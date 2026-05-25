@@ -3,440 +3,731 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Bloquin</title>
-<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700;800&family=Outfit:wght@400;500;600&display=swap" rel="stylesheet">
+<title>Bloquin IDE — Programação em blocos para Arduino e ESP32</title>
+<meta name="description" content="Bloquin é um IDE gratuito de programação em blocos para Arduino e ESP32. Ideal para crianças, alunos e iniciantes aprenderem robótica e eletrônica sem escrever código.">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://bloquin.online/">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://bloquin.online/">
+<meta property="og:title" content="Bloquin IDE — Programação em blocos para Arduino e ESP32">
+<meta property="og:description" content="IDE gratuito de programação visual em blocos para Arduino e ESP32.">
+<meta property="og:image" content="https://bloquin.online/assets/Logo_Bloquin.png">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"SoftwareApplication","name":"Bloquin IDE","description":"IDE visual de programação em blocos para Arduino e ESP32.","applicationCategory":"DeveloperApplication","operatingSystem":"Windows 10+","offers":{"@type":"Offer","price":"0","priceCurrency":"BRL"}}</script>
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
 <style>
-  :root {
-    --bg:        #0B0B12;
-    --surface:   #13131E;
-    --surface2:  #1C1C2A;
-    --border:    #252538;
-    --border2:   #323248;
-    --orange:    #F57033;
-    --orange-lo: rgba(245,112,51,0.10);
-    --lime:      #6DD63A;
-    --lime-lo:   rgba(109,214,58,0.10);
-    --blue:      #5B9CF6;
-    --blue-lo:   rgba(91,156,246,0.10);
-    --text:      #DDE0EE;
-    --text2:     #8A8DB0;
-    --muted:     #484870;
-    --green:     #4BD87A;
-    --nav-bg:    rgba(11,11,18,0.90);
-    --mono: 'JetBrains Mono', monospace;
-    --body: 'Outfit', sans-serif;
-  }
+:root {
+  --bg:       #0C0C14;
+  --surface:  #14141F;
+  --surf2:    #1D1D2C;
+  --border:   #26263A;
+  --orange:   #F56E2E;
+  --o-lo:     rgba(245,110,46,0.12);
+  --o-md:     rgba(245,110,46,0.22);
+  --text:     #E8EAF6;
+  --text2:    #7E82A8;
+  --muted:    #44466A;
+  --green:    #50E37A;
+}
+html.light {
+  --bg:       #F2F2F8;
+  --surface:  #FFFFFF;
+  --surf2:    #E8E8F2;
+  --border:   #D6D6EA;
+  --orange:   #C94A08;
+  --o-lo:     rgba(201,74,8,0.08);
+  --o-md:     rgba(201,74,8,0.16);
+  --text:     #0E0E1C;
+  --text2:    #484870;
+  --muted:    #9494B8;
+  --green:    #1A7A3A;
+}
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body {
+  font-family: 'DM Sans', sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  line-height: 1.6;
+}
 
-  html.light {
-    --bg:        #EDEDF6;
-    --surface:   #FFFFFF;
-    --surface2:  #E6E6F2;
-    --border:    #D4D4E8;
-    --border2:   #BEBEDA;
-    --orange:    #C94F10;
-    --orange-lo: rgba(201,79,16,0.08);
-    --lime:      #3D8A14;
-    --lime-lo:   rgba(61,138,20,0.08);
-    --blue:      #2256D0;
-    --blue-lo:   rgba(34,86,208,0.08);
-    --text:      #10101E;
-    --text2:     #424270;
-    --muted:     #8888B0;
-    --green:     #15803D;
-    --nav-bg:    rgba(237,237,246,0.90);
-  }
+/* ── NAV ── */
+nav {
+  height: 58px;
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 0 40px;
+  border-bottom: 1px solid var(--border);
+  background: rgba(12,12,20,0.90);
+  backdrop-filter: blur(24px);
+  position: sticky; top: 0; z-index: 100;
+}
+html.light nav { background: rgba(242,242,248,0.90); }
 
-  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+.nav-brand {
+  display: flex; align-items: center; gap: 10px;
+  text-decoration: none;
+}
+.nav-logo {
+  width: 30px; height: 30px;
+  border-radius: 8px; overflow: hidden; flex-shrink: 0;
+  background: var(--surf2);
+}
+.nav-logo img { width: 100%; height: 100%; object-fit: contain; display: block; }
+.nav-name {
+  font-family: 'Syne', sans-serif;
+  font-size: 16px; font-weight: 800;
+  letter-spacing: 0.12em; color: var(--text);
+}
 
-  body {
-    font-family: var(--body);
-    background: var(--bg);
-    color: var(--text);
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-  }
+.nav-right { display: flex; align-items: center; gap: 12px; }
 
-  /* ── NAV ─────────────────────────────────────────── */
-  nav {
-    height: 52px;
-    display: flex; align-items: center; justify-content: space-between;
-    padding: 0 36px;
-    border-bottom: 1px solid var(--border);
-    background: var(--nav-bg);
-    backdrop-filter: blur(20px);
-    position: sticky; top: 0; z-index: 10;
-  }
+.nav-cta {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 14px; font-weight: 500;
+  color: #fff; background: var(--orange);
+  border: none; border-radius: 8px;
+  padding: 9px 20px; text-decoration: none;
+  transition: opacity 0.15s;
+}
+.nav-cta:hover { opacity: 0.85; }
 
-  .nav-left { display: flex; align-items: center; gap: 11px; }
+.theme-btn {
+  width: 36px; height: 36px;
+  border: 1px solid var(--border);
+  background: var(--surface);
+  border-radius: 8px; cursor: pointer;
+  display: flex; align-items: center; justify-content: center;
+  color: var(--text2); transition: background 0.15s;
+}
+.theme-btn:hover { background: var(--surf2); }
+.theme-btn svg { width: 16px; height: 16px; }
+.icon-moon { display: block; }
+.icon-sun  { display: none; }
+html.light .icon-moon { display: none; }
+html.light .icon-sun  { display: block; }
 
-  .logo-mark {
-    width: 28px; height: 28px;
-    border-radius: 7px;
-    overflow: hidden;
-    flex-shrink: 0;
-  }
-  .logo-mark img {
-    width: 100%; height: 100%;
-    object-fit: contain;
-    display: block;
-  }
+/* ── HERO ── */
+#hero {
+  padding: 100px 40px 90px;
+  border-bottom: 1px solid var(--border);
+  position: relative; overflow: hidden;
+}
 
-  .logo-text {
-    font-family: var(--mono);
-    font-size: 12px; font-weight: 800;
-    letter-spacing: 0.18em; color: var(--text);
-  }
+/* decorative block shapes */
+#hero::before, #hero::after {
+  content: '';
+  position: absolute;
+  border-radius: 20px;
+  pointer-events: none;
+}
+#hero::before {
+  width: 220px; height: 220px;
+  top: -60px; right: 120px;
+  background: var(--o-lo);
+  transform: rotate(18deg);
+}
+#hero::after {
+  width: 140px; height: 140px;
+  top: 60px; right: 60px;
+  background: rgba(245,110,46,0.06);
+  transform: rotate(-8deg);
+}
 
-  .nav-right { display: flex; align-items: center; gap: 18px; }
+.hero-inner { max-width: 860px; margin: 0 auto; }
 
-  .nav-meta {
-    font-family: var(--mono);
-    font-size: 10px; color: var(--muted); letter-spacing: 0.1em;
-  }
+.hero-tag {
+  display: inline-flex; align-items: center; gap: 8px;
+  font-size: 13px; font-weight: 500; color: var(--orange);
+  border: 1px solid rgba(245,110,46,0.30);
+  background: var(--o-lo);
+  border-radius: 100px; padding: 6px 16px;
+  margin-bottom: 32px;
+}
+.hero-dot {
+  width: 7px; height: 7px;
+  border-radius: 50%; background: var(--orange);
+  animation: pulse 2s ease-in-out infinite;
+}
+@keyframes pulse { 0%,100%{opacity:1} 50%{opacity:0.3} }
 
-  .theme-toggle {
-    width: 30px; height: 30px;
-    border-radius: 7px; border: 1px solid var(--border2);
-    background: var(--surface2); cursor: pointer;
-    display: flex; align-items: center; justify-content: center;
-    color: var(--muted); transition: background 0.15s, color 0.15s;
-  }
-  .theme-toggle:hover { background: var(--surface); color: var(--text2); }
-  .theme-toggle svg { width: 14px; height: 14px; }
+h1 {
+  font-family: 'Syne', sans-serif;
+  font-size: clamp(42px, 6vw, 76px);
+  font-weight: 800;
+  line-height: 1.0;
+  letter-spacing: -0.03em;
+  color: var(--text);
+  margin-bottom: 24px;
+}
+h1 span { color: var(--orange); }
 
-  .icon-moon { display: block; }
-  .icon-sun  { display: none; }
-  html.light .icon-moon { display: none; }
-  html.light .icon-sun  { display: block; }
+.hero-sub {
+  font-size: clamp(17px, 2vw, 21px);
+  font-weight: 300;
+  color: var(--text2);
+  max-width: 560px;
+  line-height: 1.65;
+  margin-bottom: 44px;
+}
 
-  /* ── MAIN ─────────────────────────────────────────── */
-  main {
-    flex: 1;
-    display: flex; flex-direction: column;
-    align-items: center; justify-content: center;
-    padding: 56px 28px;
-  }
+.hero-actions {
+  display: flex; align-items: center; gap: 14px; flex-wrap: wrap;
+  margin-bottom: 60px;
+}
 
-  .page-header {
-    width: 100%; max-width: 880px;
-    margin-bottom: 20px;
-    display: flex; align-items: center;
-    justify-content: space-between;
-  }
+.btn-main {
+  font-size: 16px; font-weight: 500;
+  color: #fff; background: var(--orange);
+  border: none; border-radius: 10px;
+  padding: 16px 32px; text-decoration: none;
+  display: inline-flex; align-items: center; gap: 10px;
+  transition: opacity 0.15s, transform 0.15s;
+}
+.btn-main:hover { opacity: 0.88; transform: translateY(-2px); }
 
-  .page-title {
-    font-family: var(--mono);
-    font-size: 10px; letter-spacing: 0.2em;
-    color: var(--muted); text-transform: uppercase;
-  }
-  .page-title::before { content: '// '; color: var(--border2); }
+.btn-ghost {
+  font-size: 15px; font-weight: 400;
+  color: var(--text2);
+  border: 1px solid var(--border);
+  background: var(--surface);
+  border-radius: 10px;
+  padding: 16px 28px; text-decoration: none;
+  transition: border-color 0.15s, color 0.15s;
+}
+.btn-ghost:hover { border-color: var(--text2); color: var(--text); }
 
-  .page-version {
-    font-family: var(--mono);
-    font-size: 10px; color: var(--muted); letter-spacing: 0.08em;
-  }
+.hero-stats {
+  display: flex; gap: 48px; flex-wrap: wrap;
+  padding-top: 44px;
+  border-top: 1px solid var(--border);
+}
+.stat-val {
+  font-family: 'Syne', sans-serif;
+  font-size: 36px; font-weight: 800;
+  color: var(--text); line-height: 1;
+  margin-bottom: 4px;
+}
+.stat-key {
+  font-size: 13px; color: var(--text2); font-weight: 400;
+}
 
-  /* ── APP TILES ────────────────────────────────────── */
-  .app-grid {
-    width: 100%; max-width: 880px;
-    display: grid; grid-template-columns: 1fr 1fr;
-    gap: 14px; margin-bottom: 14px;
-  }
+/* ── SECTION SHARED ── */
+section { padding: 88px 40px; }
+.inner { max-width: 860px; margin: 0 auto; }
 
-  .app-tile {
-    background: var(--surface);
-    border: 1px solid var(--border);
-    border-radius: 14px;
-    padding: 32px 32px 28px;
-    display: flex; flex-direction: column; gap: 24px;
-    text-decoration: none; color: inherit;
-    transition: border-color 0.2s, background 0.2s, transform 0.15s;
-  }
-  .app-tile:hover { background: var(--surface2); transform: translateY(-2px); }
-  .bloquin-tile:hover { border-color: rgba(245,112,51,0.40); }
-  .sag-tile:hover     { border-color: rgba(91,156,246,0.40); }
+.sec-label {
+  font-size: 11px; font-weight: 500;
+  letter-spacing: 0.18em; text-transform: uppercase;
+  color: var(--muted); margin-bottom: 14px;
+}
 
-  .tile-header { display: flex; align-items: center; justify-content: space-between; }
+.sec-title {
+  font-family: 'Syne', sans-serif;
+  font-size: clamp(28px, 3.5vw, 44px);
+  font-weight: 800; letter-spacing: -0.025em;
+  color: var(--text); line-height: 1.1;
+  margin-bottom: 12px;
+}
 
-  .tile-icon {
-    width: 52px; height: 52px; border-radius: 12px;
-    border: 1px solid var(--border2); background: var(--surface2);
-    display: flex; align-items: center; justify-content: center; overflow: hidden;
-  }
-  .tile-icon img { width: 78%; height: 78%; object-fit: contain; }
-  .icon-fallback {
-    font-family: var(--mono); font-size: 13px; font-weight: 800;
-    color: var(--text2);
-  }
+.sec-sub {
+  font-size: 17px; color: var(--text2); font-weight: 300;
+  line-height: 1.65; max-width: 560px; margin-bottom: 48px;
+}
 
-  .tile-type {
-    font-family: var(--mono); font-size: 9px;
-    letter-spacing: 0.14em; font-weight: 700;
-    padding: 4px 10px; border-radius: 5px; border: 1px solid;
-  }
-  .bloquin-tile .tile-type {
-    color: var(--orange);
-    border-color: rgba(245,112,51,0.30);
-    background: var(--orange-lo);
-  }
-  .sag-tile .tile-type {
-    color: var(--blue);
-    border-color: rgba(91,156,246,0.30);
-    background: var(--blue-lo);
-  }
+/* ── WHAT ── */
+#what { background: var(--surface); border-bottom: 1px solid var(--border); }
 
-  .tile-body { display: flex; flex-direction: column; gap: 6px; }
+.what-grid {
+  display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 14px;
+}
 
-  .tile-name {
-    font-family: var(--mono);
-    font-size: 26px; font-weight: 800;
-    color: var(--text); letter-spacing: -0.02em;
-    line-height: 1;
-  }
+.what-card {
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  padding: 30px 26px;
+  transition: border-color 0.2s, transform 0.15s;
+}
+.what-card:hover { border-color: var(--orange); transform: translateY(-3px); }
 
-  .tile-sub {
-    font-family: var(--mono);
-    font-size: 11px; color: var(--text2); letter-spacing: 0.04em;
-  }
+.wc-icon {
+  width: 48px; height: 48px;
+  border-radius: 12px;
+  background: var(--o-lo);
+  display: flex; align-items: center; justify-content: center;
+  font-size: 22px; margin-bottom: 18px;
+}
+.wc-title {
+  font-family: 'Syne', sans-serif;
+  font-size: 18px; font-weight: 800;
+  color: var(--text); margin-bottom: 10px;
+}
+.wc-desc { font-size: 15px; color: var(--text2); line-height: 1.7; }
 
-  .tile-footer {
-    display: flex; align-items: center; justify-content: space-between;
-    padding-top: 20px; border-top: 1px solid var(--border);
-  }
+/* ── HOW ── */
+#how { border-bottom: 1px solid var(--border); }
 
-  .tile-tags { display: flex; gap: 6px; flex-wrap: wrap; align-items: center; }
+.steps {
+  display: grid; grid-template-columns: repeat(4, 1fr);
+  gap: 0; background: var(--border);
+  border: 1px solid var(--border);
+  border-radius: 16px; overflow: hidden;
+}
+.step {
+  background: var(--surface);
+  padding: 36px 26px;
+  display: flex; flex-direction: column; gap: 10px;
+  transition: background 0.15s;
+}
+.step:hover { background: var(--surf2); }
+.step-n {
+  font-family: 'Syne', sans-serif;
+  font-size: 42px; font-weight: 800;
+  color: var(--border); line-height: 1;
+  transition: color 0.15s;
+}
+.step:hover .step-n { color: var(--orange); }
+.step-icon { font-size: 24px; }
+.step-title {
+  font-size: 16px; font-weight: 500;
+  color: var(--text);
+}
+.step-desc { font-size: 14px; color: var(--text2); line-height: 1.65; }
 
-  .tile-tag {
-    font-family: var(--mono); font-size: 10px;
-    color: var(--text2);
-    background: var(--surface2);
-    border: 1px solid var(--border2);
-    border-radius: 4px; padding: 3px 8px;
-    letter-spacing: 0.05em;
-  }
+/* ── BOARDS ── */
+#boards { background: var(--surface); border-bottom: 1px solid var(--border); }
 
-  .tile-action {
-    font-family: var(--mono); font-size: 11px; font-weight: 700;
-    letter-spacing: 0.08em;
-    padding: 7px 14px; border-radius: 6px; border: 1px solid;
-    transition: background 0.15s;
-  }
-  .bloquin-tile .tile-action {
-    color: var(--orange);
-    border-color: rgba(245,112,51,0.28);
-    background: var(--orange-lo);
-  }
-  .bloquin-tile .tile-action:hover { background: rgba(245,112,51,0.18); }
-  .sag-tile .tile-action {
-    color: var(--blue);
-    border-color: rgba(91,156,246,0.28);
-    background: var(--blue-lo);
-  }
-  .sag-tile .tile-action:hover { background: rgba(91,156,246,0.18); }
+.boards-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
 
-  /* ── STACK ────────────────────────────────────────── */
-  .stack-row {
-    width: 100%; max-width: 880px;
-    display: grid; grid-template-columns: repeat(4, 1fr);
-    gap: 1px; background: var(--border);
-    border: 1px solid var(--border); border-radius: 10px; overflow: hidden;
-  }
+.board-card {
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 36px 32px;
+  display: flex; gap: 24px; align-items: flex-start;
+}
+.board-icon {
+  font-size: 36px;
+  width: 64px; height: 64px;
+  border-radius: 14px;
+  background: var(--surf2);
+  border: 1px solid var(--border);
+  display: flex; align-items: center; justify-content: center;
+  flex-shrink: 0;
+}
+.board-name {
+  font-family: 'Syne', sans-serif;
+  font-size: 22px; font-weight: 800;
+  color: var(--text); margin-bottom: 6px;
+}
+.board-desc { font-size: 15px; color: var(--text2); margin-bottom: 14px; line-height: 1.6; }
+.board-tags { display: flex; gap: 8px; flex-wrap: wrap; }
+.btag {
+  font-size: 12px; font-weight: 500;
+  color: var(--text2);
+  background: var(--surf2);
+  border: 1px solid var(--border);
+  border-radius: 6px; padding: 4px 10px;
+}
 
-  .stack-cell {
-    background: var(--surface); padding: 16px 20px;
-    display: flex; flex-direction: column; gap: 5px;
-    transition: background 0.15s;
-  }
-  .stack-cell:hover { background: var(--surface2); }
+/* ── DOWNLOAD ── */
+#download { border-bottom: 1px solid var(--border); }
 
-  .stack-key {
-    font-family: var(--mono); font-size: 9px;
-    letter-spacing: 0.14em; color: var(--muted); text-transform: uppercase;
-  }
+.dl-box {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 20px;
+  padding: 56px 48px;
+  display: flex; align-items: center; justify-content: space-between;
+  gap: 40px; flex-wrap: wrap;
+  position: relative; overflow: hidden;
+}
+.dl-box::before {
+  content: '';
+  position: absolute;
+  width: 300px; height: 300px;
+  border-radius: 50%;
+  background: radial-gradient(circle, var(--o-lo) 0%, transparent 70%);
+  right: -60px; top: -80px;
+  pointer-events: none;
+}
 
-  .stack-val {
-    font-family: var(--mono); font-size: 12px;
-    color: var(--text2); font-weight: 500;
-  }
+.dl-left { flex: 1; min-width: 260px; }
+.dl-badge {
+  display: inline-flex; align-items: center; gap: 6px;
+  font-size: 12px; font-weight: 500; color: var(--orange);
+  border: 1px solid rgba(245,110,46,0.30);
+  background: var(--o-lo); border-radius: 100px;
+  padding: 5px 14px; margin-bottom: 22px;
+}
+.dl-title {
+  font-family: 'Syne', sans-serif;
+  font-size: clamp(36px, 4vw, 54px);
+  font-weight: 800; letter-spacing: -0.03em;
+  color: var(--text); line-height: 1;
+  margin-bottom: 14px;
+}
+.dl-sub {
+  font-size: 17px; color: var(--text2); font-weight: 300;
+  line-height: 1.65; margin-bottom: 28px; max-width: 400px;
+}
+.dl-meta {
+  display: flex; gap: 10px; flex-wrap: wrap; margin-bottom: 36px;
+}
+.dl-tag {
+  font-size: 13px; color: var(--text2);
+  background: var(--surf2);
+  border: 1px solid var(--border);
+  border-radius: 6px; padding: 5px 12px;
+}
 
-  /* ── FOOTER ───────────────────────────────────────── */
-  footer {
-    border-top: 1px solid var(--border);
-    padding: 18px 36px;
-    display: flex; align-items: center; justify-content: space-between;
-  }
+.dl-cta {
+  font-size: 17px; font-weight: 500;
+  color: #fff; background: var(--orange);
+  border: none; border-radius: 12px;
+  padding: 18px 36px; text-decoration: none;
+  display: inline-flex; align-items: center; gap: 10px;
+  transition: opacity 0.15s, transform 0.15s;
+}
+.dl-cta:hover { opacity: 0.86; transform: translateY(-2px); }
 
-  .footer-id { display: flex; align-items: center; gap: 9px; }
+.dl-right {
+  display: flex; flex-direction: column; gap: 12px;
+  min-width: 200px;
+}
+.dl-check {
+  display: flex; align-items: flex-start; gap: 10px;
+  font-size: 15px; color: var(--text2);
+}
+.dl-check::before {
+  content: '✓';
+  color: var(--orange);
+  font-weight: 700; font-size: 15px;
+  flex-shrink: 0; margin-top: 1px;
+}
 
-  .footer-logo-mark {
-    width: 20px; height: 20px;
-    border-radius: 5px;
-    overflow: hidden;
-    flex-shrink: 0;
-  }
-  .footer-logo-mark img {
-    width: 100%; height: 100%;
-    object-fit: contain;
-    display: block;
-  }
+/* ── FAQ ── */
+#faq { background: var(--surface); border-bottom: 1px solid var(--border); }
 
-  .footer-name {
-    font-family: var(--mono); font-size: 10px; font-weight: 700;
-    letter-spacing: 0.16em; color: var(--muted);
-  }
+.faq-list { display: flex; flex-direction: column; gap: 4px; margin-top: 8px; }
+.faq-item {
+  border: 1px solid var(--border);
+  border-radius: 12px; overflow: hidden;
+}
+.faq-q {
+  width: 100%; background: none; border: none;
+  padding: 22px 24px;
+  display: flex; align-items: center; justify-content: space-between; gap: 16px;
+  cursor: pointer; color: var(--text);
+  font-family: 'DM Sans', sans-serif;
+  font-size: 16px; font-weight: 500;
+  text-align: left; transition: background 0.15s;
+}
+.faq-q:hover { background: var(--surf2); }
+.faq-q svg {
+  width: 18px; height: 18px;
+  flex-shrink: 0; color: var(--muted);
+  transition: transform 0.22s, color 0.15s;
+}
+.faq-item.open .faq-q svg { transform: rotate(45deg); color: var(--orange); }
+.faq-a {
+  max-height: 0; overflow: hidden;
+  transition: max-height 0.3s ease;
+  font-size: 15px; color: var(--text2); line-height: 1.75;
+}
+.faq-item.open .faq-a { max-height: 240px; padding: 0 24px 22px; }
 
-  .footer-right {
-    font-family: var(--mono); font-size: 10px;
-    color: var(--muted); letter-spacing: 0.06em;
-  }
+/* ── FOOTER ── */
+footer {
+  border-top: 1px solid var(--border);
+  padding: 28px 40px;
+  display: flex; align-items: center; justify-content: space-between;
+  flex-wrap: wrap; gap: 14px;
+}
+.footer-brand {
+  display: flex; align-items: center; gap: 10px;
+}
+.footer-logo {
+  width: 22px; height: 22px;
+  border-radius: 5px; overflow: hidden;
+}
+.footer-logo img { width: 100%; height: 100%; object-fit: contain; display: block; }
+.footer-name {
+  font-family: 'Syne', sans-serif;
+  font-size: 13px; font-weight: 800;
+  letter-spacing: 0.14em; color: var(--muted);
+}
+.footer-links { display: flex; align-items: center; gap: 20px; }
+.footer-link {
+  font-size: 13px; color: var(--muted);
+  text-decoration: none; transition: color 0.15s;
+}
+.footer-link:hover { color: var(--text2); }
+.footer-copy { font-size: 12px; color: var(--muted); }
 
-  /* Status */
-  .status-dot {
-    display: inline-block; width: 6px; height: 6px;
-    border-radius: 50%; background: var(--green);
-    margin-right: 5px; vertical-align: middle;
-    animation: blink 2.4s ease-in-out infinite;
-  }
-  @keyframes blink { 0%,100%{opacity:1} 50%{opacity:0.25} }
-
-  /* ── RESPONSIVE ───────────────────────────────────── */
-  @media (max-width: 640px) {
-    nav { padding: 0 18px; }
-    .nav-meta { display: none; }
-    main { padding: 36px 16px; }
-    .app-grid { grid-template-columns: 1fr; }
-    .stack-row { grid-template-columns: 1fr 1fr; }
-    footer { padding: 14px 18px; }
-  }
+/* ── RESPONSIVE ── */
+@media (max-width: 720px) {
+  nav { padding: 0 20px; }
+  section { padding: 60px 20px; }
+  #hero { padding: 72px 20px 60px; }
+  .what-grid { grid-template-columns: 1fr; }
+  .steps { grid-template-columns: 1fr 1fr; }
+  .boards-grid { grid-template-columns: 1fr; }
+  .dl-box { padding: 36px 28px; }
+  .hero-stats { gap: 28px; }
+  footer { padding: 20px; flex-direction: column; align-items: flex-start; }
+}
 </style>
 </head>
 <body>
 
+<!-- NAV -->
 <nav>
-  <div class="nav-left">
-    <div class="logo-mark">
-      <img src="assets/Logo_Bloquin.png" alt="Bloquin">
-    </div>
-    <span class="logo-text">BLOQUIN</span>
-  </div>
+  <a class="nav-brand" href="#">
+    <div class="nav-logo"><img src="assets/Logo_Bloquin.png" alt="Bloquin"></div>
+    <span class="nav-name">BLOQUIN</span>
+  </a>
   <div class="nav-right">
-    <span class="nav-meta">uso interno</span>
-    <button class="theme-toggle" id="themeToggle" aria-label="Alternar tema">
-      <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
-      </svg>
-      <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-        <circle cx="12" cy="12" r="5"/>
-        <line x1="12" y1="1" x2="12" y2="3"/>
-        <line x1="12" y1="21" x2="12" y2="23"/>
-        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/>
-        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/>
-        <line x1="1" y1="12" x2="3" y2="12"/>
-        <line x1="21" y1="12" x2="23" y2="12"/>
-        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/>
-        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>
-      </svg>
+    <a class="nav-cta" href="https://www.mediafire.com/file/h1e5z03az2uk84a/bloquin_0.1.0_x64-setup.exe/file" target="_blank" rel="noopener">↓ Baixar grátis</a>
+    <button class="theme-btn" id="themeBtn" aria-label="Alternar tema">
+      <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+      <svg class="icon-sun"  viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
     </button>
   </div>
 </nav>
 
-<main>
-  <div class="page-header">
-    <span class="page-title">ferramentas</span>
-    <span class="page-version">v2026.1</span>
-  </div>
-
-  <div class="app-grid">
-
-    <a class="app-tile bloquin-tile"
-       href="https://www.mediafire.com/file/h1e5z03az2uk84a/bloquin_0.1.0_x64-setup.exe/file"
-       target="_blank" rel="noopener">
-      <div class="tile-header">
-        <div class="tile-icon">
-          <img src="assets/Logo_Bloquin.png" alt="Bloquin IDE"
-               onerror="this.style.display='none';this.nextElementSibling.style.display='block'">
-          <span class="icon-fallback" style="display:none">BL</span>
-        </div>
-        <span class="tile-type">DESKTOP</span>
-      </div>
-      <div class="tile-body">
-        <div class="tile-name">Bloquin IDE</div>
-        <div class="tile-sub">editor de blocos · Arduino / ESP32</div>
-      </div>
-      <div class="tile-footer">
-        <div class="tile-tags">
-          <span class="tile-tag">v0.1.0</span>
-          <span class="tile-tag">Win 10+</span>
-          <span class="tile-tag">64-bit</span>
-        </div>
-        <span class="tile-action">↓ baixar</span>
-      </div>
-    </a>
-
-    <a class="app-tile sag-tile"
-       href="https://sagsite.vercel.app/"
-       target="_blank" rel="noopener">
-      <div class="tile-header">
-        <div class="tile-icon">
-          <img src="assets/logo_SAG.png" alt="SAG"
-               onerror="this.style.display='none';this.nextElementSibling.style.display='block'">
-          <span class="icon-fallback" style="display:none">SAG</span>
-        </div>
-        <span class="tile-type">WEB</span>
-      </div>
-      <div class="tile-body">
-        <div class="tile-name">SAG</div>
-        <div class="tile-sub">sistema de aulas e gestão</div>
-      </div>
-      <div class="tile-footer">
-        <div class="tile-tags">
-          <span class="tile-tag"><span class="status-dot"></span>online</span>
-          <span class="tile-tag">Next.js</span>
-        </div>
-        <span class="tile-action">→ acessar</span>
-      </div>
-    </a>
-
-  </div>
-
-  <div class="stack-row">
-    <div class="stack-cell">
-      <span class="stack-key">Bloquin IDE</span>
-      <span class="stack-val">Tauri 2 · React · Rust</span>
+<!-- HERO -->
+<section id="hero">
+  <div class="hero-inner">
+    <div class="hero-tag">
+      <span class="hero-dot"></span>
+      Gratuito · Windows 10+ · v0.1.0
     </div>
-    <div class="stack-cell">
-      <span class="stack-key">SAG</span>
-      <span class="stack-val">Next.js · TypeScript</span>
+    <h1>Programe Arduino e ESP32<br><span>sem escrever código.</span></h1>
+    <p class="hero-sub">
+      Bloquin é um IDE de programação em blocos — arraste, conecte e envie para sua placa. Perfeito para crianças, estudantes e quem está dando os primeiros passos em robótica.
+    </p>
+    <div class="hero-actions">
+      <a class="btn-main" href="https://www.mediafire.com/file/h1e5z03az2uk84a/bloquin_0.1.0_x64-setup.exe/file" target="_blank" rel="noopener">
+        ↓ Baixar — grátis
+      </a>
+      <a class="btn-ghost" href="#how">Como funciona →</a>
     </div>
-    <div class="stack-cell">
-      <span class="stack-key">Banco de dados</span>
-      <span class="stack-val">Supabase · PostgreSQL</span>
-    </div>
-    <div class="stack-cell">
-      <span class="stack-key">Plataforma</span>
-      <span class="stack-val">Windows 10+ · 64-bit</span>
+    <div class="hero-stats">
+      <div>
+        <div class="stat-val">100%</div>
+        <div class="stat-key">Gratuito, para sempre</div>
+      </div>
+      <div>
+        <div class="stat-val">0</div>
+        <div class="stat-key">Linhas de código necessárias</div>
+      </div>
+      <div>
+        <div class="stat-val">2</div>
+        <div class="stat-key">Placas suportadas</div>
+      </div>
     </div>
   </div>
-</main>
+</section>
 
+<!-- O QUE É -->
+<section id="what">
+  <div class="inner">
+    <div class="sec-label">O que é o Bloquin</div>
+    <div class="sec-title">Um IDE feito para aprender</div>
+    <p class="sec-sub">Como o Scratch, mas para hardware de verdade. Blocos visuais que geram código C++ e enviam direto para a placa.</p>
+    <div class="what-grid">
+      <div class="what-card">
+        <div class="wc-icon">🧩</div>
+        <div class="wc-title">Blocos em português</div>
+        <div class="wc-desc">Interface drag-and-drop sem barreira de idioma. Arraste blocos de lógica, sensores e motores sem digitar nada.</div>
+      </div>
+      <div class="what-card">
+        <div class="wc-icon">👁️</div>
+        <div class="wc-title">Veja o código gerado</div>
+        <div class="wc-desc">Os blocos viram código C++ em tempo real. Ideal para quem quer entender o que está por trás.</div>
+      </div>
+      <div class="what-card">
+        <div class="wc-icon">⚡</div>
+        <div class="wc-title">Compilar com um clique</div>
+        <div class="wc-desc">arduino-cli incluso. Funciona 100% offline. Compila e grava na placa sem instalar mais nada.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- COMO FUNCIONA -->
+<section id="how">
+  <div class="inner">
+    <div class="sec-label">Como funciona</div>
+    <div class="sec-title">Do bloco à placa em 4 passos</div>
+    <div class="steps">
+      <div class="step">
+        <div class="step-n">01</div>
+        <div class="step-icon">🧩</div>
+        <div class="step-title">Monte os blocos</div>
+        <div class="step-desc">Arraste e conecte blocos de lógica, sensores, motores e comunicação.</div>
+      </div>
+      <div class="step">
+        <div class="step-n">02</div>
+        <div class="step-icon">👁️</div>
+        <div class="step-title">Veja o código</div>
+        <div class="step-desc">O Bloquin converte os blocos em código C++ válido automaticamente.</div>
+      </div>
+      <div class="step">
+        <div class="step-n">03</div>
+        <div class="step-icon">⚙️</div>
+        <div class="step-title">Compile</div>
+        <div class="step-desc">Um clique compila o projeto. Erros aparecem em linguagem simples.</div>
+      </div>
+      <div class="step">
+        <div class="step-n">04</div>
+        <div class="step-icon">📤</div>
+        <div class="step-title">Envie para a placa</div>
+        <div class="step-desc">Conecte via USB e grave o programa. Pronto para testar.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PLACAS -->
+<section id="boards">
+  <div class="inner">
+    <div class="sec-label">Hardware suportado</div>
+    <div class="sec-title">Placas compatíveis</div>
+    <p class="sec-sub">Suporte nativo a Arduino e ESP32, com mais placas chegando nas próximas versões.</p>
+    <div class="boards-grid">
+      <div class="board-card">
+        <div class="board-icon">⚙️</div>
+        <div>
+          <div class="board-name">Arduino</div>
+          <div class="board-desc">Uno, Nano, Mega e variantes compatíveis com o ecossistema AVR.</div>
+          <div class="board-tags">
+            <span class="btag">Uno</span>
+            <span class="btag">Nano</span>
+            <span class="btag">Mega</span>
+          </div>
+        </div>
+      </div>
+      <div class="board-card">
+        <div class="board-icon">📶</div>
+        <div>
+          <div class="board-name">ESP32</div>
+          <div class="board-desc">Família ESP32 com suporte a Wi-Fi, Bluetooth e projetos IoT.</div>
+          <div class="board-tags">
+            <span class="btag">ESP32</span>
+            <span class="btag">ESP32-S2</span>
+            <span class="btag">Wi-Fi</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- DOWNLOAD -->
+<section id="download">
+  <div class="inner">
+    <div class="dl-box">
+      <div class="dl-left">
+        <div class="dl-badge">↓ Download gratuito</div>
+        <div class="dl-title">Bloquin IDE</div>
+        <div class="dl-sub">Instale e comece a programar em minutos. Sem cadastro, sem assinatura.</div>
+        <div class="dl-meta">
+          <span class="dl-tag">v0.1.0</span>
+          <span class="dl-tag">Windows 10+</span>
+          <span class="dl-tag">64-bit</span>
+        </div>
+        <a class="dl-cta" href="https://www.mediafire.com/file/h1e5z03az2uk84a/bloquin_0.1.0_x64-setup.exe/file" target="_blank" rel="noopener">
+          ↓ Baixar instalador (.exe)
+        </a>
+      </div>
+      <div class="dl-right">
+        <div class="dl-check">100% gratuito</div>
+        <div class="dl-check">Funciona offline</div>
+        <div class="dl-check">arduino-cli incluso</div>
+        <div class="dl-check">Monitor serial integrado</div>
+        <div class="dl-check">Blocos em português</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section id="faq">
+  <div class="inner">
+    <div class="sec-label">Perguntas frequentes</div>
+    <div class="sec-title">FAQ</div>
+    <div class="faq-list">
+
+      <div class="faq-item">
+        <button class="faq-q">
+          O Bloquin é gratuito?
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+        </button>
+        <div class="faq-a">Sim, completamente gratuito. Baixe, instale e use sem pagar nada e sem cadastro.</div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-q">
+          Precisa saber programar para usar?
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+        </button>
+        <div class="faq-a">Não. A proposta do Bloquin é exatamente essa — permitir criar programas reais sem precisar escrever código. Os blocos fazem tudo isso por você.</div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-q">
+          Funciona sem internet?
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+        </button>
+        <div class="faq-a">Sim. Compilação e upload para a placa funcionam 100% offline após a instalação. Ideal para escolas com Wi-Fi limitado.</div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-q">
+          Qual sistema operacional é compatível?
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+        </button>
+        <div class="faq-a">Por enquanto, Windows 10 ou superior (64-bit). Suporte a Linux e macOS está planejado para versões futuras.</div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
 <footer>
-  <div class="footer-id">
-    <div class="footer-logo-mark">
-      <img src="assets/Logo_Bloquin.png" alt="Bloquin">
-    </div>
+  <div class="footer-brand">
+    <div class="footer-logo"><img src="assets/Logo_Bloquin.png" alt="Bloquin"></div>
     <span class="footer-name">BLOQUIN</span>
   </div>
-  <span class="footer-right">© 2026 · uso interno</span>
+  <div class="footer-links">
+    <a class="footer-link" href="#what">O que é</a>
+    <a class="footer-link" href="#how">Como funciona</a>
+    <a class="footer-link" href="#faq">FAQ</a>
+    <a class="footer-link" href="https://sagsite.vercel.app/" target="_blank" rel="noopener">SAG</a>
+  </div>
+  <span class="footer-copy">© 2026 Bloquin</span>
 </footer>
 
 <script>
   const html = document.documentElement;
-  const toggle = document.getElementById('themeToggle');
+  const btn  = document.getElementById('themeBtn');
   if (localStorage.getItem('bloquin-theme') === 'light') html.classList.add('light');
-  toggle.addEventListener('click', () => {
+  btn.addEventListener('click', () => {
     html.classList.toggle('light');
     localStorage.setItem('bloquin-theme', html.classList.contains('light') ? 'light' : 'dark');
+  });
+  document.querySelectorAll('.faq-q').forEach(q => {
+    q.addEventListener('click', () => {
+      const item = q.closest('.faq-item');
+      const open = item.classList.contains('open');
+      document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('open'));
+      if (!open) item.classList.add('open');
+    });
   });
 </script>
 </body>
