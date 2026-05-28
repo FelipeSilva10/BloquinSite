@@ -25,7 +25,7 @@ Pensado para crianças, alunos do ensino fundamental e médio, e qualquer pessoa
 - **Compilação offline** — arduino-cli embutido, funciona sem internet
 - **Upload direto para a placa** — via USB, sem configuração extra
 - **Monitor serial integrado** — para debug e comunicação com a placa
-- **Suporte a Arduino e ESP32** — Uno, Nano, Mega, ESP32, ESP32-S2
+- **Suporte a Arduino e ESP32** — Uno, Nano, ESP32
 
 ---
 
@@ -51,7 +51,7 @@ Pensado para crianças, alunos do ensino fundamental e médio, e qualquer pessoa
 
 1. Acesse [bloquin.online](https://bloquin.online) ou baixe direto:
 
-   **[↓ Baixar Bloquin v0.1.0 (.exe)](https://www.mediafire.com/file/h1e5z03az2uk84a/bloquin_0.1.0_x64-setup.exe/file)**
+   **[↓ Baixar Bloquin v1.0.0 (.exe)](https://github.com/FelipeSilva10/Bloquin/releases/latest/download/Bloquin-Setup-Windows.exe)**
 
 2. Execute o instalador e siga as instruções
 3. Conecte sua placa via USB

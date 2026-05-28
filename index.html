@@ -19,7 +19,7 @@
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Bloquin IDE — Programação em blocos para Arduino e ESP32">
 <meta name="twitter:description" content="IDE gratuito de programação visual em blocos. Sem escrever código, direto para a placa.">
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"SoftwareApplication","name":"Bloquin IDE","description":"IDE visual de programação em blocos para Arduino e ESP32.","applicationCategory":"DeveloperApplication","operatingSystem":"Windows 10+","offers":{"@type":"Offer","price":"0","priceCurrency":"BRL"},"softwareVersion":"0.1.0","downloadUrl":"https://www.mediafire.com/file/h1e5z03az2uk84a/bloquin_0.1.0_x64-setup.exe/file"}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"SoftwareApplication","name":"Bloquin IDE","description":"IDE visual de programação em blocos para Arduino e ESP32.","applicationCategory":"DeveloperApplication","operatingSystem":"Windows 10+","offers":{"@type":"Offer","price":"0","priceCurrency":"BRL"},"softwareVersion":"0.1.0","downloadUrl":"https://github.com/FelipeSilva10/Bloquin/releases/latest/download/Bloquin-Setup-Windows.exe"}</script>
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -670,7 +670,7 @@ nav {
 }
 .board-card:hover { transform: translate(-3px,-4px); box-shadow: var(--shadow-xl); }
 .board-icon-wrap {
-  width: 72px; height: 72px; flex-shrink: 0;
+  width: 88px; height: 88px; flex-shrink: 0;
   border: var(--border); border-radius: var(--r-md);
   display: flex; align-items: center; justify-content: center;
   font-size: 32px; box-shadow: var(--shadow-sm);
@@ -830,11 +830,15 @@ nav {
   width: fit-content;
 }
 .sig-avatar {
-  width: 44px; height: 44px; border-radius: 50%;
+  width: 64px; height: 64px; border-radius: 50%;
   background: var(--orange); border: var(--border-w);
   box-shadow: var(--shadow-sm); flex-shrink: 0;
   display: flex; align-items: center; justify-content: center;
   font-size: 22px;
+  overflow: hidden;
+}
+.sig-avatar img {
+  width: 100%; height: 100%; object-fit: cover; border-radius: 50%; display: block;
 }
 .sig-name {
   font-family: 'Fredoka One', cursive; font-size: 15px; color: #fff;
@@ -1074,14 +1078,14 @@ footer {
     <span class="nav-wordmark">BLOQUIN</span>
   </a>
   <div class="nav-links">
-    <a class="nav-pill p-purple" href="#what">🧩 O que é</a>
-    <a class="nav-pill p-blue"   href="#how">⚙️ Como funciona</a>
-    <a class="nav-pill p-orange" href="#alunos">📸 Alunos</a>
-    <a class="nav-pill p-green"  href="#boards">🔌 Placas</a>
-    <a class="nav-pill p-yellow" href="#faq">❓ FAQ</a>
+    <a class="nav-pill p-purple" href="#what">O que é</a>
+    <a class="nav-pill p-blue"   href="#how">Como funciona</a>
+    <a class="nav-pill p-orange" href="#alunos">Alunos</a>
+    <a class="nav-pill p-green"  href="#boards">Placas</a>
+    <a class="nav-pill p-yellow" href="#faq">FAQ</a>
   </div>
   <div class="nav-right">
-    <a class="nav-dl" href="https://www.mediafire.com/file/h1e5z03az2uk84a/bloquin_0.1.0_x64-setup.exe/file" target="_blank" rel="noopener">↓ Baixar grátis</a>
+    <a class="nav-dl" href="https://github.com/FelipeSilva10/Bloquin/releases/latest/download/Bloquin-Setup-Windows.exe" target="_blank" rel="noopener"><img src="assets/icon-download.svg" alt="" aria-hidden="true" style="width:16px;height:16px;vertical-align:-3px;display:inline;"> Baixar grátis</a>
   </div>
 </nav>
 
@@ -1098,15 +1102,15 @@ footer {
 
   <div class="hero-grid">
     <div class="hero-left">
-      <div class="sticker hero-eyebrow reveal">🤖 IDE gratuito · Arduino e ESP32</div>
+      <div class="sticker hero-eyebrow reveal">IDE gratuito · Arduino e ESP32</div>
       <h1 class="hero-h1 reveal reveal-d1">
         Programe<br>
         <em>sem escrever</em><br>
         <span class="underline-squiggle">código.</span>
       </h1>
-      <p class="hero-sub reveal reveal-d2">Arraste blocos, conecte a lógica e envie direto para sua placa. Simples como um jogo, poderoso como um IDE de verdade.</p>
+      <p class="hero-sub reveal reveal-d2">Arraste blocos, conecte com lógica e envie direto para sua placa. Simples como um jogo, poderoso como um IDE de verdade.</p>
       <div class="hero-btns reveal reveal-d3">
-        <a class="btn btn-orange" href="https://www.mediafire.com/file/h1e5z03az2uk84a/bloquin_0.1.0_x64-setup.exe/file" target="_blank" rel="noopener">↓ Baixar agora — grátis</a>
+        <a class="btn btn-orange" href="https://github.com/FelipeSilva10/Bloquin/releases/latest/download/Bloquin-Setup-Windows.exe" target="_blank" rel="noopener">Baixar agora — grátis</a>
         <a class="btn btn-white" href="#how">Como funciona →</a>
       </div>
       <div class="hero-stats reveal reveal-d4">
@@ -1162,34 +1166,31 @@ footer {
   <div class="what-inner">
     <div class="what-header">
       <div class="what-header-left">
-        <div class="sec-eye sticker reveal">🧩 O que é o Bloquin</div>
+        <div class="sec-eye sticker reveal">O que é o Bloquin</div>
         <h2 class="sec-title reveal reveal-d1">Um IDE feito<br>para <em style="color:var(--purple);font-style:normal">aprender.</em></h2>
         <p class="sec-sub reveal reveal-d2">Como o Scratch, mas para hardware de verdade. Blocos visuais que geram código C++ e enviam direto para a placa.</p>
       </div>
       <div class="what-tag-cluster reveal reveal-d2">
-        <div class="tag-chip tc-yellow">🎓 Educacional</div>
-        <div class="tag-chip tc-blue">🤖 Robótica</div>
-        <div class="tag-chip tc-green">📡 IoT</div>
-        <div class="tag-chip tc-orange">⚡ Arduino</div>
-        <div class="tag-chip tc-pink">🌐 ESP32</div>
+        <div class="tag-chip tc-yellow">Educacional</div>
+        <div class="tag-chip tc-blue">Robótica</div>
+        <div class="tag-chip tc-green">IoT</div>
+        <div class="tag-chip tc-orange">Arduino</div>
+        <div class="tag-chip tc-pink">ESP32</div>
       </div>
     </div>
     <div class="what-cards">
       <div class="what-card wc-1 reveal reveal-d1">
         <div class="wc-num">01</div>
-        <div class="wc-icon">🧩</div>
         <h3 class="wc-title">Blocos em português</h3>
         <p class="wc-desc">Interface drag-and-drop sem barreira de idioma. Arraste blocos de lógica, sensores e motores sem digitar nada.</p>
       </div>
       <div class="what-card wc-2 reveal reveal-d2">
         <div class="wc-num">02</div>
-        <div class="wc-icon">👁️</div>
         <h3 class="wc-title">Veja o código gerado</h3>
         <p class="wc-desc">Os blocos viram código C++ em tempo real. Ideal para quem quer entender o que está por trás de cada ação.</p>
       </div>
       <div class="what-card wc-3 reveal reveal-d3">
         <div class="wc-num">03</div>
-        <div class="wc-icon">⚡</div>
         <h3 class="wc-title">Compilar com um clique</h3>
         <p class="wc-desc">arduino-cli incluso. Funciona 100% offline. Compila e grava na placa sem instalar mais nada.</p>
       </div>
@@ -1207,27 +1208,27 @@ footer {
   <div class="deco deco-circle how-deco-1" aria-hidden="true"></div>
   <div class="deco deco-square how-deco-2" aria-hidden="true"></div>
   <div class="how-inner">
-    <div class="sec-eye sticker reveal">⚙️ Como funciona</div>
+    <div class="sec-eye sticker reveal">Como funciona</div>
     <h2 class="sec-title reveal reveal-d1">Do bloco à placa<br>em 4 passos.</h2>
     <p class="sec-sub reveal reveal-d2">Simples o suficiente para um aluno do ensino fundamental, poderoso o suficiente para projetos reais de IoT.</p>
     <div class="steps-row">
       <div class="step-card reveal reveal-d1">
-        <div class="step-num-wrap"><div class="step-num">01</div><span class="step-icon">🧩</span></div>
+        <div class="step-num-wrap"><div class="step-num">01</div><span class="step-icon"></span></div>
         <h3 class="step-title">Monte os blocos</h3>
         <p class="step-desc">Arraste e conecte blocos de lógica, sensores, motores e comunicação na área de trabalho.</p>
       </div>
       <div class="step-card reveal reveal-d2">
-        <div class="step-num-wrap"><div class="step-num">02</div><span class="step-icon">👁️</span></div>
+        <div class="step-num-wrap"><div class="step-num">02</div><span class="step-icon"></span></div>
         <h3 class="step-title">Veja o código</h3>
         <p class="step-desc">O Bloquin converte os blocos em código C++ válido automaticamente, em tempo real.</p>
       </div>
       <div class="step-card reveal reveal-d3">
-        <div class="step-num-wrap"><div class="step-num">03</div><span class="step-icon">⚙️</span></div>
+        <div class="step-num-wrap"><div class="step-num">03</div><span class="step-icon"></span></div>
         <h3 class="step-title">Compile</h3>
         <p class="step-desc">Um clique compila o projeto. Erros aparecem em linguagem simples, fáceis de corrigir.</p>
       </div>
       <div class="step-card reveal reveal-d4">
-        <div class="step-num-wrap"><div class="step-num">04</div><span class="step-icon">📤</span></div>
+        <div class="step-num-wrap"><div class="step-num">04</div><span class="step-icon"></span></div>
         <h3 class="step-title">Envie para a placa</h3>
         <p class="step-desc">Conecte via USB e grave o programa. Pronto para testar no mundo real!</p>
       </div>
@@ -1242,21 +1243,21 @@ footer {
 
 <!-- STUDENTS -->
 <section id="alunos">
-  <div class="deco al-deco-1" aria-hidden="true">🎉</div>
+  <div class="deco al-deco-1" aria-hidden="true"><img src="assets/icon-party.svg" alt="" style="width:44px;height:44px;display:block;"></div>
   <div class="deco deco-circle al-deco-2" aria-hidden="true"></div>
   <div class="alunos-inner">
-    <div class="sec-eye sticker reveal" style="margin-bottom:36px;">📸 Na sala de aula</div>
+    <div class="sec-eye sticker reveal" style="margin-bottom:36px;"><img src="assets/icon-school.svg" alt="" aria-hidden="true" style="width:16px;height:16px;vertical-align:-3px;display:inline;"> Na sala de aula</div>
     <div class="alunos-layout">
       <div style="position:relative">
         <div class="polaroid polaroid-1 reveal reveal-d1">
-          <div class="photo-sticker ps-1" aria-hidden="true">🚀 Primeiro programa!</div>
+          <div class="photo-sticker ps-1" aria-hidden="true">Primeiro programa!</div>
           <img src="assets/alunos1.jpg" alt="Alunos usando o Bloquin IDE em sala de aula" loading="lazy">
-          <div class="polaroid-label"><span class="pol-sticker s-orange">🧩 ESP32</span></div>
+          <div class="polaroid-label"><span class="pol-sticker s-orange">ESP32</span></div>
         </div>
         <div class="polaroid polaroid-2 reveal reveal-d2">
-          <div class="photo-sticker ps-2" aria-hidden="true">🤖</div>
+          <div class="photo-sticker ps-2" aria-hidden="true"><img src="assets/icon-arduinoicon.svg" alt="" style="width:28px;height:28px;display:block;"></div>
           <img src="assets/alunos2.jpg" alt="Alunos programando com blocos no Bloquin" loading="lazy">
-          <div class="polaroid-label"><span class="pol-sticker s-blue">💡 Arduino</span></div>
+          <div class="polaroid-label"><span class="pol-sticker s-blue">Arduino</span></div>
         </div>
       </div>
       <div class="alunos-right reveal reveal-d2">
@@ -1284,12 +1285,12 @@ footer {
 <!-- BOARDS -->
 <section id="boards">
   <div class="boards-inner">
-    <div class="sec-eye sticker reveal" style="margin-bottom:16px;">🔌 Hardware suportado</div>
+    <div class="sec-eye sticker reveal" style="margin-bottom:16px;"><img src="assets/icon-hardware.svg" alt="" aria-hidden="true" style="width:16px;height:16px;vertical-align:-3px;display:inline;"> Hardware suportado</div>
     <h2 class="sec-title reveal reveal-d1">Placas compatíveis.</h2>
     <p class="sec-sub reveal reveal-d2" style="color:rgba(28,27,58,0.7);margin-bottom:48px;">Suporte nativo a Arduino e ESP32, com mais placas chegando nas próximas versões.</p>
     <div class="boards-grid">
       <div class="board-card bc-1 reveal reveal-d1">
-        <div class="board-icon-wrap">⚙️</div>
+        <div class="board-icon-wrap"><img src="assets/icon-arduino.svg" alt="" style="width:56px;height:56px;display:block;"></div>
         <div>
           <h3 class="board-name">Arduino</h3>
           <p class="board-desc">Uno, Nano e variantes compatíveis com o ecossistema AVR. Ideal para iniciantes em eletrônica.</p>
@@ -1301,7 +1302,7 @@ footer {
         </div>
       </div>
       <div class="board-card bc-2 reveal reveal-d2">
-        <div class="board-icon-wrap">📶</div>
+        <div class="board-icon-wrap"><img src="assets/icon-esp32.svg" alt="" style="width:56px;height:56px;display:block;"></div>
         <div>
           <h3 class="board-name">ESP32</h3>
           <p class="board-desc">Família ESP32 com suporte a Wi-Fi, Bluetooth e projetos IoT. Ideal para projetos conectados.</p>
@@ -1324,13 +1325,13 @@ footer {
 
 <!-- EDUCATORS — refined layout -->
 <section id="educadores">
-  <div class="deco edu-deco-1" aria-hidden="true">🏫</div>
+  <div class="deco edu-deco-1" aria-hidden="true"><img src="assets/icon-school.svg" alt="" style="width:48px;height:48px;display:block;"></div>
   <div class="deco deco-circle edu-deco-2" aria-hidden="true"></div>
 
   <div class="edu-inner">
     <!-- Header: full width, then two columns below -->
     <div class="edu-header reveal">
-      <div class="sec-eye sticker" style="background:var(--purple);color:#fff;">🏫 Para educadores</div>
+      <div class="sec-eye sticker" style="background:var(--purple);color:#fff;"><img src="assets/icon-school.svg" alt="" aria-hidden="true" style="width:16px;height:16px;vertical-align:-3px;display:inline;"> Para educadores</div>
       <h2 class="sec-title reveal reveal-d1">Por que usar o Bloquin<br><em style="color:var(--purple);font-style:normal">em sala?</em></h2>
       <p class="sec-sub reveal reveal-d2" style="color:rgba(28,27,58,0.7);">Pensado desde o início para o ambiente escolar, sem dependências, sem cadastros, sem complicação.</p>
     </div>
@@ -1395,13 +1396,13 @@ footer {
 
   <div class="origem-inner">
     <div class="origem-left">
-      <div class="sec-eye sticker origem-eyebrow reveal">💡 Como surgiu</div>
+      <div class="sec-eye sticker origem-eyebrow reveal"><img src="assets/icon-idea.svg" alt="" aria-hidden="true" style="width:16px;height:16px;vertical-align:-3px;display:inline;"> Como surgiu</div>
       <h2 class="origem-title reveal reveal-d1">
         Nasceu em<br>
         sala de <em>aula.</em>
       </h2>
       <div class="origem-signature reveal reveal-d2">
-        <div class="sig-avatar">👨‍🏫</div>
+        <div class="sig-avatar"><img src="assets/icon-felipe.jpg" alt="Felipe da Conceição"></div>
         <div>
           <div class="sig-name">Felipe da Conceição</div>
           <div class="sig-role">Professor de Robótica · Criador do Bloquin</div>
@@ -1432,21 +1433,20 @@ footer {
 <section id="download">
   <div class="deco deco-circle dl-deco-1" aria-hidden="true"></div>
   <div class="deco deco-square dl-deco-2" aria-hidden="true"></div>
-  <div class="deco dl-deco-3" aria-hidden="true">🚀</div>
   <div class="dl-inner">
     <div class="dl-left">
-      <div class="sec-eye sticker reveal" style="background:var(--yellow);color:var(--dark);border-color:rgba(28,27,58,0.2);">↓ Download gratuito</div>
+      <div class="sec-eye sticker reveal" style="background:var(--yellow);color:var(--dark);border-color:rgba(28,27,58,0.2);"><img src="assets/icon-download.svg" alt="" aria-hidden="true" style="width:16px;height:16px;vertical-align:-3px;display:inline;"> Download gratuito</div>
       <h2 class="dl-h2 reveal reveal-d1">Bloquin<br>IDE</h2>
       <p class="dl-sub reveal reveal-d2">Instale e comece a programar em minutos. Sem cadastro, sem assinatura, sem pegadinha.</p>
       <div class="dl-meta reveal reveal-d3">
-        <span class="dl-tag">v0.1.0</span>
+        <span class="dl-tag">v1.0.0</span>
         <span class="dl-tag">Windows 10+</span>
         <span class="dl-tag">64-bit</span>
         <span class="dl-tag">~120 MB</span>
       </div>
       <div class="dl-cta-group reveal reveal-d4">
-        <a class="btn-dl-main" href="https://www.mediafire.com/file/h1e5z03az2uk84a/bloquin_0.1.0_x64-setup.exe/file" target="_blank" rel="noopener">↓ Baixar (.exe)</a>
-        <span class="dl-version">Versão 0.1.0 · Windows</span>
+        <a class="btn-dl-main" href="https://github.com/FelipeSilva10/Bloquin/releases/latest/download/Bloquin-Setup-Windows.exe" target="_blank" rel="noopener"><img src="assets/icon-download.svg" alt="" aria-hidden="true" style="width:16px;height:16px;vertical-align:-3px;display:inline;"> Baixar (.exe)</a>
+        <span class="dl-version">Versão 1.0.0 · Windows</span>
       </div>
     </div>
     <div class="dl-right-box reveal reveal-d2">
@@ -1470,7 +1470,7 @@ footer {
 <!-- FAQ -->
 <section id="faq">
   <div class="faq-inner">
-    <div class="sec-eye sticker reveal" style="background:var(--yellow);color:var(--dark);border-color:rgba(28,27,58,0.2);">❓ Perguntas frequentes</div>
+    <div class="sec-eye sticker reveal" style="background:var(--yellow);color:var(--dark);border-color:rgba(28,27,58,0.2);"><img src="assets/icon-faq.svg" alt="" aria-hidden="true" style="width:16px;height:16px;vertical-align:-3px;display:inline;"> Perguntas frequentes</div>
     <h2 class="sec-title reveal reveal-d1">FAQ</h2>
     <div class="faq-list">
       <div class="faq-item reveal reveal-d1">
