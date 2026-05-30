@@ -1,0 +1,23 @@
+# Backups de editor (Gedit, Kate, nano, vim)
+*~
+*.bak
+*.swp
+*.swo
+.*.swp
+
+# Arquivos temporários de sistema
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Logs
+*.log
+
+# Node (caso instale ferramentas de build futuramente)
+node_modules/
+npm-debug.log*
+
+# Output de build
+dist/
+build/
+.cache/

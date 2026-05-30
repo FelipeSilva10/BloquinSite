@@ -4,6 +4,3 @@ Disallow: /assets/alunos
 
 # Sitemap
 Sitemap: https://bloquin.online/sitemap-main.xml
-
-# Crawl-delay (para bots agressivos)
-Crawl-delay: 10

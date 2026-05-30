@@ -3,23 +3,136 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="shortcut icon" href="public/flavicon.png">
-<title>Bloquin IDE — Programação em blocos para Arduino e ESP32</title>
-<meta name="description" content="Bloquin é um IDE gratuito de programação em blocos para Arduino e ESP32. Ideal para crianças, alunos e iniciantes aprenderem robótica e eletrônica sem escrever código.">
-<meta name="keywords" content="bloquin, arduino, esp32, programação em blocos, ide arduino, scratch arduino, robótica educacional, programação visual">
-<meta name="author" content="Bloquin">
+<link rel="shortcut icon" href="public/favicon.png">
+<title>Bloquin IDE — Programação em Blocos para Arduino e ESP32 | Robótica Educacional</title>
+<meta name="description" content="Bloquin é um IDE gratuito de programação em blocos para Arduino e ESP32. Crianças e alunos aprendem robótica e eletrônica sem escrever código — 100% offline, em português.">
+<meta name="keywords" content="bloquin, arduino, esp32, programação em blocos, ide arduino para crianças, robótica educacional gratuita, programação visual esp32, scratch arduino, ide arduino em português, ensino de robótica">
+<meta name="author" content="Felipe da Conceição Silva">
 <meta name="robots" content="index, follow">
+<meta name="theme-color" content="#FF5E1F">
 <link rel="canonical" href="https://bloquin.online/">
+
+<!-- Open Graph -->
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://bloquin.online/">
-<meta property="og:title" content="Bloquin IDE — Programe Arduino e ESP32 sem escrever código">
-<meta property="og:description" content="IDE gratuito de programação visual em blocos. Perfeito para crianças, alunos e iniciantes em robótica.">
-<meta property="og:image" content="https://bloquin.online/assets/Logo_Bloquin.png">
+<meta property="og:title" content="Bloquin IDE — Programação em blocos para Arduino e ESP32">
+<meta property="og:description" content="IDE gratuito de robótica educacional. Arraste blocos, compile e envie para Arduino ou ESP32 — sem escrever código, 100% offline, em português.">
+<meta property="og:image" content="https://bloquin.online/assets/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Bloquin IDE — Programação em blocos para Arduino e ESP32">
 <meta property="og:locale" content="pt_BR">
+<meta property="og:site_name" content="Bloquin IDE">
+
+<!-- Twitter Card -->
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Bloquin IDE — Programação em blocos para Arduino e ESP32">
-<meta name="twitter:description" content="IDE gratuito de programação visual em blocos. Sem escrever código, direto para a placa.">
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"SoftwareApplication","name":"Bloquin IDE","description":"IDE visual de programação em blocos para Arduino e ESP32.","applicationCategory":"DeveloperApplication","operatingSystem":"Windows 10+","offers":{"@type":"Offer","price":"0","priceCurrency":"BRL"},"softwareVersion":"0.1.0","downloadUrl":"https://github.com/FelipeSilva10/Bloquin/releases/latest/download/Bloquin-Setup-Windows.exe"}</script>
+<meta name="twitter:description" content="IDE gratuito de robótica educacional. Sem escrever código, direto para a placa.">
+<meta name="twitter:image" content="https://bloquin.online/assets/og-image.png">
+<meta name="twitter:image:alt" content="Bloquin IDE — Programação em blocos para Arduino e ESP32">
+
+<!-- Schema: SoftwareApplication -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "Bloquin IDE",
+  "description": "IDE visual de programação em blocos para Arduino e ESP32. Ideal para crianças e alunos aprenderem robótica educacional sem escrever código.",
+  "applicationCategory": "EducationalApplication",
+  "operatingSystem": "Windows 10+",
+  "inLanguage": "pt-BR",
+  "isAccessibleForFree": true,
+  "softwareVersion": "0.1.0",
+  "downloadUrl": "https://github.com/FelipeSilva10/Bloquin/releases/latest/download/Bloquin-Setup-Windows.exe",
+  "screenshot": "https://bloquin.online/assets/og-image.png",
+  "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "BRL"
+  },
+  "audience": {
+    "@type": "EducationalAudience",
+    "educationalRole": "student",
+    "audienceType": "Crianças e alunos do ensino fundamental e médio"
+  },
+  "author": {
+    "@type": "Person",
+    "name": "Felipe da Conceição Silva",
+    "jobTitle": "Professor de Robótica",
+    "url": "https://github.com/FelipeSilva10"
+  },
+  "creator": {
+    "@type": "Person",
+    "name": "Felipe da Conceição Silva",
+    "url": "https://github.com/FelipeSilva10",
+    "sameAs": ["https://github.com/FelipeSilva10"]
+  },
+  "codeRepository": "https://github.com/FelipeSilva10/Bloquin",
+  "license": "https://opensource.org/licenses/MIT",
+  "releaseNotes": "https://github.com/FelipeSilva10/Bloquin/releases",
+  "discussionUrl": "https://github.com/FelipeSilva10/Bloquin/issues",
+  "developmentStatus": "Active",
+  "programmingLanguage": ["Rust", "TypeScript", "C++"]
+}
+</script>
+
+<!-- Schema: FAQPage -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "O Bloquin é realmente gratuito?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Sim, completamente gratuito — agora e para sempre. Baixe, instale e use sem pagar nada e sem cadastro. Não existe plano pago."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Precisa saber programar para usar o Bloquin?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Não. A proposta do Bloquin é permitir criar programas reais sem precisar escrever código. Os blocos fazem isso por você. Ideal para crianças a partir de 8 anos."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "O Bloquin funciona sem internet?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Sim. Compilação e upload para a placa funcionam 100% offline. O arduino-cli já vem embutido no instalador. Ideal para escolas com Wi-Fi limitado."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Qual sistema operacional é compatível com o Bloquin?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Por enquanto, Windows 10 ou superior (64-bit). Suporte a Linux está planejado para versões futuras."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Posso ver o código C++ que os blocos geram?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Sim. O Bloquin exibe o código C++ gerado em tempo real enquanto você monta os blocos. Uma ótima forma de aprender a transição para programação textual."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Quais placas são suportadas pelo Bloquin?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Atualmente suportamos Arduino Uno, Arduino Nano e compatíveis AVR, além de ESP32 incluindo ESP32-S2. Mais placas serão adicionadas nas próximas versões."
+      }
+    }
+  ]
+}
+</script>
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -88,6 +201,24 @@ body {
 img { display: block; max-width: 100%; }
 a { text-decoration: none; color: inherit; }
 
+/* ── FOCO VISÍVEL — navegação por teclado ── */
+:focus-visible {
+  outline: 3px solid var(--orange);
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+.btn:focus-visible,
+.nav-pill:focus-visible,
+.nav-dl:focus-visible {
+  outline: 3px solid var(--dark);
+  outline-offset: 3px;
+}
+.faq-q:focus-visible {
+  outline: 3px solid var(--orange);
+  outline-offset: -3px;
+  border-radius: var(--r-md);
+}
+
 /* ═══════════════════════════════
    ANIMATIONS
 ═══════════════════════════════ */
@@ -108,8 +239,8 @@ a { text-decoration: none; color: inherit; }
   user-select: none;
   z-index: var(--z-deco); /* stays beneath all content */
 }
-.deco-circle { animation: float-b 6s ease-in-out infinite; border-radius: 50%; }
-.deco-square { animation: float-c 7s ease-in-out infinite; border-radius: 6px; }
+.deco-circle { animation: float-b 6s ease-in-out infinite; border-radius: 50%; will-change: transform; }
+.deco-square { animation: float-c 7s ease-in-out infinite; border-radius: 6px; will-change: transform; }
 
 /* ═══════════════════════════════
    SHARED COMPONENTS
@@ -230,6 +361,20 @@ nav {
 .nav-pill.p-orange { background: #FFF0E8; }
 .nav-pill.p-yellow { background: #FFFAD0; }
 .nav-right { display: flex; align-items: center; gap: 10px; }
+.nav-github {
+  font-family: 'Fredoka One', cursive;
+  font-size: 13px;
+  padding: 5px 14px;
+  border: var(--border-w);
+  border-radius: 100px;
+  background: var(--dark);
+  color: #fff;
+  transition: background 0.15s, transform 0.12s;
+  letter-spacing: 0.02em;
+  display: inline-flex; align-items: center; gap: 6px;
+}
+.nav-github:hover { background: #2c2b52; transform: scale(1.06); }
+.nav-github svg { width: 14px; height: 14px; fill: currentColor; flex-shrink: 0; }
 .nav-dl {
   font-family: 'Fredoka One', cursive;
   font-size: 15px;
@@ -244,6 +389,67 @@ nav {
 }
 .nav-dl:hover  { transform: translate(-1px,-1px); box-shadow: var(--shadow-md); }
 .nav-dl:active { transform: translate(3px,3px); box-shadow: none; }
+
+/* ── HAMBURGER ── */
+.nav-hamburger {
+  display: none;
+  flex-direction: column; justify-content: center; align-items: center; gap: 5px;
+  width: 40px; height: 40px;
+  background: var(--white); border: var(--border-w);
+  border-radius: var(--r-sm); box-shadow: var(--shadow-sm);
+  cursor: pointer; padding: 8px; flex-shrink: 0;
+  transition: box-shadow 0.1s, transform 0.1s;
+}
+.nav-hamburger:hover { transform: translate(-1px,-1px); box-shadow: var(--shadow-md); }
+.nav-hamburger:active { transform: translate(2px,2px); box-shadow: none; }
+.nav-hamburger span {
+  display: block; width: 20px; height: 2.5px;
+  background: var(--dark); border-radius: 2px;
+  transition: transform 0.25s ease, opacity 0.2s ease;
+  transform-origin: center;
+}
+/* Estado aberto — X */
+.nav-hamburger[aria-expanded="true"] span:nth-child(1) { transform: translateY(7.5px) rotate(45deg); }
+.nav-hamburger[aria-expanded="true"] span:nth-child(2) { opacity: 0; transform: scaleX(0); }
+.nav-hamburger[aria-expanded="true"] span:nth-child(3) { transform: translateY(-7.5px) rotate(-45deg); }
+
+/* ── MENU MOBILE ── */
+.nav-mobile {
+  display: none;
+  position: fixed; inset: 64px 0 0 0;
+  background: var(--white); border-top: var(--border);
+  z-index: calc(var(--z-nav) - 1);
+  padding: 24px 20px;
+  flex-direction: column; gap: 10px;
+  overflow-y: auto;
+  box-shadow: 0 8px 0 rgba(28,27,58,0.08);
+}
+.nav-mobile.open { display: flex; }
+.nav-mobile-pill {
+  font-family: 'Fredoka One', cursive;
+  font-size: 20px; color: var(--dark);
+  padding: 14px 20px;
+  border: var(--border-w); border-radius: var(--r-md);
+  background: transparent; display: block; width: 100%;
+  text-align: left; cursor: pointer; text-decoration: none;
+  transition: background 0.12s, transform 0.1s;
+}
+.nav-mobile-pill.p-purple { background: #F0EBFF; }
+.nav-mobile-pill.p-blue   { background: #EEF4FF; }
+.nav-mobile-pill.p-orange { background: #FFF0E8; }
+.nav-mobile-pill.p-green  { background: #EAFFF3; }
+.nav-mobile-pill.p-yellow { background: #FFFAD0; }
+.nav-mobile-pill:hover { transform: translate(-2px,-2px); box-shadow: var(--shadow-sm); }
+.nav-mobile-dl {
+  margin-top: 8px; padding: 16px 20px;
+  background: var(--orange); color: #fff;
+  border: var(--border); border-radius: var(--r-md);
+  font-family: 'Fredoka One', cursive; font-size: 20px;
+  text-align: center; box-shadow: var(--shadow-md); display: block;
+  text-decoration: none;
+  transition: transform 0.1s, box-shadow 0.1s;
+}
+.nav-mobile-dl:hover { transform: translate(-2px,-2px); box-shadow: var(--shadow-lg); }
 
 /* ═══════════════════════════════
    HERO
@@ -328,105 +534,190 @@ nav {
 .hs-val { font-family: 'Fredoka One', cursive; font-size: 28px; color: var(--orange); }
 .hs-key { font-size: 11px; font-weight: 800; text-align: center; color: rgba(28,27,58,0.6); text-transform: uppercase; letter-spacing: 0.06em; }
 
-/* Block IDE Preview */
+/* ═══════════════════════════════
+   REAL BLOQUIN IDE PREVIEW
+   Fiel ao App.css real do app
+═══════════════════════════════ */
+/* hero-right: contém o IDE preview */
 .hero-right {
   position: relative;
   display: flex; align-items: flex-end; justify-content: center;
-  padding-bottom: 0;
+  padding-bottom: 0; min-width: 0;
   animation: bounce-in 0.9s 0.15s ease both;
   z-index: var(--z-content);
 }
 .block-ide {
-  background: var(--white); border: var(--border);
-  border-radius: var(--r-lg) var(--r-lg) 0 0;
+  background: #eef2f7;
+  border: var(--border);
+  border-radius: var(--r-md) var(--r-md) 0 0;
   box-shadow: var(--shadow-xl);
-  width: 100%; max-width: 460px;
-  overflow: hidden; transform: rotate(1.5deg);
+  width: 100%; max-width: 620px;
+  overflow: hidden;
+  transform: rotate(1deg);
   position: relative; z-index: var(--z-card);
+  display: flex; flex-direction: column;
+  min-width: 0; /* prevents flex overflow */
 }
-.ide-titlebar {
-  background: var(--dark); padding: 10px 16px;
+/* Topbar — idêntica ao .topbar real */
+.ide-topbar {
+  min-height: 48px; background: #ffffff;
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 6px 10px; border-bottom: 2px solid #e0e6ed; gap: 6px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.04);
+  flex-shrink: 0; overflow: hidden;
+}
+.ide-tb-left {
   display: flex; align-items: center; gap: 8px;
+  flex: 0 0 auto; /* não expande — só ocupa o necessário */
+  min-width: 0; overflow: hidden;
 }
-.ide-dot { width: 12px; height: 12px; border-radius: 50%; border: 1.5px solid rgba(255,255,255,0.2); }
-.ide-label {
-  font-family: 'Space Mono', monospace;
-  font-size: 11px; color: rgba(255,255,255,0.55);
-  margin-left: 6px; flex: 1;
+.ide-logo-wrap { display: flex; align-items: center; flex-shrink: 0; }
+.ide-project-badge {
+  background: #f8fafd; border: 1.5px solid #e0e6ed;
+  border-radius: 8px; padding: 3px 10px;
+  font-size: 10px; font-weight: 800; color: #2f3542;
+  white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+  max-width: 110px; flex-shrink: 1;
 }
-.ide-body { display: grid; grid-template-columns: 110px 1fr; }
-.ide-palette {
-  border-right: var(--border-w); background: #F8F8FF;
-  padding: 12px 8px; display: flex; flex-direction: column; gap: 5px;
+.ide-tb-center {
+  display: flex; justify-content: center; align-items: center;
+  flex: 1 1 auto; min-width: 0; overflow: hidden;
 }
-.pal-cat {
-  font-family: 'Fredoka One', cursive; font-size: 11.5px;
-  padding: 7px 10px; border-radius: 8px;
-  border: 1.5px solid rgba(28,27,58,0.12);
-  cursor: pointer; color: white;
-  transition: transform 0.12s, box-shadow 0.12s;
-  box-shadow: 2px 2px 0 rgba(28,27,58,0.2);
+.ide-hw-controls {
+  display: flex; align-items: center; background: #fff;
+  padding: 3px 4px; gap: 3px; border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  flex-wrap: nowrap; overflow: hidden;
+}
+.ide-board-badge {
   display: flex; align-items: center; gap: 5px;
+  border-radius: 100px; padding: 3px 8px 3px 6px;
+  font-weight: 900; font-size: 9px; flex-shrink: 0;
 }
-.pal-cat:hover { transform: translate(-1px,-1px); box-shadow: 3px 3px 0 rgba(28,27,58,0.25); }
-.pal-cat.c-orange { background: var(--orange); }
-.pal-cat.c-blue   { background: var(--blue); }
-.pal-cat.c-yellow { background: #E6A000; color: var(--dark); }
-.pal-cat.c-green  { background: var(--green); }
-.pal-cat.c-purple { background: var(--purple); }
-.pal-cat.c-teal   { background: var(--teal); }
-.ide-canvas {
-  padding: 16px 14px; min-height: 260px;
-  background: #FAFAFA;
+.ide-board-dot { width: 6px; height: 6px; border-radius: 50%; flex-shrink: 0; display: inline-block; }
+.ide-ctrl-div { width: 2px; height: 16px; background: #e0e6ed; margin: 0 2px; border-radius: 2px; flex-shrink: 0; }
+.ide-ctrl-group {
+  display: flex; align-items: center; gap: 3px;
+  background: #f8fafd; border-radius: 70px; padding: 3px 7px;
+  font-size: 10px; font-weight: 700; color: #2f3542; flex-shrink: 0;
+}
+.ide-port-label { font-size: 9px; font-weight: 700; }
+.ide-refresh { font-size: 10px; cursor: pointer; }
+.ide-btn-send, .ide-btn-chat, .ide-btn-code, .ide-btn-save, .ide-btn-exit {
+  border: none; border-radius: 100px; padding: 4px 8px;
+  font-size: 9px; font-weight: 800; cursor: default; color: white;
+  box-shadow: 0 3px 0 rgba(0,0,0,0.2); flex-shrink: 0; white-space: nowrap;
+}
+.ide-btn-send  { background: #4cd137; box-shadow: 0 3px 0 #3bac29; }
+.ide-btn-chat  { background: #2c3e50; box-shadow: 0 3px 0 #1a252f; }
+.ide-tb-right  {
+  display: flex; align-items: center; gap: 3px;
+  flex: 0 0 auto; /* não expande — fica à direita */
+  flex-shrink: 0;
+}
+.ide-btn-code  { background: #23638c; box-shadow: 0 3px 0 #1a4b6b; font-size: 8px; padding: 4px 6px; }
+.ide-btn-save  { background: #ef9f4b; box-shadow: 0 3px 0 #cf8235; font-size: 8px; padding: 4px 6px; }
+.ide-btn-exit  { background: #e73561; box-shadow: 0 3px 0 #bf254c; font-size: 8px; padding: 4px 6px; }
+/* Workspace: toolbox + canvas (horizontal split) */
+.ide-workspace { display: flex; flex: 1; overflow: hidden; height: 260px; }
+/* Toolbox — dark sidebar real */
+.ide-toolbox {
+  width: 82px; flex-shrink: 0;
+  background: #1a2035; padding: 8px 5px;
+  display: flex; flex-direction: column; gap: 2px;
+  overflow: hidden;
+}
+.ide-toolbox-cat {
+  font-family: 'Nunito', sans-serif; font-weight: 800;
+  font-size: 8.5px; color: #ffffff;
+  padding: 5px 6px; border-radius: 6px;
+  cursor: pointer; white-space: nowrap;
+  transition: background 0.12s;
+}
+.ide-toolbox-cat:hover, .ide-toolbox-cat.active { background: rgba(255,255,255,0.1); }
+.ide-toolbox-divider { height: 1px; background: rgba(255,255,255,0.1); margin: 4px 0; }
+/* Canvas — grid background like real workspace */
+.ide-canvas-real {
+  flex: 1; position: relative; overflow: hidden; min-width: 0;
+  background: #eef2f7;
   background-image:
-    linear-gradient(rgba(28,27,58,0.05) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(28,27,58,0.05) 1px, transparent 1px);
-  background-size: 18px 18px;
-  display: flex; flex-direction: column; gap: 0;
+    linear-gradient(rgba(47,53,66,0.07) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(47,53,66,0.07) 1px, transparent 1px);
+  background-size: 24px 24px;
 }
-.blk {
+/* Real Blockly blocks */
+.ide-root-block {
+  position: absolute;
+  display: flex; flex-direction: column;
+  left: var(--blk-x, 16px); top: var(--blk-y, 16px);
+  min-width: 0;
+}
+.ide-blk-header {
+  background: var(--blk-color, #ef9f4b);
+  border: 1.5px solid rgba(0,0,0,0.15);
+  border-radius: 6px 6px 0 0;
+  padding: 5px 9px; display: flex; align-items: center; gap: 5px;
+  box-shadow: 0 4px 0 var(--blk-shadow, #cf8235);
   position: relative;
-  font-family: 'Nunito', sans-serif; font-weight: 800; font-size: 12.5px;
-  color: white; border: 2px solid rgba(0,0,0,0.2);
-  padding: 8px 12px; border-radius: 7px;
-  display: flex; align-items: center; gap: 6px;
-  cursor: grab; user-select: none; transition: transform 0.1s;
 }
-.blk:hover { transform: scale(1.02); }
-.blk::after {
-  content: ''; position: absolute; bottom: -9px; left: 16px;
-  width: 24px; height: 9px; border-radius: 0 0 5px 5px;
-  border: 2px solid rgba(0,0,0,0.2); border-top: none;
+.ide-blk-hat {
+  display: block; position: absolute;
+  top: -7px; left: 14px; width: 20px; height: 7px;
+  background: var(--blk-color, #ef9f4b);
+  border: 1.5px solid rgba(0,0,0,0.15); border-bottom: none;
+  border-radius: 4px 4px 0 0;
 }
-.blk-has-top { margin-top: 8px; }
-.blk-has-top::before {
-  content: ''; position: absolute; top: -9px; left: 16px;
-  width: 24px; height: 9px; border-radius: 5px 5px 0 0;
-  border: 2px solid rgba(0,0,0,0.2); border-bottom: none;
+.ide-blk-label {
+  font-family: 'Nunito', sans-serif; font-weight: 900;
+  font-size: 9px; color: white; white-space: nowrap;
 }
-.blk.b-event  { background: var(--orange); margin-bottom: 2px; }
-.blk.b-event::after { background: var(--orange); }
-.blk.b-control {
-  background: var(--blue); flex-direction: column;
-  align-items: flex-start; padding-bottom: 10px;
-  margin-bottom: 2px; gap: 8px; border-radius: 7px;
+.ide-val {
+  background: rgba(255,255,255,0.3); border-radius: 4px;
+  padding: 1px 5px; font-weight: 900;
 }
-.blk.b-control::after { background: var(--blue); }
-.blk.b-control .blk-label { display: flex; align-items: center; gap: 6px; }
-.blk-slot {
-  align-self: stretch; margin-left: 18px;
-  border-left: 3px solid rgba(255,255,255,0.3); padding-left: 8px;
-  display: flex; flex-direction: column; gap: 4px;
+.ide-blk-body { display: flex; flex-direction: column; gap: 2px; padding: 4px 0 4px 14px; }
+.ide-blk-child {
+  background: var(--blk-color, #4cd137);
+  border: 1.5px solid rgba(0,0,0,0.15);
+  border-radius: 5px; padding: 4px 8px;
+  box-shadow: 0 3px 0 var(--blk-shadow, #3bac29);
+  position: relative;
 }
-.blk.b-output { background: #E6A000; color: var(--dark); border-color: rgba(0,0,0,0.15); margin-bottom: 2px; }
-.blk.b-output::after { background: #E6A000; }
-.blk.b-wait   { background: var(--green); margin-bottom: 2px; }
-.blk.b-wait::after { background: var(--green); }
-.blk.b-control > .blk-slot .blk::before { display: none; }
-.blk-val {
-  background: rgba(0,0,0,0.18); padding: 2px 8px;
-  border-radius: 12px; font-size: 11px;
+.ide-blk-child::before {
+  content: ''; position: absolute;
+  top: -5px; left: 12px; width: 16px; height: 5px;
+  background: var(--blk-color); border: 1.5px solid rgba(0,0,0,0.15);
+  border-bottom: none; border-radius: 3px 3px 0 0;
 }
+/* Code panel — direita, dark */
+.ide-code-panel {
+  width: 175px; flex-shrink: 0;
+  background: #2f3542; border-left: 2px solid #1a252f;
+  display: flex; flex-direction: column; overflow: hidden;
+}
+.ide-code-header {
+  background: #242c42; padding: 6px 10px;
+  display: flex; align-items: center; justify-content: space-between;
+  border-bottom: 1px solid rgba(255,255,255,0.06);
+}
+.ide-code-label {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 9px; font-weight: 700; color: #4cd137;
+  text-transform: uppercase; letter-spacing: 0.05em;
+}
+.ide-code-copy {
+  background: rgba(255,255,255,0.08); border: 1px solid rgba(255,255,255,0.12);
+  border-radius: 4px; color: rgba(255,255,255,0.6);
+  font-size: 8px; font-weight: 700; cursor: default; padding: 2px 6px;
+  box-shadow: none;
+}
+.ide-code-pre {
+  flex: 1; padding: 10px; overflow: hidden;
+  font-family: 'JetBrains Mono', 'Courier New', monospace;
+  font-size: 8.5px; line-height: 1.7; color: #cdd6f4;
+  background: #1e1e2e;
+}
+
 
 /* Hero deco — all z-index: 0 */
 .hero-star-1 { top: 10%; right: 44%; font-size: 32px; animation: float-a 4s ease-in-out infinite; }
@@ -559,6 +850,7 @@ nav {
   border-radius: var(--r-lg); padding: 28px 22px 24px;
   display: flex; flex-direction: column; gap: 12px;
   position: relative; z-index: var(--z-card);
+  -webkit-backdrop-filter: blur(8px);
   backdrop-filter: blur(8px);
   transition: transform 0.2s cubic-bezier(.34,1.56,.64,1), background 0.2s;
 }
@@ -917,7 +1209,7 @@ nav {
 .dl-version { font-family: 'Fredoka One', cursive; font-size: 13px; color: rgba(255,255,255,0.7); letter-spacing: 0.04em; }
 .dl-right-box {
   background: rgba(255,255,255,0.14); border: 2.5px solid rgba(255,255,255,0.35);
-  border-radius: var(--r-xl); padding: 32px 28px; backdrop-filter: blur(12px);
+  border-radius: var(--r-xl); padding: 32px 28px; -webkit-backdrop-filter: blur(12px); backdrop-filter: blur(12px);
   position: relative; z-index: var(--z-card);
 }
 .dl-checklist { display: flex; flex-direction: column; gap: 12px; }
@@ -939,7 +1231,79 @@ nav {
   transform: rotate(30deg); bottom: 30px; right: 30px;
   animation: float-c 8s ease-in-out infinite;
 }
-.dl-deco-3 { font-size: 44px; bottom: 20px; left: 48%; animation: float-a 5s ease-in-out infinite; }
+
+/* ═══════════════════════════════
+   OPEN SOURCE SECTION
+═══════════════════════════════ */
+.opensource-inner {
+  max-width: 1100px; margin: 0 auto;
+  display: grid; grid-template-columns: 1fr 1fr; gap: 56px; align-items: flex-start;
+  position: relative; z-index: var(--z-content);
+}
+.os-links { display: flex; flex-direction: column; gap: 10px; }
+.os-link-card {
+  display: flex; align-items: center; gap: 14px;
+  background: var(--white); border: var(--border-w);
+  border-radius: var(--r-md); padding: 14px 18px;
+  box-shadow: var(--shadow-sm); color: var(--dark);
+  text-decoration: none;
+  transition: transform 0.1s, box-shadow 0.12s;
+}
+.os-link-card:hover { transform: translate(-2px,-2px); box-shadow: var(--shadow-md); }
+.os-link-card div { display: flex; flex-direction: column; gap: 2px; flex: 1; }
+.os-link-card strong { font-weight: 900; font-size: 15px; }
+.os-link-card span { font-size: 12px; color: rgba(28,27,58,0.6); font-weight: 700; }
+.os-arrow { font-size: 18px; color: var(--green); font-weight: 900; flex-shrink: 0; }
+/* GitHub card */
+.os-gh-card {
+  background: var(--dark); border: var(--border);
+  border-radius: var(--r-xl); padding: 32px 28px;
+  box-shadow: var(--shadow-xl);
+  display: flex; flex-direction: column; gap: 16px;
+}
+.os-gh-header { display: flex; align-items: center; gap: 12px; flex-wrap: wrap; }
+.os-gh-title { display: flex; align-items: baseline; gap: 2px; }
+.os-gh-org { font-family: 'Fredoka One', cursive; font-size: 20px; color: rgba(255,255,255,0.6); }
+.os-gh-repo { font-family: 'Fredoka One', cursive; font-size: 20px; color: #fff; }
+.os-gh-badge {
+  background: var(--green); color: var(--dark);
+  font-family: 'Fredoka One', cursive; font-size: 12px;
+  padding: 3px 12px; border-radius: 100px;
+  border: 2px solid rgba(255,255,255,0.2);
+  margin-left: auto;
+}
+.os-gh-desc { font-size: 14px; font-weight: 700; color: rgba(255,255,255,0.72); line-height: 1.6; }
+.os-gh-lang { display: flex; align-items: center; gap: 6px; font-size: 13px; font-weight: 800; color: rgba(255,255,255,0.7); }
+.os-lang-dot { width: 12px; height: 12px; border-radius: 50%; flex-shrink: 0; display: inline-block; }
+.os-gh-stats {
+  display: flex; gap: 12px; flex-wrap: wrap;
+  border-top: 1.5px solid rgba(255,255,255,0.1);
+  padding-top: 16px;
+}
+.os-stat {
+  font-family: 'Fredoka One', cursive; font-size: 14px;
+  color: rgba(255,255,255,0.7);
+  background: rgba(255,255,255,0.07); border: 1.5px solid rgba(255,255,255,0.12);
+  border-radius: 100px; padding: 5px 14px;
+}
+.os-gh-cta {
+  display: flex; align-items: center; justify-content: center; gap: 8px;
+  background: var(--white); color: var(--dark);
+  font-family: 'Fredoka One', cursive; font-size: 18px;
+  padding: 14px 28px; border-radius: var(--r-md);
+  border: var(--border); box-shadow: var(--shadow-md);
+  text-decoration: none; transition: transform 0.1s, box-shadow 0.1s;
+}
+.os-gh-cta:hover { transform: translate(-2px,-2px); box-shadow: var(--shadow-lg); }
+/* GitHub link below download CTA */
+.dl-github-link {
+  display: inline-flex; align-items: center; gap: 8px; margin-top: 12px;
+  font-family: 'Fredoka One', cursive; font-size: 14px;
+  color: rgba(255,255,255,0.75); text-decoration: none;
+  letter-spacing: 0.02em;
+  transition: color 0.15s;
+}
+.dl-github-link:hover { color: #fff; }
 
 /* ═══════════════════════════════
    FAQ
@@ -1008,14 +1372,17 @@ footer {
   transition: background 0.15s, color 0.15s, transform 0.12s; letter-spacing: 0.03em;
 }
 .foot-link:hover { background: rgba(255,255,255,0.08); color: rgba(255,255,255,0.9); transform: scale(1.05); }
+.foot-link-gh { background: rgba(255,255,255,0.07); color: rgba(255,255,255,0.8) !important; display: inline-flex; align-items: center; gap: 5px; }
+.foot-link-gh:hover { background: rgba(255,255,255,0.15) !important; }
+.foot-divider { width: 1.5px; height: 18px; background: rgba(255,255,255,0.12); border-radius: 2px; align-self: center; }
 .foot-copy { font-size: 13px; font-weight: 700; color: rgba(255,255,255,0.3); }
 
 /* ═══════════════════════════════
    RESPONSIVE
 ═══════════════════════════════ */
 @media (max-width: 960px) {
-  nav { padding: 0 20px; }
   .nav-links { display: none; }
+  .nav-hamburger { display: flex; }
 
   #hero, #what, #how, #alunos, #boards, #educadores, #origem, #download, #faq {
     padding: 64px 24px 72px;
@@ -1032,7 +1399,20 @@ footer {
   }
 
   .hero-grid { grid-template-columns: 1fr; }
-  .hero-right { display: none; }
+  /* hero-right: compacto abaixo do conteúdo no mobile */
+  .hero-right {
+    justify-content: center;
+    padding-top: 8px;
+    padding-bottom: 0;
+  }
+  .block-ide {
+    max-width: 100%;
+    transform: rotate(0deg);   /* sem inclinação em telas pequenas */
+  }
+  .ide-tb-center { display: none; } /* esconde hw controls no mobile */
+  .ide-code-panel { display: none; } /* esconde código no mobile */
+  .ide-workspace { height: 220px; }
+  .ide-body { grid-template-columns: 90px 1fr; }
   .hero-left { padding-bottom: 0; }
   .what-cards { grid-template-columns: 1fr; }
   .steps-row { grid-template-columns: 1fr 1fr; }
@@ -1046,6 +1426,8 @@ footer {
 
   .origem-inner { grid-template-columns: 1fr; gap: 32px; }
   .dl-inner { grid-template-columns: 1fr; }
+  .opensource-inner { grid-template-columns: 1fr; gap: 32px; }
+  #opensource { padding: 64px 24px 72px; }
 
   footer { padding: 28px 20px; }
 }
@@ -1063,6 +1445,7 @@ footer {
   .what-header .sec-title { font-size: 36px; }
   .origem-card { padding: 28px 22px; }
   footer { flex-direction: column; align-items: flex-start; }
+  .foot-divider { display: none; }
 
   /* Prevent any leftover deco from covering buttons */
   .photo-sticker { display: none; }
@@ -1072,7 +1455,7 @@ footer {
 <body>
 
 <!-- NAV -->
-<nav>
+<nav aria-label="Navegação principal">
   <a class="nav-brand" href="#">
     <div class="nav-logo-wrap"><img src="assets/Logo_Bloquin.png" alt="Bloquin logo"></div>
     <span class="nav-wordmark">BLOQUIN</span>
@@ -1085,9 +1468,31 @@ footer {
     <a class="nav-pill p-yellow" href="#faq">FAQ</a>
   </div>
   <div class="nav-right">
-    <a class="nav-dl" href="https://github.com/FelipeSilva10/Bloquin/releases/latest/download/Bloquin-Setup-Windows.exe" target="_blank" rel="noopener"><img src="assets/icon-download.svg" alt="" aria-hidden="true" style="width:16px;height:16px;vertical-align:-3px;display:inline;"> Baixar grátis</a>
+    <a class="nav-github" href="https://github.com/FelipeSilva10/Bloquin" target="_blank" rel="noopener" aria-label="Ver Bloquin no GitHub">
+      <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>
+      Ver no GitHub
+    </a>
+<a class="nav-dl" href="https://github.com/FelipeSilva10/Bloquin/releases/latest/download/Bloquin-Setup-Windows.exe" target="_blank" rel="noopener">Baixar grátis</a>
+    <button class="nav-hamburger" aria-label="Abrir menu" aria-expanded="false" aria-controls="nav-mobile-menu">
+      <span></span><span></span><span></span>
+    </button>
   </div>
 </nav>
+
+<div id="nav-mobile-menu" class="nav-mobile" role="dialog" aria-label="Menu de navegação">
+  <a class="nav-mobile-pill p-purple" href="#what">O que é</a>
+  <a class="nav-mobile-pill p-blue"   href="#how">Como funciona</a>
+  <a class="nav-mobile-pill p-orange" href="#alunos">Alunos</a>
+  <a class="nav-mobile-pill p-green"  href="#boards">Placas</a>
+  <a class="nav-mobile-pill p-yellow" href="#faq">FAQ</a>
+  <a class="nav-mobile-pill" style="background:#f0f0f8;display:flex;align-items:center;gap:10px;" href="https://github.com/FelipeSilva10/Bloquin" target="_blank" rel="noopener">
+    <svg viewBox="0 0 24 24" style="width:18px;height:18px;fill:#1C1B3A;flex-shrink:0;" xmlns="http://www.w3.org/2000/svg"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>
+    Ver no GitHub ↗
+  </a>
+  <a class="nav-mobile-dl" href="https://github.com/FelipeSilva10/Bloquin/releases/latest/download/Bloquin-Setup-Windows.exe" target="_blank" rel="noopener">⬇ Baixar grátis (.exe)</a>
+</div>
+
+<main id="conteudo-principal">
 
 
 <!-- HERO -->
@@ -1102,16 +1507,19 @@ footer {
 
   <div class="hero-grid">
     <div class="hero-left">
-      <div class="sticker hero-eyebrow reveal">IDE gratuito · Arduino e ESP32</div>
+      <div class="sticker hero-eyebrow reveal">🔓 Open Source · Arduino e ESP32</div>
       <h1 class="hero-h1 reveal reveal-d1">
         Programe<br>
-        <em>sem escrever</em><br>
-        <span class="underline-squiggle">código.</span>
+        <em>Arduino e ESP32</em><br>
+        <span class="underline-squiggle">sem código.</span>
       </h1>
       <p class="hero-sub reveal reveal-d2">Arraste blocos, conecte com lógica e envie direto para sua placa. Simples como um jogo, poderoso como um IDE de verdade.</p>
       <div class="hero-btns reveal reveal-d3">
         <a class="btn btn-orange" href="https://github.com/FelipeSilva10/Bloquin/releases/latest/download/Bloquin-Setup-Windows.exe" target="_blank" rel="noopener">Baixar agora — grátis</a>
-        <a class="btn btn-white" href="#how">Como funciona →</a>
+        <a class="btn btn-white" href="https://github.com/FelipeSilva10/Bloquin" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:9px;">
+          <svg viewBox="0 0 24 24" style="width:18px;height:18px;fill:var(--dark);flex-shrink:0;" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>
+          Ver no GitHub
+        </a>
       </div>
       <div class="hero-stats reveal reveal-d4">
         <div class="hero-stat"><span class="hs-val">100%</span><span class="hs-key">Gratuito</span></div>
@@ -1121,34 +1529,114 @@ footer {
       </div>
     </div>
 
-    <!-- Block IDE Preview -->
+    <!-- Real Bloquin IDE Preview -->
     <div class="hero-right">
       <div class="block-ide">
-        <div class="ide-titlebar">
-          <div class="ide-dot" style="background:#FF5F57"></div>
-          <div class="ide-dot" style="background:#FEBC2E"></div>
-          <div class="ide-dot" style="background:#28C840"></div>
-          <span class="ide-label">bloquin.ide — meu-projeto.blq</span>
-        </div>
-        <div class="ide-body">
-          <div class="ide-palette">
-            <div class="pal-cat c-orange">🔔 Eventos</div>
-            <div class="pal-cat c-blue">↺ Controle</div>
-            <div class="pal-cat c-yellow">💡 Saídas</div>
-            <div class="pal-cat c-green">⏱ Tempo</div>
-            <div class="pal-cat c-purple">📡 Sensores</div>
-            <div class="pal-cat c-teal">📶 Wi-Fi</div>
+        <!-- Real topbar matching App.css .topbar -->
+        <div class="ide-topbar">
+          <div class="ide-tb-left">
+            <div class="ide-logo-wrap">
+              <img src="assets/Logo_Bloquin.png" alt="Bloquin" style="height:22px;display:block;">
+            </div>
+            <div class="ide-project-badge">
+              <span>Meu Projeto: robô-seguidor</span>
+            </div>
           </div>
-          <div class="ide-canvas">
-            <div class="blk b-event"><span>▶</span> Quando iniciar</div>
-            <div class="blk b-control blk-has-top">
-              <div class="blk-label"><span>↺</span> Repita sempre</div>
-              <div class="blk-slot">
-                <div class="blk b-output"><span>💡</span> Piscar LED pino <span class="blk-val">13</span></div>
-                <div class="blk b-wait blk-has-top"><span>⏱</span> Esperar <span class="blk-val">1s</span></div>
+          <div class="ide-tb-center">
+            <div class="ide-hw-controls">
+              <div class="ide-board-badge" style="background:#e1705515;border:2px solid #e1705555;color:#e17055;">
+                <span class="ide-board-dot" style="background:#e17055;"></span>ESP32
+              </div>
+              <div class="ide-ctrl-div"></div>
+              <div class="ide-ctrl-group">
+                <span class="ide-port-label">COM3</span>
+                <span class="ide-refresh">🔄</span>
+              </div>
+              <div class="ide-ctrl-div"></div>
+              <button class="ide-btn-send">Enviar</button>
+              <button class="ide-btn-chat">Chat</button>
+            </div>
+          </div>
+          <div class="ide-tb-right">
+            <button class="ide-btn-code">Ver Código</button>
+            <button class="ide-btn-save">💾 Salvar</button>
+            <button class="ide-btn-exit">Sair</button>
+          </div>
+        </div>
+        <!-- Real workspace: toolbox + canvas -->
+        <div class="ide-workspace">
+          <!-- Dark Blockly toolbox -->
+          <div class="ide-toolbox">
+            <div class="ide-toolbox-cat" style="border-left:4px solid #ef9f4b">📥 Entradas</div>
+            <div class="ide-toolbox-cat active" style="border-left:4px solid #4cd137">📤 Saídas</div>
+            <div class="ide-toolbox-cat" style="border-left:4px solid #6c5ce7">↺ Controle</div>
+            <div class="ide-toolbox-cat" style="border-left:4px solid #0984e3">🔢 Matemática</div>
+            <div class="ide-toolbox-cat" style="border-left:4px solid #00b894">📡 Sensores</div>
+            <div class="ide-toolbox-cat" style="border-left:4px solid #fd79a8">⚙️ Funções</div>
+            <div class="ide-toolbox-cat" style="border-left:4px solid #fdcb6e">💬 Texto</div>
+            <div class="ide-toolbox-divider"></div>
+            <div class="ide-toolbox-cat" style="border-left:4px solid #00a8ff">🤖 Arduino</div>
+            <div class="ide-toolbox-cat" style="border-left:4px solid #e17055">📶 ESP32</div>
+            <div class="ide-toolbox-cat" style="border-left:4px solid #a29bfe">🚗 L298N</div>
+            <div class="ide-toolbox-cat" style="border-left:4px solid #55efc4">📡 ESP-NOW</div>
+          </div>
+          <!-- Blockly canvas -->
+          <div class="ide-canvas-real">
+            <!-- PREPARAR block -->
+            <div class="ide-root-block" style="--blk-color:#ef9f4b;--blk-shadow:#cf8235;left:22px;top:16px;">
+              <div class="ide-blk-header">
+                <span class="ide-blk-hat"></span>
+                <span class="ide-blk-label">▶ PREPARAR</span>
+              </div>
+              <div class="ide-blk-body">
+                <div class="ide-blk-child" style="--blk-color:#4cd137;--blk-shadow:#3bac29;">
+                  <span class="ide-blk-label">💡 definir pino <span class="ide-val">13</span> como <span class="ide-val">SAÍDA</span></span>
+                </div>
+                <div class="ide-blk-child" style="--blk-color:#0984e3;--blk-shadow:#0773c9;">
+                  <span class="ide-blk-label">🖨 Serial.iniciar <span class="ide-val">9600</span></span>
+                </div>
+              </div>
+            </div>
+            <!-- AGIR block -->
+            <div class="ide-root-block" style="--blk-color:#ef9f4b;--blk-shadow:#cf8235;left:22px;top:140px;">
+              <div class="ide-blk-header">
+                <span class="ide-blk-hat"></span>
+                <span class="ide-blk-label">🔄 AGIR (loop)</span>
+              </div>
+              <div class="ide-blk-body">
+                <div class="ide-blk-child" style="--blk-color:#4cd137;--blk-shadow:#3bac29;">
+                  <span class="ide-blk-label">💡 pino <span class="ide-val">13</span> → <span class="ide-val">ALTO</span></span>
+                </div>
+                <div class="ide-blk-child" style="--blk-color:#00b894;--blk-shadow:#00a381;">
+                  <span class="ide-blk-label">⏱ esperar <span class="ide-val">500</span> ms</span>
+                </div>
+                <div class="ide-blk-child" style="--blk-color:#4cd137;--blk-shadow:#3bac29;">
+                  <span class="ide-blk-label">💡 pino <span class="ide-val">13</span> → <span class="ide-val">BAIXO</span></span>
+                </div>
+                <div class="ide-blk-child" style="--blk-color:#00b894;--blk-shadow:#00a381;">
+                  <span class="ide-blk-label">⏱ esperar <span class="ide-val">500</span> ms</span>
+                </div>
               </div>
             </div>
           </div>
+        </div>
+        <!-- Code panel -->
+        <div class="ide-code-panel">
+          <div class="ide-code-header">
+            <span class="ide-code-label">C++</span>
+            <button class="ide-code-copy">📋 Copiar</button>
+          </div>
+          <div class="ide-code-pre"><span style="color:#6272a4">// Gerado pelo Bloquin</span>
+<span style="color:#8be9fd">void</span> <span style="color:#50fa7b">setup</span>() {
+  pinMode(<span style="color:#f1fa8c">13</span>, OUTPUT);
+  Serial.<span style="color:#50fa7b">begin</span>(<span style="color:#f1fa8c">9600</span>);
+}
+<span style="color:#8be9fd">void</span> <span style="color:#50fa7b">loop</span>() {
+  digitalWrite(<span style="color:#f1fa8c">13</span>, HIGH);
+  delay(<span style="color:#f1fa8c">500</span>);
+  digitalWrite(<span style="color:#f1fa8c">13</span>, LOW);
+  delay(<span style="color:#f1fa8c">500</span>);
+}</div>
         </div>
       </div>
     </div>
@@ -1167,7 +1655,7 @@ footer {
     <div class="what-header">
       <div class="what-header-left">
         <div class="sec-eye sticker reveal">O que é o Bloquin</div>
-        <h2 class="sec-title reveal reveal-d1">Um IDE feito<br>para <em style="color:var(--purple);font-style:normal">aprender.</em></h2>
+        <h2 class="sec-title reveal reveal-d1">IDE de robótica<br>feito para <em style="color:var(--purple);font-style:normal">aprender.</em></h2>
         <p class="sec-sub reveal reveal-d2">Como o Scratch, mas para hardware de verdade. Blocos visuais que geram código C++ e enviam direto para a placa.</p>
       </div>
       <div class="what-tag-cluster reveal reveal-d2">
@@ -1209,7 +1697,7 @@ footer {
   <div class="deco deco-square how-deco-2" aria-hidden="true"></div>
   <div class="how-inner">
     <div class="sec-eye sticker reveal">Como funciona</div>
-    <h2 class="sec-title reveal reveal-d1">Do bloco à placa<br>em 4 passos.</h2>
+    <h2 class="sec-title reveal reveal-d1">Do bloco à placa<br>em 4 passos simples.</h2>
     <p class="sec-sub reveal reveal-d2">Simples o suficiente para um aluno do ensino fundamental, poderoso o suficiente para projetos reais de IoT.</p>
     <div class="steps-row">
       <div class="step-card reveal reveal-d1">
@@ -1251,12 +1739,12 @@ footer {
       <div style="position:relative">
         <div class="polaroid polaroid-1 reveal reveal-d1">
           <div class="photo-sticker ps-1" aria-hidden="true">Primeiro programa!</div>
-          <img src="assets/alunos1.jpg" alt="Alunos usando o Bloquin IDE em sala de aula" loading="lazy">
+          <img src="assets/alunos1.jpg" alt="Alunos usando o Bloquin IDE em sala de aula" loading="lazy" width="800" height="600">
           <div class="polaroid-label"><span class="pol-sticker s-orange">ESP32</span></div>
         </div>
         <div class="polaroid polaroid-2 reveal reveal-d2">
           <div class="photo-sticker ps-2" aria-hidden="true"><img src="assets/icon-arduinoicon.svg" alt="" style="width:28px;height:28px;display:block;"></div>
-          <img src="assets/alunos2.jpg" alt="Alunos programando com blocos no Bloquin" loading="lazy">
+          <img src="assets/alunos2.jpg" alt="Alunos programando com blocos no Bloquin" loading="lazy" width="800" height="600">
           <div class="polaroid-label"><span class="pol-sticker s-blue">Arduino</span></div>
         </div>
       </div>
@@ -1286,7 +1774,7 @@ footer {
 <section id="boards">
   <div class="boards-inner">
     <div class="sec-eye sticker reveal" style="margin-bottom:16px;"><img src="assets/icon-hardware.svg" alt="" aria-hidden="true" style="width:16px;height:16px;vertical-align:-3px;display:inline;"> Hardware suportado</div>
-    <h2 class="sec-title reveal reveal-d1">Placas compatíveis.</h2>
+    <h2 class="sec-title reveal reveal-d1">Arduino e ESP32<br>suportados.</h2>
     <p class="sec-sub reveal reveal-d2" style="color:rgba(28,27,58,0.7);margin-bottom:48px;">Suporte nativo a Arduino e ESP32, com mais placas chegando nas próximas versões.</p>
     <div class="boards-grid">
       <div class="board-card bc-1 reveal reveal-d1">
@@ -1332,7 +1820,7 @@ footer {
     <!-- Header: full width, then two columns below -->
     <div class="edu-header reveal">
       <div class="sec-eye sticker" style="background:var(--purple);color:#fff;"><img src="assets/icon-school.svg" alt="" aria-hidden="true" style="width:16px;height:16px;vertical-align:-3px;display:inline;"> Para educadores</div>
-      <h2 class="sec-title reveal reveal-d1">Por que usar o Bloquin<br><em style="color:var(--purple);font-style:normal">em sala?</em></h2>
+      <h2 class="sec-title reveal reveal-d1">Por que usar o Bloquin<br><em style="color:var(--purple);font-style:normal">na aula de robótica?</em></h2>
       <p class="sec-sub reveal reveal-d2" style="color:rgba(28,27,58,0.7);">Pensado desde o início para o ambiente escolar, sem dependências, sem cadastros, sem complicação.</p>
     </div>
 
@@ -1425,6 +1913,87 @@ footer {
 </section>
 
 <div class="wave-wrap" style="background:var(--origin-bg)" aria-hidden="true">
+  <svg viewBox="0 0 1440 70" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg"><path d="M0,40 C200,0 500,70 800,30 C1050,0 1280,60 1440,25 L1440,70 L0,70 Z" fill="#18C95D"/></svg>
+</div>
+
+
+<!-- OPEN SOURCE -->
+<section id="opensource" style="background:#EAFFF3;padding:72px 48px;position:relative;overflow:hidden;">
+  <div style="position:absolute;inset:0;background-image:radial-gradient(circle,rgba(28,27,58,0.06) 1.5px,transparent 1.5px);background-size:28px 28px;pointer-events:none;"></div>
+  <div class="opensource-inner">
+    <div class="opensource-left reveal">
+      <div class="sec-eye sticker" style="background:var(--dark);color:#fff;border-color:var(--dark);">
+        <svg viewBox="0 0 24 24" style="width:14px;height:14px;fill:#fff;flex-shrink:0;" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>
+        Código aberto · MIT
+      </div>
+      <h2 class="sec-title reveal reveal-d1" style="margin-top:16px;">100% open source,<br><em style="color:var(--green);font-style:normal">para sempre.</em></h2>
+      <p class="sec-sub reveal reveal-d2" style="color:rgba(28,27,58,0.72);margin-bottom:28px;">O Bloquin é software livre. Você pode baixar, estudar, modificar e contribuir com o código. Nenhuma licença paga, nenhum lock-in.</p>
+      <div class="os-links reveal reveal-d3">
+        <a class="os-link-card" href="https://github.com/FelipeSilva10/Bloquin" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" style="width:20px;height:20px;fill:currentColor;flex-shrink:0;" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>
+          <div>
+            <strong>Repositório GitHub</strong>
+            <span>Código-fonte completo</span>
+          </div>
+          <span class="os-arrow">↗</span>
+        </a>
+        <a class="os-link-card" href="https://github.com/FelipeSilva10/Bloquin/blob/main/README.md" target="_blank" rel="noopener">
+          <span style="font-size:20px;flex-shrink:0;">📄</span>
+          <div>
+            <strong>Documentação</strong>
+            <span>README e guia de instalação</span>
+          </div>
+          <span class="os-arrow">↗</span>
+        </a>
+        <a class="os-link-card" href="https://github.com/FelipeSilva10/Bloquin/releases" target="_blank" rel="noopener">
+          <span style="font-size:20px;flex-shrink:0;">🏷️</span>
+          <div>
+            <strong>Releases</strong>
+            <span>Histórico de versões e changelogs</span>
+          </div>
+          <span class="os-arrow">↗</span>
+        </a>
+        <a class="os-link-card" href="https://github.com/FelipeSilva10/Bloquin/issues" target="_blank" rel="noopener">
+          <span style="font-size:20px;flex-shrink:0;">🐛</span>
+          <div>
+            <strong>Issues &amp; Feedback</strong>
+            <span>Reporte bugs ou sugira melhorias</span>
+          </div>
+          <span class="os-arrow">↗</span>
+        </a>
+      </div>
+    </div>
+    <div class="opensource-right reveal reveal-d2">
+      <div class="os-gh-card">
+        <div class="os-gh-header">
+          <svg viewBox="0 0 24 24" style="width:28px;height:28px;fill:#fff;" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>
+          <div class="os-gh-title">
+            <span class="os-gh-org">FelipeSilva10</span>
+            <span class="os-gh-repo">/ Bloquin</span>
+          </div>
+          <div class="os-gh-badge">Open Source</div>
+        </div>
+        <p class="os-gh-desc">IDE visual de programação em blocos para Arduino e ESP32. Ideal para crianças e alunos aprenderem robótica educacional sem escrever código.</p>
+        <div class="os-gh-lang">
+          <span class="os-lang-dot" style="background:#b07219;"></span><span>Rust</span>
+          <span class="os-lang-dot" style="background:#3178c6;margin-left:12px;"></span><span>TypeScript</span>
+          <span class="os-lang-dot" style="background:#f34b7d;margin-left:12px;"></span><span>C++</span>
+        </div>
+        <div class="os-gh-stats">
+          <div class="os-stat">⭐ Stars</div>
+          <div class="os-stat">🍴 Forks</div>
+          <div class="os-stat">📄 MIT</div>
+        </div>
+        <a class="os-gh-cta" href="https://github.com/FelipeSilva10/Bloquin" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" style="width:16px;height:16px;fill:currentColor;" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>
+          Ver no GitHub
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="wave-wrap" style="background:#EAFFF3" aria-hidden="true">
   <svg viewBox="0 0 1440 70" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg"><path d="M0,40 C200,0 500,70 800,30 C1050,0 1280,60 1440,25 L1440,70 L0,70 Z" fill="#FF5E1F"/></svg>
 </div>
 
@@ -1448,6 +2017,10 @@ footer {
         <a class="btn-dl-main" href="https://github.com/FelipeSilva10/Bloquin/releases/latest/download/Bloquin-Setup-Windows.exe" target="_blank" rel="noopener"><img src="assets/icon-download.svg" alt="" aria-hidden="true" style="width:16px;height:16px;vertical-align:-3px;display:inline;"> Baixar (.exe)</a>
         <span class="dl-version">Versão 1.0.0 · Windows</span>
       </div>
+      <a class="dl-github-link reveal reveal-d4" href="https://github.com/FelipeSilva10/Bloquin" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" style="width:16px;height:16px;fill:rgba(255,255,255,0.8);flex-shrink:0;" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>
+        Ou acesse o código-fonte no GitHub ↗
+      </a>
     </div>
     <div class="dl-right-box reveal reveal-d2">
       <div class="dl-checklist">
@@ -1471,36 +2044,56 @@ footer {
 <section id="faq">
   <div class="faq-inner">
     <div class="sec-eye sticker reveal" style="background:var(--yellow);color:var(--dark);border-color:rgba(28,27,58,0.2);"><img src="assets/icon-faq.svg" alt="" aria-hidden="true" style="width:16px;height:16px;vertical-align:-3px;display:inline;"> Perguntas frequentes</div>
-    <h2 class="sec-title reveal reveal-d1">FAQ</h2>
+    <h2 class="sec-title reveal reveal-d1">Perguntas sobre o Bloquin IDE</h2>
     <div class="faq-list">
       <div class="faq-item reveal reveal-d1">
-        <button class="faq-q">O Bloquin é realmente gratuito?<div class="faq-badge">+</div></button>
-        <div class="faq-a">Sim, completamente gratuito — agora e para sempre. Baixe, instale e use sem pagar nada e sem cadastro. Não existe plano pago.</div>
+        <button class="faq-q" aria-expanded="false" aria-controls="faq-a-1">O Bloquin é realmente gratuito?<div class="faq-badge" aria-hidden="true">+</div></button>
+        <div class="faq-a" id="faq-a-1" role="region">Sim, completamente gratuito — agora e para sempre. Baixe, instale e use sem pagar nada e sem cadastro. Não existe plano pago.</div>
       </div>
       <div class="faq-item reveal reveal-d2">
-        <button class="faq-q">Precisa saber programar para usar?<div class="faq-badge">+</div></button>
-        <div class="faq-a">Não. A proposta do Bloquin é exatamente essa — permitir criar programas reais sem precisar escrever código. Os blocos fazem isso por você. Ideal para crianças a partir de 8 anos.</div>
+        <button class="faq-q" aria-expanded="false" aria-controls="faq-a-2">Precisa saber programar para usar?<div class="faq-badge" aria-hidden="true">+</div></button>
+        <div class="faq-a" id="faq-a-2" role="region">Não. A proposta do Bloquin é exatamente essa — permitir criar programas reais sem precisar escrever código. Os blocos fazem isso por você. Ideal para crianças a partir de 8 anos.</div>
       </div>
       <div class="faq-item reveal reveal-d3">
-        <button class="faq-q">Funciona sem internet?<div class="faq-badge">+</div></button>
-        <div class="faq-a">Sim. Compilação e upload para a placa funcionam 100% offline. O arduino-cli já vem embutido no instalador. Ideal para escolas com Wi-Fi limitado.</div>
+        <button class="faq-q" aria-expanded="false" aria-controls="faq-a-3">Funciona sem internet?<div class="faq-badge" aria-hidden="true">+</div></button>
+        <div class="faq-a" id="faq-a-3" role="region">Sim. Compilação e upload para a placa funcionam 100% offline. O arduino-cli já vem embutido no instalador. Ideal para escolas com Wi-Fi limitado.</div>
       </div>
       <div class="faq-item reveal reveal-d4">
-        <button class="faq-q">Qual sistema operacional é compatível?<div class="faq-badge">+</div></button>
-        <div class="faq-a">Por enquanto, Windows 10 ou superior (64-bit). Suporte a Linux está planejado para versões futuras.</div>
+        <button class="faq-q" aria-expanded="false" aria-controls="faq-a-4">Qual sistema operacional é compatível?<div class="faq-badge" aria-hidden="true">+</div></button>
+        <div class="faq-a" id="faq-a-4" role="region">Por enquanto, Windows 10 ou superior (64-bit). Suporte a Linux está planejado para versões futuras.</div>
       </div>
       <div class="faq-item reveal">
-        <button class="faq-q">Posso ver o código C++ que os blocos geram?<div class="faq-badge">+</div></button>
-        <div class="faq-a">Sim! O Bloquin exibe o código C++ gerado em tempo real enquanto você monta os blocos. Uma ótima forma de aprender a transição para programação textual.</div>
+        <button class="faq-q" aria-expanded="false" aria-controls="faq-a-5">Posso ver o código C++ que os blocos geram?<div class="faq-badge" aria-hidden="true">+</div></button>
+        <div class="faq-a" id="faq-a-5" role="region">Sim! O Bloquin exibe o código C++ gerado em tempo real enquanto você monta os blocos. Uma ótima forma de aprender a transição para programação textual.</div>
       </div>
       <div class="faq-item reveal reveal-d1">
-        <button class="faq-q">Quais placas são suportadas?<div class="faq-badge">+</div></button>
-        <div class="faq-a">Atualmente suportamos Arduino (Uno, Nano e compatíveis AVR) e ESP32 (incluindo ESP32-S2). Mais placas serão adicionadas nas próximas versões.</div>
+        <button class="faq-q" aria-expanded="false" aria-controls="faq-a-6">Quais placas são suportadas?<div class="faq-badge" aria-hidden="true">+</div></button>
+        <div class="faq-a" id="faq-a-6" role="region">Atualmente suportamos Arduino (Uno, Nano e compatíveis AVR) e ESP32 (incluindo ESP32-S2). Mais placas serão adicionadas nas próximas versões.</div>
       </div>
     </div>
+
+    <!-- Fallback indexável para crawlers sem JS -->
+    <noscript>
+      <dl class="faq-noscript">
+        <dt>O Bloquin é realmente gratuito?</dt>
+        <dd>Sim, completamente gratuito — agora e para sempre. Baixe, instale e use sem pagar nada e sem cadastro. Não existe plano pago.</dd>
+        <dt>Precisa saber programar para usar?</dt>
+        <dd>Não. Os blocos fazem o código por você. Ideal para crianças a partir de 8 anos.</dd>
+        <dt>Funciona sem internet?</dt>
+        <dd>Sim. Compilação e upload funcionam 100% offline. O arduino-cli já vem embutido no instalador.</dd>
+        <dt>Qual sistema operacional é compatível?</dt>
+        <dd>Windows 10 ou superior (64-bit). Suporte a Linux está planejado.</dd>
+        <dt>Posso ver o código C++ que os blocos geram?</dt>
+        <dd>Sim. O código C++ aparece em tempo real enquanto você monta os blocos.</dd>
+        <dt>Quais placas são suportadas?</dt>
+        <dd>Arduino Uno, Arduino Nano e ESP32 (incluindo ESP32-S2).</dd>
+      </dl>
+    </noscript>
   </div>
 </section>
 
+
+</main>
 
 <!-- FOOTER -->
 <footer>
@@ -1514,8 +2107,16 @@ footer {
     <a class="foot-link" href="#alunos">Alunos</a>
     <a class="foot-link" href="#boards">Placas</a>
     <a class="foot-link" href="#educadores">Educadores</a>
-    <a class="foot-link" href="#origem">Origem</a>
+    <a class="foot-link" href="#opensource">Open Source</a>
     <a class="foot-link" href="#faq">FAQ</a>
+    <span class="foot-divider" aria-hidden="true"></span>
+    <a class="foot-link foot-link-gh" href="https://github.com/FelipeSilva10/Bloquin" target="_blank" rel="noopener">
+      <svg viewBox="0 0 24 24" style="width:12px;height:12px;fill:currentColor;display:inline;vertical-align:-1px;" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>
+      GitHub ↗
+    </a>
+    <a class="foot-link" href="https://github.com/FelipeSilva10/Bloquin/blob/main/README.md" target="_blank" rel="noopener">Documentação ↗</a>
+    <a class="foot-link" href="https://github.com/FelipeSilva10/Bloquin/wiki" target="_blank" rel="noopener">Guias ↗</a>
+    <a class="foot-link" href="https://github.com/FelipeSilva10/Bloquin/issues" target="_blank" rel="noopener">Tutoriais ↗</a>
     <a class="foot-link" href="https://sagsite.vercel.app/" target="_blank" rel="noopener">SAG ↗</a>
   </div>
   <span class="foot-copy">© 2026 Bloquin — Feito com ❤️ por Felipe da Conceição</span>
@@ -1523,13 +2124,42 @@ footer {
 
 
 <script>
+/* ── HAMBURGER ── */
+const hamburger = document.querySelector('.nav-hamburger');
+const mobileMenu = document.getElementById('nav-mobile-menu');
+
+hamburger.addEventListener('click', () => {
+  const isOpen = mobileMenu.classList.toggle('open');
+  hamburger.setAttribute('aria-expanded', isOpen);
+  hamburger.setAttribute('aria-label', isOpen ? 'Fechar menu' : 'Abrir menu');
+  document.body.style.overflow = isOpen ? 'hidden' : '';
+});
+
+// Fechar ao clicar em link do menu mobile
+mobileMenu.querySelectorAll('a').forEach(link => {
+  link.addEventListener('click', () => {
+    mobileMenu.classList.remove('open');
+    hamburger.setAttribute('aria-expanded', 'false');
+    hamburger.setAttribute('aria-label', 'Abrir menu');
+    document.body.style.overflow = '';
+  });
+});
+
 /* ── FAQ ── */
 document.querySelectorAll('.faq-q').forEach(q => {
   q.addEventListener('click', () => {
     const item = q.closest('.faq-item');
     const isOpen = item.classList.contains('open');
-    document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('open'));
-    if (!isOpen) item.classList.add('open');
+    // Fechar todos
+    document.querySelectorAll('.faq-item').forEach(i => {
+      i.classList.remove('open');
+      i.querySelector('.faq-q').setAttribute('aria-expanded', 'false');
+    });
+    // Abrir o clicado (se estava fechado)
+    if (!isOpen) {
+      item.classList.add('open');
+      q.setAttribute('aria-expanded', 'true');
+    }
   });
 });
 
@@ -1556,9 +2186,21 @@ const activeObs = new IntersectionObserver(entries => {
 sections.forEach(s => activeObs.observe(s));
 
 /* ── BLOCK DRAG FEEL ── */
+// Drag feedback — listeners centralizados (sem memory leak)
+let _activeBlk = null;
 document.querySelectorAll('.blk').forEach(blk => {
-  blk.addEventListener('mousedown', () => { blk.style.transform = 'scale(0.96)'; blk.style.cursor = 'grabbing'; });
-  document.addEventListener('mouseup', () => { blk.style.transform = ''; blk.style.cursor = 'grab'; });
+  blk.addEventListener('mousedown', () => {
+    _activeBlk = blk;
+    blk.style.transform = 'scale(0.96)';
+    blk.style.cursor = 'grabbing';
+  });
+});
+document.addEventListener('mouseup', () => {
+  if (_activeBlk) {
+    _activeBlk.style.transform = '';
+    _activeBlk.style.cursor = 'grab';
+    _activeBlk = null;
+  }
 });
 </script>
 </body>
