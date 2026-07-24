@@ -1,18 +1,18 @@
 
 # Bloquin IDE
 
-> IDE gratuito de programação em blocos para Arduino e ESP32. Sem escrever uma linha de código.
+> Site oficial do Bloquin, uma IDE visual em português para Arduino e ESP32.
 
-[![Versão](https://img.shields.io/badge/versão-0.1.0-F56E2E?style=flat-square)](https://bloquin.online)
-[![Plataforma](https://img.shields.io/badge/plataforma-Windows%2010%2B-0078D4?style=flat-square)](https://bloquin.online)
-[![Licença](https://img.shields.io/badge/licença-Gratuito-50E37A?style=flat-square)](https://bloquin.online)
+[![Versão](https://img.shields.io/badge/versão-1.1.0-F56E2E?style=flat-square)](https://bloquin.online)
+[![Plataforma](https://img.shields.io/badge/plataforma-Windows%2010%2F11-0078D4?style=flat-square)](https://bloquin.online)
+[![Licença](https://img.shields.io/badge/licença-MIT-50E37A?style=flat-square)](https://bloquin.online)
 [![Site](https://img.shields.io/badge/site-bloquin.online-F56E2E?style=flat-square)](https://bloquin.online)
 
 ---
 
 ## O que é o Bloquin?
 
-O **Bloquin** é um IDE visual de programação em blocos, inspirado no Scratch, mas voltado para hardware de verdade. Em vez de escrever código, você arrasta blocos, conecta a lógica, e envia para a sua placa Arduino ou ESP32 — tudo com um clique.
+O **Bloquin** é uma IDE visual de programação em blocos voltada para hardware real. O estudante monta a lógica visualmente, acompanha o código C++ gerado e envia o programa para uma placa Arduino ou ESP32.
 
 Pensado para crianças, alunos do ensino fundamental e médio, e qualquer pessoa que queira aprender robótica e eletrônica sem a barreira da sintaxe de programação.
 
@@ -22,10 +22,12 @@ Pensado para crianças, alunos do ensino fundamental e médio, e qualquer pessoa
 
 - **Programação em blocos drag-and-drop** — interface visual em português, sem barreira de idioma
 - **Geração de código C++ em tempo real** — veja o código que os blocos geram enquanto você monta
-- **Compilação offline** — arduino-cli embutido, funciona sem internet
+- **Compilação local** — arduino-cli incluído no aplicativo
 - **Upload direto para a placa** — via USB, sem configuração extra
 - **Monitor serial integrado** — para debug e comunicação com a placa
-- **Suporte a Arduino e ESP32** — Uno, Nano, ESP32
+- **Suporte a Arduino e ESP32** — Uno, Nano e ESP32 DevKit V1
+- **Recursos educacionais conectados** — turmas, projetos na nuvem e painel do professor
+- **Modo visitante** — permite experimentar o editor sem criar conta
 
 ---
 
@@ -51,7 +53,7 @@ Pensado para crianças, alunos do ensino fundamental e médio, e qualquer pessoa
 
 1. Acesse [bloquin.online](https://bloquin.online) ou baixe direto:
 
-   **[↓ Baixar Bloquin v1.0.0 (.exe)](https://github.com/FelipeSilva10/Bloquin/releases/latest/download/Bloquin-Setup-Windows.exe)**
+   **[↓ Baixar a versão estável do Bloquin (.exe)](https://github.com/FelipeSilva10/Bloquin/releases/latest/download/Bloquin-Setup-Windows.exe)**
 
 2. Execute o instalador e siga as instruções
 3. Conecte sua placa via USB
@@ -79,6 +81,9 @@ BloquinSite/
 │   ├── logo_SAG.png         # Logotipo da SAG
 │   ├── alunos1.jpg          # Foto de alunos em aula
 │   └── alunos2.jpg          # Foto de alunos em aula
+├── conteudos/                # Biblioteca de projetos e componentes
+├── public/
+│   └── favicon.png           # Marca otimizada para uso na interface
 ├── index.html               # Página principal do site
 ├── sitemap-main.xml         # Sitemap para SEO
 ├── robots.txt               # Regras para crawlers
@@ -92,11 +97,12 @@ BloquinSite/
 
 O Bloquin foi projetado pensando no ambiente escolar:
 
-- **Zero configuração** — instale uma vez, funciona em todos os computadores do laboratório
-- **100% offline** — sem Wi-Fi necessário para compilar e fazer upload
+- **Instalação direta** — o arduino-cli acompanha o aplicativo
+- **Compilação e upload locais** — não dependem de compilador no navegador
 - **Interface em português** — sem barreira de idioma para alunos brasileiros
 - **Ponte para o código real** — alunos avançados podem ver e aprender o C++ gerado
-- **Gratuito para sempre** — sem licenças por escola, sem assinaturas
+- **Recursos de turma** — projetos na nuvem e painel do professor usam conexão com a internet
+- **Código aberto** — distribuído sob licença MIT
 
 ---
 
@@ -117,8 +123,8 @@ Felipe da Conceição Silva
 
 ## Licença
 
-Bloquin é gratuito para uso pessoal e educacional.
+O Bloquin é distribuído sob a licença MIT.
 
 ---
 
-*© 2026 Bloquin — Feito com ❤️ para e alunos*
+*© 2026 Bloquin — Feito com ❤️ para a educação*

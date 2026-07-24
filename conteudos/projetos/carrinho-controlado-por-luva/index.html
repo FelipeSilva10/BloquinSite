@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="shortcut icon" href="../../../public/favicon.png">
+<title>Carrinho Controlado por Luva — Conteúdos Bloquin</title>
+<meta name="description" content="Página de estudo do projeto Carrinho Controlado por Luva: imagens, código do transmissor, código do receptor, download ZIP, circuito eletrônico e explicação.">
+<meta name="robots" content="index, follow">
+<meta name="theme-color" content="#FF5E1F">
+<link rel="canonical" href="https://bloquin.online/conteudos/projetos/carrinho-controlado-por-luva/">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Nunito:wght@400;600;700;800;900&family=Space+Mono:wght@700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../conteudos.css">
+</head>
+<body>
+<a class="skip-link" href="#conteudo-principal">Pular para o conteúdo</a>
+
+<nav class="site-nav" aria-label="Navegação do projeto">
+  <a class="brand" href="../../../">
+    <span class="brand-mark"><img src="../../../public/favicon.png" alt="" width="28" height="28"></span>
+    <span class="brand-word">BLOQUIN</span>
+  </a>
+  <div class="nav-actions">
+    <a class="nav-link" href="../../">Conteúdos</a>
+    <a class="nav-link" href="#codigos">Códigos</a>
+    <a class="nav-link" href="#circuito">Circuito</a>
+    <a class="nav-link is-orange" href="#download-codigos">Download ZIP</a>
+  </div>
+</nav>
+
+<main id="conteudo-principal">
+  <section class="hero pattern" style="background:#FFF0E8;">
+    <div class="hero-inner hero-grid">
+      <div>
+        <div class="eyebrow" style="background:#FF5E1F;color:#1C1B3A;">Projeto de aula</div>
+        <h1>Carrinho Controlado por Luva</h1>
+        <p>Um projeto para estudar comunicação sem fio entre ESP32, leitura de joystick, controle de motores e montagem de circuito com driver.</p>
+        <div class="hero-actions">
+          <a class="btn btn-orange" href="#codigos">Ver códigos</a>
+          <a class="btn btn-yellow" href="#download-codigos">Baixar arquivos</a>
+        </div>
+      </div>
+
+      <div class="repo-panel" role="group" aria-label="Recursos deste projeto">
+        <div class="repo-line"><span class="repo-dot" style="background:#FFD60A;"></span><strong>Imagens do projeto montado</strong><span>galeria</span></div>
+        <div class="repo-line"><span class="repo-dot" style="background:#2F6EDB;"></span><strong>Código do transmissor</strong><span>luva</span></div>
+        <div class="repo-line"><span class="repo-dot" style="background:#18C95D;"></span><strong>Código do receptor</strong><span>carrinho</span></div>
+        <div class="repo-line"><span class="repo-dot" style="background:#FF3F8E;"></span><strong>Circuito eletrônico</strong><span>pinagem</span></div>
+        <div class="repo-line"><span class="repo-dot" style="background:#7C4DFF;"></span><strong>Explicação e complementos</strong><span>aula</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="imagens" class="section" style="background:#FFFFFF;">
+    <div class="section-inner">
+      <div class="eyebrow" style="background:#FFD60A;">Imagens do projeto</div>
+      <h2 class="section-title">Visão ilustrada da montagem</h2>
+      <p class="section-sub">As imagens abaixo são representações de apoio, não fotografias nem diagramas técnicos. Use o mapa de ligações e confira a pinagem dos componentes antes de montar.</p>
+
+      <div class="gallery-grid">
+        <figure class="gallery-shot big car-art">
+          <figcaption class="gallery-label">Carrinho com ESP32, driver e motores</figcaption>
+        </figure>
+        <figure class="gallery-shot glove-art">
+          <figcaption class="gallery-label">Luva com joystick</figcaption>
+        </figure>
+        <figure class="gallery-shot board-art">
+          <figcaption class="gallery-label">ESP32 receptor</figcaption>
+        </figure>
+        <figure class="gallery-shot board-art">
+          <figcaption class="gallery-label">Driver de motor</figcaption>
+        </figure>
+        <figure class="gallery-shot glove-art">
+          <figcaption class="gallery-label">Teste de movimento</figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" style="background:#EEF4FF;">
+    <div class="section-inner">
+      <div class="eyebrow" style="background:#2F6EDB;color:#fff;">Recursos</div>
+      <h2 class="section-title">Materiais disponíveis</h2>
+      <p class="section-sub">Cada cartão aponta para uma parte da página ou para um arquivo do projeto.</p>
+
+      <div class="resource-grid">
+        <a class="resource-card" href="#codigos">
+          <div class="resource-icon"><img src="../../../assets/icon-code.svg" alt="" aria-hidden="true"></div>
+          <strong>Códigos-fonte</strong>
+          <span>Transmissor da luva e receptor do carrinho.</span>
+        </a>
+        <a class="resource-card" href="#download-codigos">
+          <div class="resource-icon" style="background:#FFFAD0;"><img src="../../../assets/icon-download.svg" alt="" aria-hidden="true"></div>
+          <strong>Download ZIP</strong>
+          <span>Pacote com arquivos .ino e README.</span>
+        </a>
+        <a class="resource-card" href="#circuito">
+          <div class="resource-icon" style="background:#EAFFF3;"><img src="../../../assets/icon-hardware.svg" alt="" aria-hidden="true"></div>
+          <strong>Circuito</strong>
+          <span>Mapa de ligação entre luva, ESP32, driver e motores.</span>
+        </a>
+        <a class="resource-card" href="#funcionamento">
+          <div class="resource-icon" style="background:#F0EBFF;"><img src="../../../assets/icon-idea.svg" alt="" aria-hidden="true"></div>
+          <strong>Funcionamento</strong>
+          <span>Explicação do fluxo de dados e movimento.</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section id="codigos" class="section" style="background:#FFFBF0;">
+    <div class="section-inner">
+      <div class="section-head">
+        <div>
+          <div class="eyebrow" style="background:#1C1B3A;color:#fff;">Visualização dos códigos</div>
+          <h2 class="section-title">Transmissor e receptor</h2>
+          <p class="section-sub">Os painéis mostram os trechos centrais do transmissor e do receptor. Baixe os arquivos completos para compilar e adaptar o projeto.</p>
+        </div>
+      </div>
+
+      <div class="code-grid">
+        <article class="code-card">
+          <div class="code-head">
+            <h3>transmissor-luva.ino</h3>
+            <a href="../../downloads/carrinho-controlado-por-luva/transmissor-luva.ino" download>Baixar arquivo</a>
+          </div>
+<pre><code>#include &lt;WiFi.h&gt;
+#include &lt;esp_now.h&gt;
+
+const int PIN_EIXO_X = 34;
+const int PIN_EIXO_Y = 35;
+const int PIN_BOTAO = 23;
+
+uint8_t macDoCarrinho[] = {0x24, 0x6F, 0x28, 0xAA, 0xBB, 0xCC};
+
+struct PacoteControle {
+  int16_t eixoX;
+  int16_t eixoY;
+  bool botaoPressionado;
+};
+
+void loop() {
+  PacoteControle pacote;
+  pacote.eixoX = map(analogRead(PIN_EIXO_X), 0, 4095, -100, 100);
+  pacote.eixoY = map(analogRead(PIN_EIXO_Y), 0, 4095, -100, 100);
+  pacote.botaoPressionado = digitalRead(PIN_BOTAO) == LOW;
+
+  esp_now_send(macDoCarrinho, (uint8_t *)&amp;pacote, sizeof(pacote));
+  delay(80);
+}</code></pre>
+        </article>
+
+        <article class="code-card">
+          <div class="code-head">
+            <h3>receptor-carrinho.ino</h3>
+            <a href="../../downloads/carrinho-controlado-por-luva/receptor-carrinho.ino" download>Baixar arquivo</a>
+          </div>
+<pre><code>#include &lt;WiFi.h&gt;
+#include &lt;esp_now.h&gt;
+
+struct PacoteControle {
+  int16_t eixoX;
+  int16_t eixoY;
+  bool botaoPressionado;
+};
+
+PacoteControle ultimoComando = {0, 0, false};
+
+void moverCarrinho(int eixoX, int eixoY) {
+  int velocidadeBase = map(abs(eixoY), 0, 100, 0, 255);
+  int ajusteCurva = map(eixoX, -100, 100, -120, 120);
+
+  int esquerda = velocidadeBase - ajusteCurva;
+  int direita = velocidadeBase + ajusteCurva;
+
+  if (eixoY &lt; 0) {
+    esquerda *= -1;
+    direita *= -1;
+  }
+
+  controlarMotor(MOTOR_ESQ_IN1, MOTOR_ESQ_IN2, MOTOR_ESQ_PWM, esquerda);
+  controlarMotor(MOTOR_DIR_IN1, MOTOR_DIR_IN2, MOTOR_DIR_PWM, direita);
+}</code></pre>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section id="download-codigos" class="section" style="background:#EAFFF3;">
+    <div class="section-inner">
+      <div class="download-panel">
+        <div>
+          <div class="eyebrow" style="background:#18C95D;color:#1C1B3A;">Download dos códigos</div>
+          <h2 class="section-title" style="margin-bottom:8px;">Pacote ZIP do projeto</h2>
+          <p class="section-sub" style="margin-bottom:0;">Inclui <code>transmissor-luva.ino</code>, <code>receptor-carrinho.ino</code> e um README com passos antes de gravar nas placas.</p>
+        </div>
+        <a class="btn btn-orange" href="../../downloads/carrinho-controlado-por-luva-codigos.zip" download>Baixar ZIP</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="circuito" class="section" style="background:#FFFFFF;">
+    <div class="section-inner">
+      <div class="eyebrow" style="background:#FF3F8E;color:#1C1B3A;">Circuito eletrônico</div>
+      <h2 class="section-title">Mapa simplificado das ligações</h2>
+      <p class="section-sub">Use este mapa para entender os módulos do sistema. Antes de energizar, confira a pinagem do seu ESP32, o modelo do driver, a polaridade e a alimentação dos motores.</p>
+
+      <div class="diagram-panel">
+        <div class="circuit-map" role="group" aria-label="Diagrama simplificado do circuito entre luva, joystick, placas ESP32, driver e motores">
+          <span class="wire w1" aria-hidden="true"></span>
+          <span class="wire w2" aria-hidden="true"></span>
+          <span class="wire w3" aria-hidden="true"></span>
+          <span class="wire w4" aria-hidden="true"></span>
+
+          <div class="part p-glove">Luva<small>Joystick X/Y + botão</small></div>
+          <div class="part p-joy">Joystick<small>X: GPIO34 · Y: GPIO35</small></div>
+          <div class="part p-tx">ESP32 transmissor<small>Envia por ESP-NOW</small></div>
+          <div class="part p-rx">ESP32 receptor<small>Recebe comandos</small></div>
+          <div class="part p-driver">Driver L298N<small>IN1, IN2, ENA/PWM</small></div>
+          <div class="part p-left-motor">Motor esquerdo<small>Roda esquerda</small></div>
+          <div class="part p-right-motor">Motor direito<small>Roda direita</small></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="funcionamento" class="section" style="background:#F0EBFF;">
+    <div class="section-inner">
+      <div class="eyebrow" style="background:#7C4DFF;color:#fff;">Funcionamento</div>
+      <h2 class="section-title">Como o projeto funciona</h2>
+      <p class="section-sub">O objetivo é transformar o movimento da mão em comandos de direção para o carrinho.</p>
+
+      <div class="lesson-grid">
+        <article class="lesson-card">
+          <div class="lesson-num">1</div>
+          <h3>A luva lê o joystick</h3>
+          <span>O ESP32 transmissor mede os eixos X e Y e transforma os valores em uma escala simples de -100 a 100.</span>
+        </article>
+        <article class="lesson-card">
+          <div class="lesson-num">2</div>
+          <h3>Os dados viajam por ESP-NOW</h3>
+          <span>O pacote de controle é enviado diretamente para o ESP32 do carrinho, sem depender de roteador Wi-Fi.</span>
+        </article>
+        <article class="lesson-card">
+          <div class="lesson-num">3</div>
+          <h3>O carrinho calcula o movimento</h3>
+          <span>O eixo Y define frente ou ré. O eixo X ajusta a diferença de velocidade entre os motores para fazer curvas.</span>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" style="background:#FFFBF0;">
+    <div class="section-inner">
+      <div class="eyebrow" style="background:#FFD60A;">Materiais complementares</div>
+      <h2 class="section-title">Para continuar estudando</h2>
+      <div class="info-grid">
+        <div class="info-box"><h3>Conceitos trabalhados</h3><ul><li>Entrada analógica</li><li>Comunicação sem fio</li><li>PWM e controle de velocidade</li><li>GND comum e alimentação separada</li></ul></div>
+        <div class="info-box"><h3>Desafios para alunos</h3><ul><li>Adicionar buzzer de ré.</li><li>Criar modo lento e modo rápido.</li><li>Mostrar status em LEDs coloridos.</li><li>Trocar joystick por sensor de inclinação.</li></ul></div>
+        <div class="info-box"><h3>Componentes usados</h3><p>2 ESP32, joystick, botão, driver de motor, 2 motores DC, chassi, rodas, bateria e fios jumper.</p></div>
+        <div class="info-box"><h3>Cuidados importantes</h3><p>Confira a polaridade da bateria, mantenha GND comum e nunca alimente motores diretamente pelos pinos do ESP32.</p></div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="page-footer">
+  <span>© 2026 Bloquin — Carrinho Controlado por Luva</span>
+  <div class="footer-links" role="navigation" aria-label="Links do rodapé">
+    <a href="../../">Conteúdos</a>
+    <a href="../../../">Site principal</a>
+    <a href="#download-codigos">Download ZIP</a>
+  </div>
+</footer>
+</body>
+</html>
