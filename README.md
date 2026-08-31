@@ -53,10 +53,11 @@ Pensado para crianças, alunos do ensino fundamental e médio, e qualquer pessoa
 
 1. Acesse [bloquin.online](https://bloquin.online) ou baixe a versão estável diretamente:
 
-   | Plataforma | Arquivo | Tamanho |
-   | --- | --- | --- |
-   | Windows 10/11 (64-bit) | **[↓ Bloquin-Setup-Windows.exe](https://github.com/FelipeSilva10/Bloquin/releases/latest/download/Bloquin-Setup-Windows.exe)** | 21,1 MB |
-   | Linux x86_64 | **[↓ Bloquin-Linux-x86_64.AppImage](https://github.com/FelipeSilva10/Bloquin/releases/latest/download/Bloquin-Linux-x86_64.AppImage)** | 102,3 MB |
+   | Plataforma | Arquivo | Tamanho | Status |
+   | --- | --- | --- | --- |
+   | Windows 10/11 (64-bit) | **[↓ Bloquin-Setup-Windows.exe](https://github.com/FelipeSilva10/Bloquin/releases/latest/download/Bloquin-Setup-Windows.exe)** | 21,1 MB | ✅ Disponível |
+   | Linux x86_64 | **[↓ Bloquin-Linux-x86_64.AppImage](https://github.com/FelipeSilva10/Bloquin/releases/latest/download/Bloquin-Linux-x86_64.AppImage)** | 102,3 MB | ✅ Disponível |
+   | Microsoft Store | — | — | 🕒 Em breve |
 
 2. No Windows, execute o instalador e siga as instruções. No Linux, permita a execução do arquivo AppImage e abra-o.
 3. Conecte sua placa via USB.
@@ -111,6 +112,7 @@ O Bloquin foi projetado pensando no ambiente escolar:
 
 ## Roadmap
 
+- [ ] Publicação na Microsoft Store
 - [ ] Mais blocos de sensores
 - [ ] Modo tutorial interativo
 - [ ] Biblioteca de projetos prontos
