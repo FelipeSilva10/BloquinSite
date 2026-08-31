@@ -3,8 +3,8 @@
 
 > Site oficial do Bloquin, uma IDE visual em português para Arduino e ESP32.
 
-[![Versão](https://img.shields.io/badge/versão-1.1.0-F56E2E?style=flat-square)](https://bloquin.online)
-[![Plataforma](https://img.shields.io/badge/plataforma-Windows%2010%2F11-0078D4?style=flat-square)](https://bloquin.online)
+[![Versão](https://img.shields.io/badge/versão-2.5.0-F56E2E?style=flat-square)](https://bloquin.online)
+[![Plataforma](https://img.shields.io/badge/plataforma-Windows%20%2B%20Linux-0078D4?style=flat-square)](https://bloquin.online)
 [![Licença](https://img.shields.io/badge/licença-MIT-50E37A?style=flat-square)](https://bloquin.online)
 [![Site](https://img.shields.io/badge/site-bloquin.online-F56E2E?style=flat-square)](https://bloquin.online)
 
@@ -43,7 +43,7 @@ Pensado para crianças, alunos do ensino fundamental e médio, e qualquer pessoa
 
 ## Requisitos do sistema
 
-- **Sistema operacional:** Windows 10 ou superior (64-bit)
+- **Sistema operacional:** Windows 10 ou superior (64-bit), ou Linux x86_64
 - **Armazenamento:** ~6 GB de espaço livre
 - **Outros:** Nenhum — tudo que precisa está incluso no instalador
 
@@ -51,13 +51,16 @@ Pensado para crianças, alunos do ensino fundamental e médio, e qualquer pessoa
 
 ## Download e instalação
 
-1. Acesse [bloquin.online](https://bloquin.online) ou baixe direto:
+1. Acesse [bloquin.online](https://bloquin.online) ou baixe a versão estável diretamente:
 
-   **[↓ Baixar a versão estável do Bloquin (.exe)](https://github.com/FelipeSilva10/Bloquin/releases/latest/download/Bloquin-Setup-Windows.exe)**
+   | Plataforma | Arquivo | Tamanho |
+   | --- | --- | --- |
+   | Windows 10/11 (64-bit) | **[↓ Bloquin-Setup-Windows.exe](https://github.com/FelipeSilva10/Bloquin/releases/latest/download/Bloquin-Setup-Windows.exe)** | 21,1 MB |
+   | Linux x86_64 | **[↓ Bloquin-Linux-x86_64.AppImage](https://github.com/FelipeSilva10/Bloquin/releases/latest/download/Bloquin-Linux-x86_64.AppImage)** | 102,3 MB |
 
-2. Execute o instalador e siga as instruções
-3. Conecte sua placa via USB
-4. Abra o Bloquin, selecione a placa e comece a programar
+2. No Windows, execute o instalador e siga as instruções. No Linux, permita a execução do arquivo AppImage e abra-o.
+3. Conecte sua placa via USB.
+4. Abra o Bloquin, selecione a placa e comece a programar.
 
 ---
 

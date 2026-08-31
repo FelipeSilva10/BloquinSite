@@ -39,11 +39,11 @@
   "name": "Bloquin IDE",
   "description": "IDE visual em português para aprender programação com blocos, acompanhar o código C++ gerado e enviar projetos para Arduino e ESP32.",
   "applicationCategory": "EducationalApplication",
-  "operatingSystem": "Windows 10/11 (64-bit)",
+  "operatingSystem": "Windows 10/11 (64-bit) e Linux x86_64",
   "inLanguage": "pt-BR",
   "isAccessibleForFree": true,
-  "softwareVersion": "1.1.0",
-  "downloadUrl": "https://github.com/FelipeSilva10/Bloquin/releases/latest/download/Bloquin-Setup-Windows.exe",
+  "softwareVersion": "2.5.0",
+  "downloadUrl": "https://github.com/FelipeSilva10/Bloquin/releases/latest",
   "screenshot": "https://bloquin.online/assets/Logo_Bloquin.png",
   "offers": {
     "@type": "Offer",
@@ -111,7 +111,7 @@
       "name": "Qual sistema operacional é compatível com o Bloquin?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "A versão disponível para download é compatível com Windows 10 e Windows 11, em sistemas de 64 bits."
+        "text": "O Bloquin está disponível para Windows 10 e Windows 11 (64 bits), com instalador .exe, e para Linux x86_64, no formato AppImage."
       }
     },
     {
@@ -1270,6 +1270,15 @@ nav {
 }
 .btn-dl-main:hover  { transform: translate(-3px,-3px); box-shadow: 11px 11px 0 var(--dark); }
 .btn-dl-main:active { transform: translate(5px,5px); box-shadow: 1px 1px 0 var(--dark); animation: none; }
+.btn-dl-linux {
+  font-family: 'Fredoka One', cursive; font-size: 17px;
+  padding: 15px 24px; background: var(--white); color: var(--dark);
+  border: var(--border); border-radius: var(--r-md); box-shadow: var(--shadow-sm);
+  display: inline-flex; align-items: center; gap: 9px;
+  transition: transform 0.1s, box-shadow 0.1s; text-decoration: none;
+}
+.btn-dl-linux:hover { transform: translate(-2px,-2px); box-shadow: var(--shadow-md); }
+.btn-dl-linux:active { transform: translate(3px,3px); box-shadow: 1px 1px 0 var(--dark); }
 .dl-version { font-family: 'Fredoka One', cursive; font-size: 13px; color: var(--dark); letter-spacing: 0.04em; }
 .dl-right-box {
   background: rgba(255,255,255,0.14); border: 2.5px solid rgba(255,255,255,0.35);
@@ -1620,7 +1629,7 @@ footer {
       <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>
       Ver no GitHub
     </a>
-    <a class="nav-dl" href="https://github.com/FelipeSilva10/Bloquin/releases/latest/download/Bloquin-Setup-Windows.exe">Baixar para Windows</a>
+    <a class="nav-dl" href="#download">Baixar o Bloquin</a>
     <button class="nav-hamburger" type="button" aria-label="Abrir menu" aria-expanded="false" aria-controls="nav-mobile-menu">
       <span></span><span></span><span></span>
     </button>
@@ -1637,7 +1646,7 @@ footer {
     <svg viewBox="0 0 24 24" style="width:18px;height:18px;fill:#1C1B3A;flex-shrink:0;" xmlns="http://www.w3.org/2000/svg"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>
     Ver no GitHub ↗
   </a>
-  <a class="nav-mobile-dl" href="https://github.com/FelipeSilva10/Bloquin/releases/latest/download/Bloquin-Setup-Windows.exe">Baixar para Windows (.exe)</a>
+  <a class="nav-mobile-dl" href="#download">Baixar o Bloquin</a>
 </div>
 
 <main id="conteudo-principal">
@@ -1663,7 +1672,7 @@ footer {
       </h1>
       <p class="hero-sub reveal reveal-d2">O Bloquin é uma IDE em português para estudantes iniciantes, crianças com acompanhamento e educadores. Monte a lógica visualmente, acompanhe o C++ gerado e envie o programa para Arduino ou ESP32.</p>
       <div class="hero-btns reveal reveal-d3">
-        <a class="btn btn-orange" href="https://github.com/FelipeSilva10/Bloquin/releases/latest/download/Bloquin-Setup-Windows.exe">Baixar para Windows</a>
+        <a class="btn btn-orange" href="#download">Baixar o Bloquin</a>
         <a class="btn btn-white" href="#how">Entender como funciona</a>
       </div>
       <div class="hero-stats reveal reveal-d4">
@@ -2150,16 +2159,17 @@ footer {
     <div class="dl-left">
       <div class="sec-eye sticker reveal" style="background:var(--yellow);color:var(--dark);border-color:rgba(28,27,58,0.2);"><img src="assets/icon-download.svg" alt="" aria-hidden="true" style="width:16px;height:16px;vertical-align:-3px;display:inline;"> Download gratuito</div>
       <h2 class="dl-h2 reveal reveal-d1">Bloquin<br>IDE</h2>
-      <p class="dl-sub reveal reveal-d2">Baixe o aplicativo para Windows e experimente no modo visitante ou entre com uma conta para usar os recursos conectados da turma.</p>
+      <p class="dl-sub reveal reveal-d2">Escolha Windows ou Linux, experimente no modo visitante ou entre com uma conta para usar os recursos conectados da turma.</p>
       <div class="dl-meta reveal reveal-d3">
-        <span class="dl-tag">v2.1.0</span>
+        <span class="dl-tag">v2.5.0</span>
         <span class="dl-tag">Windows 10/11</span>
+        <span class="dl-tag">Linux x86_64</span>
         <span class="dl-tag">64-bit</span>
-        <span class="dl-tag">~19 MB</span>
       </div>
       <div class="dl-cta-group reveal reveal-d4">
-        <a class="btn-dl-main" href="https://github.com/FelipeSilva10/Bloquin/releases/latest/download/Bloquin-Setup-Windows.exe" target="_blank" rel="noopener"><img src="assets/icon-download.svg" alt="" aria-hidden="true" style="width:16px;height:16px;vertical-align:-3px;display:inline;"> Baixar (.exe)</a>
-        <span class="dl-version">Versão 2.1.0· Windows 64-bit</span>
+        <a class="btn-dl-main" href="https://github.com/FelipeSilva10/Bloquin/releases/latest/download/Bloquin-Setup-Windows.exe" target="_blank" rel="noopener"><img src="assets/icon-download.svg" alt="" aria-hidden="true" style="width:16px;height:16px;vertical-align:-3px;display:inline;"> Windows (.exe)</a>
+        <a class="btn-dl-linux" href="https://github.com/FelipeSilva10/Bloquin/releases/latest/download/Bloquin-Linux-x86_64.AppImage" target="_blank" rel="noopener"><img src="assets/icon-download.svg" alt="" aria-hidden="true" style="width:14px;height:14px;vertical-align:-2px;display:inline;"> Linux (.AppImage)</a>
+        <span class="dl-version">Windows: 21,1 MB · Linux: 102,3 MB</span>
       </div>
       <a class="dl-github-link reveal reveal-d4" href="https://github.com/FelipeSilva10/Bloquin/releases/latest" target="_blank" rel="noopener">
         <svg viewBox="0 0 24 24" style="width:16px;height:16px;fill:currentColor;flex-shrink:0;" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>
@@ -2204,7 +2214,7 @@ footer {
       </div>
       <div class="faq-item reveal reveal-d4">
         <button class="faq-q" type="button" id="faq-q-4" aria-expanded="false" aria-controls="faq-a-4">Qual sistema operacional é compatível?<span class="faq-badge" aria-hidden="true">+</span></button>
-        <div class="faq-a" id="faq-a-4" role="region" aria-labelledby="faq-q-4" hidden>A versão disponível para download é compatível com Windows 10 e Windows 11, em sistemas de 64 bits.</div>
+        <div class="faq-a" id="faq-a-4" role="region" aria-labelledby="faq-q-4" hidden>O Bloquin está disponível para Windows 10 e Windows 11 (64 bits), com instalador .exe, e para Linux x86_64, no formato AppImage.</div>
       </div>
       <div class="faq-item reveal">
         <button class="faq-q" type="button" id="faq-q-5" aria-expanded="false" aria-controls="faq-a-5">Posso ver o código C++ gerado?<span class="faq-badge" aria-hidden="true">+</span></button>
@@ -2226,7 +2236,7 @@ footer {
         <dt>O Bloquin precisa de internet?</dt>
         <dd>Compilação e envio à placa são locais. Recursos de conta, nuvem e turma precisam de conexão.</dd>
         <dt>Qual sistema operacional é compatível?</dt>
-        <dd>Windows 10 e Windows 11, em sistemas de 64 bits.</dd>
+        <dd>Windows 10 e Windows 11 (64 bits), com instalador .exe, e Linux x86_64, no formato AppImage.</dd>
         <dt>Posso ver o código C++ gerado?</dt>
         <dd>Sim. O código correspondente aos blocos pode ser consultado no editor.</dd>
         <dt>Quais placas são suportadas?</dt>
