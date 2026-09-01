@@ -59,7 +59,7 @@ Pensado para crianças, alunos do ensino fundamental e médio, e qualquer pessoa
    | Linux x86_64 | **[↓ Bloquin-Linux-x86_64.AppImage](https://github.com/FelipeSilva10/Bloquin/releases/latest/download/Bloquin-Linux-x86_64.AppImage)** | 103,3 MB | ✅ Disponível |
    | Microsoft Store | — | — | 🕒 Em breve |
 
-   > O nome do instalador Windows muda a cada versão (ex.: `BloquinIDE_2.6.0.exe`). Use sempre a [página de releases](https://github.com/FelipeSilva10/Bloquin/releases/latest) para pegar o arquivo certo — o site já faz isso automaticamente.
+   > ⚠️ O nome do instalador Windows muda a cada versão (ex.: `BloquinIDE_2.6.0.exe`). O link acima e o botão do site apontam para o arquivo exato desta versão — ao publicar uma nova release, atualize o nome do arquivo aqui e em `index.html` (seção `#download`).
 
 2. No Windows, execute o instalador e siga as instruções. No Linux, permita a execução do arquivo AppImage e abra-o.
 3. Conecte sua placa via USB.
