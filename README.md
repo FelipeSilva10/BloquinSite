@@ -57,7 +57,7 @@ Pensado para crianças, alunos do ensino fundamental e médio, e qualquer pessoa
    | --- | --- | --- | --- |
    | Windows 10/11 (64-bit) | **[↓ BloquinIDE_2.7.0.exe](https://github.com/FelipeSilva10/Bloquin/releases/latest/download/BloquinIDE_2.7.0.exe)** | 22,2 MB | ✅ Disponível |
    | Linux x86_64 | **[↓ Bloquin-Linux-x86_64.AppImage](https://github.com/FelipeSilva10/Bloquin/releases/latest/download/Bloquin-Linux-x86_64.AppImage)** | 103,3 MB | ✅ Disponível |
-   | Microsoft Store | — | — | 🕒 Em breve |
+   | Microsoft Store | **[↓ Bloquin na Microsoft Store](https://apps.microsoft.com/detail/9N3MJX3CVHW4)** | — | ✅ Disponível |
 
    > O nome do instalador Windows muda a cada versão (ex.: `BloquinIDE_2.7.0.exe`). Use sempre a [página de releases](https://github.com/FelipeSilva10/Bloquin/releases/latest) para pegar o arquivo certo — o site já faz isso automaticamente (o link acima é apenas um fallback estático e pode ficar desatualizado até a próxima atualização do site).
 
@@ -114,7 +114,7 @@ O Bloquin foi projetado pensando no ambiente escolar:
 
 ## Roadmap
 
-- [ ] Publicação na Microsoft Store
+- [x] Publicação na Microsoft Store
 - [ ] Mais blocos de sensores
 - [ ] Modo tutorial interativo
 - [ ] Biblioteca de projetos prontos

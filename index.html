@@ -111,7 +111,7 @@
       "name": "Qual sistema operacional é compatível com o Bloquin?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "O Bloquin está disponível para Windows 10 e Windows 11 (64 bits), com instalador .exe, e para Linux x86_64, no formato AppImage. Uma versão para a Microsoft Store está em preparação."
+        "text": "O Bloquin está disponível para Windows 10 e Windows 11 (64 bits), com instalador .exe, pela Microsoft Store, e para Linux x86_64, no formato AppImage."
       }
     },
     {
@@ -1282,7 +1282,7 @@ nav {
 }
 .dl-plat-icon-win   { background: #E8F0FF; color: var(--blue); }
 .dl-plat-icon-linux { background: #EEF3FF; }
-.dl-plat-icon-store { background: rgba(28,27,58,0.06); border-color: rgba(28,27,58,0.3); color: rgba(28,27,58,0.45); }
+.dl-plat-icon-store { background: #F0EBFF; color: var(--purple); }
 .dl-plat-info { display: flex; align-items: center; gap: 16px; flex: 1 1 220px; min-width: 0; }
 .dl-plat-body { min-width: 0; }
 .dl-plat-top { display: flex; align-items: center; gap: 8px; flex-wrap: wrap; margin-bottom: 3px; }
@@ -2195,7 +2195,7 @@ footer {
     <div class="dl-left">
       <div class="sec-eye sticker reveal" style="background:var(--yellow);color:var(--dark);border-color:rgba(28,27,58,0.2);"><img src="assets/icon-download.svg" alt="" aria-hidden="true" style="width:16px;height:16px;vertical-align:-3px;display:inline;"> Download gratuito</div>
       <h2 class="dl-h2 reveal reveal-d1">Bloquin<br>IDE</h2>
-      <p class="dl-sub reveal reveal-d2">Baixe agora para Windows ou Linux. A versão para Microsoft Store está a caminho. Experimente no modo visitante ou entre com uma conta para os recursos conectados da turma.</p>
+      <p class="dl-sub reveal reveal-d2">Baixe agora para Windows, Linux ou pela Microsoft Store. Experimente no modo visitante ou entre com uma conta para os recursos conectados da turma.</p>
       <div class="dl-meta reveal reveal-d3">
         <span class="dl-tag dl-tag-version" id="dl-version-tag">v2.7.0</span>
         <span class="dl-tag">64-bit</span>
@@ -2229,17 +2229,17 @@ footer {
           <a class="dl-plat-btn" id="dl-btn-linux" href="https://github.com/FelipeSilva10/Bloquin/releases/latest/download/Bloquin-Linux-x86_64.AppImage" target="_blank" rel="noopener" aria-label="Baixar Bloquin para Linux — AppImage, 103,3 MB"><img src="assets/icon-download.svg" alt="" aria-hidden="true" style="width:14px;height:14px;"> Baixar</a>
         </div>
 
-        <div class="dl-plat dl-plat-soon">
+        <div class="dl-plat dl-plat-available">
           <div class="dl-plat-info">
             <div class="dl-plat-icon dl-plat-icon-store" aria-hidden="true">
               <svg viewBox="0 0 24 24" width="22" height="22" xmlns="http://www.w3.org/2000/svg"><path d="M6 8h12l-1 12a2 2 0 0 1-2 2H9a2 2 0 0 1-2-2L6 8Z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/><path d="M9 8V6a3 3 0 0 1 6 0v2" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
             </div>
             <div class="dl-plat-body">
-              <div class="dl-plat-top"><span class="dl-plat-name">Microsoft Store</span><span class="dl-status dl-status-soon">Em breve</span></div>
-              <p class="dl-plat-meta">Publicação em preparação para Windows 10/11</p>
+              <div class="dl-plat-top"><span class="dl-plat-name">Microsoft Store</span><span class="dl-status dl-status-ok">Disponível</span></div>
+              <p class="dl-plat-meta">Windows 10/11 · instalação automática</p>
             </div>
           </div>
-          <span class="dl-plat-btn dl-plat-btn-disabled" role="button" aria-disabled="true" tabindex="-1">Em breve</span>
+          <a class="dl-plat-btn" id="dl-btn-store" href="https://apps.microsoft.com/detail/9N3MJX3CVHW4" target="_blank" rel="noopener" aria-label="Abrir Bloquin na Microsoft Store">Abrir na Store</a>
         </div>
       </div>
 
@@ -2288,7 +2288,7 @@ footer {
       </div>
       <div class="faq-item reveal reveal-d4">
         <button class="faq-q" type="button" id="faq-q-4" aria-expanded="false" aria-controls="faq-a-4">Qual sistema operacional é compatível?<span class="faq-badge" aria-hidden="true">+</span></button>
-        <div class="faq-a" id="faq-a-4" role="region" aria-labelledby="faq-q-4" hidden>O Bloquin está disponível para Windows 10 e Windows 11 (64 bits), com instalador .exe, e para Linux x86_64, no formato AppImage. Uma versão para a Microsoft Store está em preparação.</div>
+        <div class="faq-a" id="faq-a-4" role="region" aria-labelledby="faq-q-4" hidden>O Bloquin está disponível para Windows 10 e Windows 11 (64 bits), com instalador .exe, pela <a href="https://apps.microsoft.com/detail/9N3MJX3CVHW4" target="_blank" rel="noopener">Microsoft Store</a>, e para Linux x86_64, no formato AppImage.</div>
       </div>
       <div class="faq-item reveal">
         <button class="faq-q" type="button" id="faq-q-5" aria-expanded="false" aria-controls="faq-a-5">Posso ver o código C++ gerado?<span class="faq-badge" aria-hidden="true">+</span></button>
@@ -2310,7 +2310,7 @@ footer {
         <dt>O Bloquin precisa de internet?</dt>
         <dd>Compilação e envio à placa são locais. Recursos de conta, nuvem e turma precisam de conexão.</dd>
         <dt>Qual sistema operacional é compatível?</dt>
-        <dd>Windows 10 e Windows 11 (64 bits), com instalador .exe, e Linux x86_64, no formato AppImage. Versão para a Microsoft Store em preparação.</dd>
+        <dd>Windows 10 e Windows 11 (64 bits), com instalador .exe ou pela Microsoft Store, e Linux x86_64, no formato AppImage.</dd>
         <dt>Posso ver o código C++ gerado?</dt>
         <dd>Sim. O código correspondente aos blocos pode ser consultado no editor.</dd>
         <dt>Quais placas são suportadas?</dt>
