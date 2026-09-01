@@ -1298,15 +1298,21 @@ nav {
 .dl-status-soon { background: #FFFAD0; border-color: #E0B400; color: #8a6c00; }
 .dl-plat-btn {
   font-family: 'Fredoka One', cursive; font-size: 14px;
-  padding: 11px 22px; border-radius: var(--r-md);
-  border: var(--border-w); background: var(--dark); color: #fff;
+  padding: 12px 20px; border-radius: 10px;
+  border: 1.5px solid var(--dark); background: var(--dark); color: #fff;
   display: inline-flex; align-items: center; gap: 8px;
-  text-decoration: none; box-shadow: var(--shadow-sm);
+  text-decoration: none; box-shadow: 0 2px 5px rgba(28,27,58,0.28);
   transition: transform 0.1s, box-shadow 0.1s; flex-shrink: 0; margin-left: auto;
 }
-.dl-plat-btn:hover { transform: translate(-2px,-2px); box-shadow: var(--shadow-md); }
-.dl-plat-btn:active { transform: translate(2px,2px); box-shadow: 1px 1px 0 var(--dark); }
+.dl-plat-btn:hover { transform: translateY(-2px); box-shadow: 0 5px 12px rgba(28,27,58,0.32); }
+.dl-plat-btn:active { transform: translateY(0); box-shadow: 0 1px 3px rgba(28,27,58,0.28); }
 .dl-plat-btn-primary { animation: pulse-ring 2.5s infinite; }
+.dl-plat-btn-badge {
+  padding: 0; border: none; background: transparent; box-shadow: none;
+  border-radius: 8px; overflow: hidden;
+}
+.dl-plat-btn-badge:hover { box-shadow: 0 5px 12px rgba(28,27,58,0.25); }
+.dl-plat-btn-badge:active { transform: translateY(0); box-shadow: 0 2px 5px rgba(28,27,58,0.2); }
 .dl-plat-btn-disabled {
   background: transparent; color: rgba(28,27,58,0.5);
   border: 1.5px dashed rgba(28,27,58,0.4); box-shadow: none;
@@ -2239,7 +2245,7 @@ footer {
               <p class="dl-plat-meta">Windows 10/11 · instalação automática</p>
             </div>
           </div>
-          <a class="dl-plat-btn" id="dl-btn-store" href="https://apps.microsoft.com/detail/9N3MJX3CVHW4" target="_blank" rel="noopener" aria-label="Abrir Bloquin na Microsoft Store">Abrir na Store</a>
+          <a class="dl-plat-btn dl-plat-btn-badge" id="dl-btn-store" href="https://apps.microsoft.com/detail/9N3MJX3CVHW4" target="_blank" rel="noopener" aria-label="Abrir Bloquin na Microsoft Store"><img src="assets/ms-store-badge.svg" alt="Disponível na Microsoft Store" width="146" height="40" style="display:block;height:40px;width:auto;"></a>
         </div>
       </div>
 
