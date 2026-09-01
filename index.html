@@ -42,7 +42,7 @@
   "operatingSystem": "Windows 10/11 (64-bit) e Linux x86_64",
   "inLanguage": "pt-BR",
   "isAccessibleForFree": true,
-  "softwareVersion": "2.5.0",
+  "softwareVersion": "2.6.0",
   "downloadUrl": "https://github.com/FelipeSilva10/Bloquin/releases/latest",
   "screenshot": "https://bloquin.online/assets/Logo_Bloquin.png",
   "offers": {
@@ -2197,7 +2197,7 @@ footer {
       <h2 class="dl-h2 reveal reveal-d1">Bloquin<br>IDE</h2>
       <p class="dl-sub reveal reveal-d2">Baixe agora para Windows ou Linux. A versão para Microsoft Store está a caminho. Experimente no modo visitante ou entre com uma conta para os recursos conectados da turma.</p>
       <div class="dl-meta reveal reveal-d3">
-        <span class="dl-tag dl-tag-version">v2.5.0</span>
+        <span class="dl-tag dl-tag-version" id="dl-version-tag">v2.6.0</span>
         <span class="dl-tag">64-bit</span>
         <span class="dl-tag">MIT · Código aberto</span>
       </div>
@@ -2210,10 +2210,10 @@ footer {
             </div>
             <div class="dl-plat-body">
               <div class="dl-plat-top"><span class="dl-plat-name">Windows</span><span class="dl-status dl-status-ok">Disponível</span></div>
-              <p class="dl-plat-meta">Windows 10/11 (64-bit) · instalador .exe · 21,1 MB</p>
+              <p class="dl-plat-meta" id="dl-meta-windows">Windows 10/11 (64-bit) · instalador .exe · 22,2 MB</p>
             </div>
           </div>
-          <a class="dl-plat-btn dl-plat-btn-primary" href="https://github.com/FelipeSilva10/Bloquin/releases/latest/download/Bloquin-Setup-Windows.exe" target="_blank" rel="noopener" aria-label="Baixar Bloquin para Windows — instalador .exe, 21,1 MB"><img src="assets/icon-download.svg" alt="" aria-hidden="true" style="width:14px;height:14px;"> Baixar</a>
+          <a class="dl-plat-btn dl-plat-btn-primary" id="dl-btn-windows" href="https://github.com/FelipeSilva10/Bloquin/releases/latest/download/BloquinIDE_2.6.0.exe" target="_blank" rel="noopener" aria-label="Baixar Bloquin para Windows — instalador .exe, 22,2 MB"><img src="assets/icon-download.svg" alt="" aria-hidden="true" style="width:14px;height:14px;"> Baixar</a>
         </div>
 
         <div class="dl-plat dl-plat-available">
@@ -2223,10 +2223,10 @@ footer {
             </div>
             <div class="dl-plat-body">
               <div class="dl-plat-top"><span class="dl-plat-name">Linux</span><span class="dl-status dl-status-ok">Disponível</span></div>
-              <p class="dl-plat-meta">x86_64 · AppImage portátil · 102,3 MB</p>
+              <p class="dl-plat-meta" id="dl-meta-linux">x86_64 · AppImage portátil · 103,3 MB</p>
             </div>
           </div>
-          <a class="dl-plat-btn" href="https://github.com/FelipeSilva10/Bloquin/releases/latest/download/Bloquin-Linux-x86_64.AppImage" target="_blank" rel="noopener" aria-label="Baixar Bloquin para Linux — AppImage, 102,3 MB"><img src="assets/icon-download.svg" alt="" aria-hidden="true" style="width:14px;height:14px;"> Baixar</a>
+          <a class="dl-plat-btn" id="dl-btn-linux" href="https://github.com/FelipeSilva10/Bloquin/releases/latest/download/Bloquin-Linux-x86_64.AppImage" target="_blank" rel="noopener" aria-label="Baixar Bloquin para Linux — AppImage, 103,3 MB"><img src="assets/icon-download.svg" alt="" aria-hidden="true" style="width:14px;height:14px;"> Baixar</a>
         </div>
 
         <div class="dl-plat dl-plat-soon">
@@ -2451,6 +2451,52 @@ document.addEventListener('mouseup', () => {
     _activeBlk = null;
   }
 });
+
+/* ── DOWNLOAD LINKS: auto-sync with the latest GitHub release ──
+   The Windows installer filename embeds the version (e.g. BloquinIDE_2.6.0.exe)
+   and changes on every release, so the static hrefs below can go stale. This
+   fetches the real latest-release assets and repairs the buttons in place.
+   The static hrefs already point at the correct files as of this deploy, so
+   nothing is broken if this fetch fails, is rate-limited, or JS is disabled. */
+(function () {
+  function fmtMB(bytes) { return (bytes / 1e6).toFixed(1).replace('.', ',') + ' MB'; }
+  function applyAsset(asset, btnId, metaId, metaPrefix, ariaPrefix) {
+    if (!asset) return;
+    const size = fmtMB(asset.size);
+    const btn = document.getElementById(btnId);
+    if (btn) {
+      btn.href = asset.browser_download_url;
+      btn.setAttribute('aria-label', ariaPrefix + size);
+    }
+    const meta = document.getElementById(metaId);
+    if (meta) meta.textContent = metaPrefix + size;
+  }
+
+  const controller = new AbortController();
+  const timer = setTimeout(() => controller.abort(), 8000);
+
+  fetch('https://api.github.com/repos/FelipeSilva10/Bloquin/releases/latest', {
+    signal: controller.signal,
+    headers: { Accept: 'application/vnd.github+json' }
+  })
+    .then(res => { if (!res.ok) throw new Error('release fetch failed'); return res.json(); })
+    .then(release => {
+      const assets = release.assets || [];
+      const winAsset = assets.find(a => /\.exe$/i.test(a.name));
+      const linuxAsset = assets.find(a => /\.AppImage$/i.test(a.name));
+      applyAsset(winAsset, 'dl-btn-windows', 'dl-meta-windows',
+        'Windows 10/11 (64-bit) · instalador .exe · ', 'Baixar Bloquin para Windows — instalador .exe, ');
+      applyAsset(linuxAsset, 'dl-btn-linux', 'dl-meta-linux',
+        'x86_64 · AppImage portátil · ', 'Baixar Bloquin para Linux — AppImage, ');
+      const tag = (release.tag_name || '').replace(/^v/i, '');
+      if (tag) {
+        const vEl = document.getElementById('dl-version-tag');
+        if (vEl) vEl.textContent = 'v' + tag;
+      }
+    })
+    .catch(() => { /* keep the static, deploy-time-correct links */ })
+    .finally(() => clearTimeout(timer));
+})();
 </script>
 </body>
 </html>
