@@ -42,7 +42,7 @@
   "operatingSystem": "Windows 10/11 (64-bit) e Linux x86_64",
   "inLanguage": "pt-BR",
   "isAccessibleForFree": true,
-  "softwareVersion": "2.7.0",
+  "softwareVersion": "2.7.1",
   "downloadUrl": "https://github.com/FelipeSilva10/Bloquin/releases/latest",
   "screenshot": "https://bloquin.online/assets/Logo_Bloquin.png",
   "offers": {
@@ -394,6 +394,17 @@ nav {
 }
 .nav-github:hover { background: #2c2b52; transform: scale(1.06); }
 .nav-github svg { width: 14px; height: 14px; fill: currentColor; flex-shrink: 0; }
+.nav-youtube {
+  display: inline-flex; align-items: center; justify-content: center;
+  width: 32px; height: 32px; flex-shrink: 0;
+  border: var(--border-w);
+  border-radius: 100px;
+  background: var(--dark);
+  color: #fff;
+  transition: background 0.15s, transform 0.12s;
+}
+.nav-youtube:hover { background: #2c2b52; transform: scale(1.06); }
+.nav-youtube svg { width: 15px; height: 15px; fill: currentColor; }
 .nav-dl {
   font-family: 'Fredoka One', cursive;
   font-size: 15px;
@@ -1228,7 +1239,7 @@ nav {
    DOWNLOAD
 ═══════════════════════════════ */
 #download {
-  background: var(--dl-bg); padding: 88px 48px 96px;
+  background: var(--dl-bg); padding: 64px 48px 68px;
   position: relative; overflow: hidden;
 }
 #download::before {
@@ -1241,17 +1252,17 @@ nav {
 .dl-inner {
   max-width: 1100px; margin: 0 auto;
   position: relative; z-index: var(--z-content);
-  display: grid; grid-template-columns: 1.2fr 1fr; gap: 48px; align-items: center;
+  display: grid; grid-template-columns: 1.2fr 1fr; gap: 40px; align-items: start;
 }
 .dl-left .sec-eye { background: var(--yellow); color: var(--dark); }
 .dl-h2 {
   font-family: 'Fredoka One', cursive;
-  font-size: clamp(44px, 6vw, 84px); line-height: 0.95;
+  font-size: clamp(36px, 4.2vw, 58px); line-height: 0.95;
   letter-spacing: -0.02em; color: #fff;
-  -webkit-text-stroke: 2.5px rgba(28,27,58,0.25); margin-bottom: 24px;
+  -webkit-text-stroke: 2.5px rgba(28,27,58,0.25); margin-bottom: 16px;
 }
-.dl-sub { font-size: 18px; font-weight: 700; color: rgba(255,255,255,0.88); max-width: 420px; line-height: 1.65; margin-bottom: 28px; }
-.dl-meta { display: flex; gap: 10px; flex-wrap: wrap; margin-bottom: 20px; }
+.dl-sub { font-size: 16px; font-weight: 700; color: rgba(255,255,255,0.88); max-width: 480px; line-height: 1.55; margin-bottom: 18px; }
+.dl-meta { display: flex; gap: 10px; flex-wrap: wrap; margin-bottom: 14px; }
 .dl-tag {
   font-family: 'Fredoka One', cursive; font-size: 13px; padding: 6px 14px;
   border-radius: 100px; background: rgba(255,255,255,0.2);
@@ -1260,11 +1271,11 @@ nav {
 .dl-tag-version { background: var(--yellow); border-color: var(--dark); }
 
 /* Platform availability list */
-.dl-platforms { display: flex; flex-direction: column; gap: 12px; margin-bottom: 18px; }
+.dl-platforms { display: flex; flex-direction: column; gap: 10px; margin-bottom: 14px; }
 .dl-plat {
   display: flex; align-items: center; gap: 16px; flex-wrap: wrap;
   background: var(--white); border: var(--border-w); border-radius: var(--r-md);
-  box-shadow: var(--shadow-sm); padding: 14px 18px;
+  box-shadow: var(--shadow-sm); padding: 11px 16px;
   transition: transform 0.15s, box-shadow 0.15s;
   position: relative; z-index: var(--z-card);
 }
@@ -1275,7 +1286,7 @@ nav {
   border-color: rgba(28,27,58,0.4); box-shadow: none;
 }
 .dl-plat-icon {
-  width: 46px; height: 46px; flex-shrink: 0;
+  width: 40px; height: 40px; flex-shrink: 0;
   border: var(--border-w); border-radius: var(--r-sm);
   display: flex; align-items: center; justify-content: center;
   background: var(--white); box-shadow: 2px 2px 0 rgba(28,27,58,0.15);
@@ -1307,6 +1318,7 @@ nav {
 .dl-plat-btn:hover { transform: translateY(-2px); box-shadow: 0 5px 12px rgba(28,27,58,0.32); }
 .dl-plat-btn:active { transform: translateY(0); box-shadow: 0 1px 3px rgba(28,27,58,0.28); }
 .dl-plat-btn-primary { animation: pulse-ring 2.5s infinite; }
+.dl-plat-btn:not(.dl-plat-btn-badge) { min-width: 118px; justify-content: center; }
 .dl-plat-btn-badge {
   padding: 0; border: none; background: transparent; box-shadow: none;
   border-radius: 8px; overflow: hidden;
@@ -1318,18 +1330,18 @@ nav {
   border: 1.5px dashed rgba(28,27,58,0.4); box-shadow: none;
   cursor: not-allowed; pointer-events: none;
 }
-.dl-req-note { font-size: 12.5px; font-weight: 700; color: rgba(255,255,255,0.75); line-height: 1.6; margin-bottom: 18px; max-width: 420px; }
+.dl-req-note { font-size: 12.5px; font-weight: 700; color: rgba(255,255,255,0.75); line-height: 1.5; margin-bottom: 12px; max-width: 480px; }
 .dl-right-box {
   background: rgba(255,255,255,0.14); border: 2.5px solid rgba(255,255,255,0.35);
-  border-radius: var(--r-xl); padding: 32px 28px; -webkit-backdrop-filter: blur(12px); backdrop-filter: blur(12px);
+  border-radius: var(--r-xl); padding: 28px; -webkit-backdrop-filter: blur(12px); backdrop-filter: blur(12px);
   position: relative; z-index: var(--z-card);
 }
-.dl-checklist { display: flex; flex-direction: column; gap: 12px; }
-.dl-check { display: flex; align-items: center; gap: 14px; font-size: 16px; font-weight: 800; color: var(--dark); }
+.dl-checklist { display: grid; grid-template-columns: repeat(2, 1fr); gap: 18px 16px; }
+.dl-check { display: flex; align-items: center; gap: 10px; font-size: 14.5px; font-weight: 800; color: var(--dark); line-height: 1.25; }
 .dl-check-icon {
-  width: 30px; height: 30px; flex-shrink: 0;
+  width: 26px; height: 26px; flex-shrink: 0;
   background: rgba(255,255,255,0.25); border: 2px solid rgba(255,255,255,0.5);
-  border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 14px;
+  border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 12px;
 }
 /* DL deco */
 .dl-deco-1 {
@@ -1494,6 +1506,8 @@ footer {
 .foot-link:hover { background: rgba(255,255,255,0.08); color: rgba(255,255,255,0.9); transform: scale(1.05); }
 .foot-link-gh { background: rgba(255,255,255,0.07); color: rgba(255,255,255,0.8) !important; display: inline-flex; align-items: center; gap: 5px; }
 .foot-link-gh:hover { background: rgba(255,255,255,0.15) !important; }
+.foot-link-yt { background: rgba(255,255,255,0.07); color: rgba(255,255,255,0.8) !important; display: inline-flex; align-items: center; gap: 5px; }
+.foot-link-yt:hover { background: rgba(255,255,255,0.15) !important; }
 .foot-divider { width: 1.5px; height: 18px; background: rgba(255,255,255,0.12); border-radius: 2px; align-self: center; }
 .foot-copy { font-size: 13px; font-weight: 700; color: rgba(255,255,255,0.3); }
 
@@ -1576,6 +1590,7 @@ footer {
 @media (max-width: 560px) {
   nav { padding: 0 18px; }
   .nav-github,
+  .nav-youtube,
   .nav-dl { display: none; }
   .hero-h1 { font-size: clamp(40px, 13vw, 48px); }
   .hero-btns { flex-direction: column; }
@@ -1667,6 +1682,9 @@ footer {
     <a class="nav-pill p-yellow" href="#faq">Dúvidas</a>
   </div>
   <div class="nav-right">
+    <a class="nav-youtube" href="https://www.youtube.com/@BloquinIDE" target="_blank" rel="noopener" aria-label="Canal do Bloquin no YouTube">
+      <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+    </a>
     <a class="nav-github" href="https://github.com/FelipeSilva10/Bloquin" target="_blank" rel="noopener" aria-label="Ver Bloquin no GitHub">
       <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>
       Ver no GitHub
@@ -1687,6 +1705,10 @@ footer {
   <a class="nav-mobile-pill" style="background:#f0f0f8;display:flex;align-items:center;gap:10px;" href="https://github.com/FelipeSilva10/Bloquin" target="_blank" rel="noopener">
     <svg viewBox="0 0 24 24" style="width:18px;height:18px;fill:#1C1B3A;flex-shrink:0;" xmlns="http://www.w3.org/2000/svg"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>
     Ver no GitHub ↗
+  </a>
+  <a class="nav-mobile-pill" style="background:#f0f0f8;display:flex;align-items:center;gap:10px;" href="https://www.youtube.com/@BloquinIDE" target="_blank" rel="noopener">
+    <svg viewBox="0 0 24 24" style="width:18px;height:18px;fill:#1C1B3A;flex-shrink:0;" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+    Canal no YouTube ↗
   </a>
   <a class="nav-mobile-dl" href="#download">Baixar o Bloquin</a>
 </div>
@@ -2203,7 +2225,7 @@ footer {
       <h2 class="dl-h2 reveal reveal-d1">Bloquin<br>IDE</h2>
       <p class="dl-sub reveal reveal-d2">Baixe agora para Windows, Linux ou pela Microsoft Store. Experimente no modo visitante ou entre com uma conta para os recursos conectados da turma.</p>
       <div class="dl-meta reveal reveal-d3">
-        <span class="dl-tag dl-tag-version" id="dl-version-tag">v2.7.0</span>
+        <span class="dl-tag dl-tag-version" id="dl-version-tag">v2.7.1</span>
         <span class="dl-tag">64-bit</span>
         <span class="dl-tag">MIT · Código aberto</span>
       </div>
@@ -2219,7 +2241,7 @@ footer {
               <p class="dl-plat-meta" id="dl-meta-windows">Windows 10/11 (64-bit) · instalador .exe · 22,2 MB</p>
             </div>
           </div>
-          <a class="dl-plat-btn dl-plat-btn-primary" id="dl-btn-windows" href="https://github.com/FelipeSilva10/Bloquin/releases/latest/download/BloquinIDE_2.7.0.exe" target="_blank" rel="noopener" aria-label="Baixar Bloquin para Windows — instalador .exe, 22,2 MB"><img src="assets/icon-download.svg" alt="" aria-hidden="true" style="width:14px;height:14px;"> Baixar</a>
+          <a class="dl-plat-btn dl-plat-btn-primary" id="dl-btn-windows" href="https://github.com/FelipeSilva10/Bloquin/releases/latest" target="_blank" rel="noopener" aria-label="Baixar Bloquin para Windows — instalador .exe, 22,2 MB"><img src="assets/icon-download.svg" alt="" aria-hidden="true" style="width:14px;height:14px;"> Baixar</a>
         </div>
 
         <div class="dl-plat dl-plat-available">
@@ -2348,6 +2370,10 @@ footer {
       <svg viewBox="0 0 24 24" style="width:12px;height:12px;fill:currentColor;display:inline;vertical-align:-1px;" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>
       GitHub ↗
     </a>
+    <a class="foot-link foot-link-yt" href="https://www.youtube.com/@BloquinIDE" target="_blank" rel="noopener">
+      <svg viewBox="0 0 24 24" style="width:12px;height:12px;fill:currentColor;display:inline;vertical-align:-1px;" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+      YouTube ↗
+    </a>
     <a class="foot-link" href="https://github.com/FelipeSilva10/Bloquin/blob/main/README.md" target="_blank" rel="noopener">Documentação ↗</a>
     <a class="foot-link" href="https://github.com/FelipeSilva10/Bloquin/releases" target="_blank" rel="noopener">Versões ↗</a>
     <a class="foot-link" href="https://github.com/FelipeSilva10/Bloquin/issues" target="_blank" rel="noopener">Suporte ↗</a>
@@ -2460,10 +2486,15 @@ document.addEventListener('mouseup', () => {
 
 /* ── DOWNLOAD LINKS: auto-sync with the latest GitHub release ──
    The Windows installer filename embeds the version (e.g. BloquinIDE_2.6.0.exe)
-   and changes on every release, so the static hrefs below can go stale. This
-   fetches the real latest-release assets and repairs the buttons in place.
-   The static hrefs already point at the correct files as of this deploy, so
-   nothing is broken if this fetch fails, is rate-limited, or JS is disabled. */
+   and changes on every release, so a direct static href would go stale and
+   404 the moment a new version ships. This fetches the real latest-release
+   assets and points the buttons at the exact current files. The static
+   Windows href below deliberately points at the releases page (never 404s)
+   rather than a guessed filename, so nothing is broken if this fetch fails,
+   is rate-limited, or JS is disabled — worst case the visitor lands on the
+   releases page instead of getting a direct download. The Linux filename is
+   fixed by the build (never versioned), so its static href stays evergreen
+   on its own. */
 (function () {
   function fmtMB(bytes) { return (bytes / 1e6).toFixed(1).replace('.', ',') + ' MB'; }
   function applyAsset(asset, btnId, metaId, metaPrefix, ariaPrefix) {
