@@ -5,7 +5,6 @@
 
 [![Versão](https://img.shields.io/badge/versão-2.7.1-F56E2E?style=flat-square)](https://bloquin.online)
 [![Plataforma](https://img.shields.io/badge/plataforma-Windows%20%2B%20Linux-0078D4?style=flat-square)](https://bloquin.online)
-[![Licença](https://img.shields.io/badge/licença-MIT-50E37A?style=flat-square)](https://bloquin.online)
 [![Site](https://img.shields.io/badge/site-bloquin.online-F56E2E?style=flat-square)](https://bloquin.online)
 
 ---
@@ -55,11 +54,11 @@ Pensado para crianças, alunos do ensino fundamental e médio, e qualquer pessoa
 
    | Plataforma | Arquivo | Tamanho | Status |
    | --- | --- | --- | --- |
-   | Windows 10/11 (64-bit) | **[↓ Baixar instalador .exe](https://github.com/FelipeSilva10/Bloquin/releases/latest)** | 22,2 MB | ✅ Disponível |
-   | Linux x86_64 | **[↓ Bloquin-Linux-x86_64.AppImage](https://github.com/FelipeSilva10/Bloquin/releases/latest/download/Bloquin-Linux-x86_64.AppImage)** | 103,3 MB | ✅ Disponível |
+   | Windows 10/11 (64-bit) | **[↓ Baixar instalador .exe](https://github.com/FelipeSilva10/bloquin-releases/releases/latest)** | 22,2 MB | ✅ Disponível |
+   | Linux x86_64 | **[↓ Bloquin-Linux-x86_64.AppImage](https://github.com/FelipeSilva10/bloquin-releases/releases/latest/download/Bloquin-Linux-x86_64.AppImage)** | 103,3 MB | ✅ Disponível |
    | Microsoft Store | **[↓ Bloquin na Microsoft Store](https://apps.microsoft.com/detail/9N3MJX3CVHW4)** | — | ✅ Disponível |
 
-   > O nome do instalador Windows muda a cada versão (ex.: `BloquinIDE_2.7.1.exe`), por isso o link acima aponta direto para a [página de releases](https://github.com/FelipeSilva10/Bloquin/releases/latest) em vez de um arquivo específico — assim ele nunca quebra, mesmo entre atualizações do site. No site oficial, o botão de download já resolve o arquivo exato via a API do GitHub automaticamente.
+   > O nome do instalador Windows muda a cada versão (ex.: `BloquinIDE_2.7.1.exe`), por isso o link acima aponta direto para a [página de releases](https://github.com/FelipeSilva10/bloquin-releases/releases/latest) em vez de um arquivo específico — assim ele nunca quebra, mesmo entre atualizações do site. No site oficial, o botão de download já resolve o arquivo exato via a API do GitHub automaticamente.
 
 2. No Windows, execute o instalador e siga as instruções. No Linux, permita a execução do arquivo AppImage e abra-o.
 3. Conecte sua placa via USB.
@@ -108,7 +107,6 @@ O Bloquin foi projetado pensando no ambiente escolar:
 - **Interface em português** — sem barreira de idioma para alunos brasileiros
 - **Ponte para o código real** — alunos avançados podem ver e aprender o C++ gerado
 - **Recursos de turma** — projetos na nuvem e painel do professor usam conexão com a internet
-- **Código aberto** — distribuído sob licença MIT
 
 ---
 
@@ -125,12 +123,6 @@ O Bloquin foi projetado pensando no ambiente escolar:
 ## Desenvolvido por
 
 Felipe da Conceição Silva
-
----
-
-## Licença
-
-O Bloquin é distribuído sob a licença MIT.
 
 ---
 

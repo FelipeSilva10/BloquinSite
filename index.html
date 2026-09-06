@@ -43,7 +43,7 @@
   "inLanguage": "pt-BR",
   "isAccessibleForFree": true,
   "softwareVersion": "2.7.1",
-  "downloadUrl": "https://github.com/FelipeSilva10/Bloquin/releases/latest",
+  "downloadUrl": "https://github.com/FelipeSilva10/bloquin-releases/releases/latest",
   "screenshot": "https://bloquin.online/assets/Logo_Bloquin.png",
   "offers": {
     "@type": "Offer",
@@ -67,10 +67,8 @@
     "url": "https://github.com/FelipeSilva10",
     "sameAs": ["https://github.com/FelipeSilva10"]
   },
-  "codeRepository": "https://github.com/FelipeSilva10/Bloquin",
-  "license": "https://opensource.org/licenses/MIT",
-  "releaseNotes": "https://github.com/FelipeSilva10/Bloquin/releases",
-  "discussionUrl": "https://github.com/FelipeSilva10/Bloquin/issues",
+  "releaseNotes": "https://github.com/FelipeSilva10/bloquin-releases/releases",
+  "discussionUrl": "https://github.com/FelipeSilva10/bloquin-releases/issues",
   "developmentStatus": "Active",
   "programmingLanguage": ["Rust", "TypeScript", "C++"]
 }
@@ -87,7 +85,7 @@
       "name": "O Bloquin é realmente gratuito?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Sim. O Bloquin é distribuído gratuitamente e seu código-fonte está disponível sob a licença MIT."
+        "text": "Sim. O Bloquin é distribuído gratuitamente para Windows, Linux e Microsoft Store."
       }
     },
     {
@@ -1356,77 +1354,6 @@ nav {
   animation: float-c 8s ease-in-out infinite;
 }
 
-/* ═══════════════════════════════
-   OPEN SOURCE SECTION
-═══════════════════════════════ */
-.opensource-inner {
-  max-width: 1100px; margin: 0 auto;
-  display: grid;
-  grid-template-columns: minmax(0, 1.02fr) minmax(0, 0.98fr);
-  gap: clamp(36px, 5vw, 64px);
-  align-items: stretch;
-  position: relative; z-index: var(--z-content);
-}
-.opensource-left { display: flex; flex-direction: column; min-width: 0; }
-.opensource-right { display: flex; align-items: center; min-width: 0; }
-.os-links { display: flex; flex-direction: column; gap: 10px; }
-.os-link-card {
-  display: flex; align-items: center; gap: 14px;
-  background: var(--white); border: var(--border-w);
-  border-radius: var(--r-md); padding: 14px 18px;
-  box-shadow: var(--shadow-sm); color: var(--dark);
-  text-decoration: none;
-  transition: transform 0.1s, box-shadow 0.12s;
-}
-.os-link-card:hover { transform: translate(-2px,-2px); box-shadow: var(--shadow-md); }
-.os-link-card div { display: flex; flex-direction: column; gap: 2px; flex: 1; }
-.os-link-card strong { font-weight: 900; font-size: 15px; }
-.os-link-card span { font-size: 12px; color: rgba(28,27,58,0.6); font-weight: 700; }
-.os-arrow { font-size: 18px; color: var(--green); font-weight: 900; flex-shrink: 0; }
-/* GitHub card */
-.os-gh-card {
-  background: var(--dark); border: var(--border);
-  border-radius: var(--r-xl); padding: 32px 28px;
-  box-shadow: var(--shadow-xl);
-  display: flex; flex-direction: column; gap: 16px;
-  width: 100%;
-  min-height: 380px;
-}
-.os-gh-header { display: flex; align-items: center; gap: 12px; flex-wrap: wrap; }
-.os-gh-title { display: flex; align-items: baseline; gap: 2px; }
-.os-gh-org { font-family: 'Fredoka One', cursive; font-size: 20px; color: rgba(255,255,255,0.6); }
-.os-gh-repo { font-family: 'Fredoka One', cursive; font-size: 20px; color: #fff; }
-.os-gh-badge {
-  background: var(--green); color: var(--dark);
-  font-family: 'Fredoka One', cursive; font-size: 12px;
-  padding: 3px 12px; border-radius: 100px;
-  border: 2px solid rgba(255,255,255,0.2);
-  margin-left: auto;
-}
-.os-gh-desc { font-size: 14px; font-weight: 700; color: rgba(255,255,255,0.72); line-height: 1.6; }
-.os-gh-lang { display: flex; align-items: center; gap: 6px; font-size: 13px; font-weight: 800; color: rgba(255,255,255,0.7); }
-.os-lang-dot { width: 12px; height: 12px; border-radius: 50%; flex-shrink: 0; display: inline-block; }
-.os-gh-stats {
-  display: flex; gap: 12px; flex-wrap: wrap;
-  border-top: 1.5px solid rgba(255,255,255,0.1);
-  padding-top: 16px;
-}
-.os-stat {
-  font-family: 'Fredoka One', cursive; font-size: 14px;
-  color: rgba(255,255,255,0.7);
-  background: rgba(255,255,255,0.07); border: 1.5px solid rgba(255,255,255,0.12);
-  border-radius: 100px; padding: 5px 14px;
-}
-.os-gh-cta {
-  display: flex; align-items: center; justify-content: center; gap: 8px;
-  background: var(--white); color: var(--dark);
-  font-family: 'Fredoka One', cursive; font-size: 18px;
-  padding: 14px 28px; border-radius: var(--r-md);
-  border: var(--border); box-shadow: var(--shadow-md);
-  text-decoration: none; transition: transform 0.1s, box-shadow 0.1s;
-}
-.os-gh-card .os-gh-cta { margin-top: auto; }
-.os-gh-cta:hover { transform: translate(-2px,-2px); box-shadow: var(--shadow-lg); }
 /* GitHub link below download CTA */
 .dl-github-link {
   display: inline-flex; align-items: center; gap: 8px; margin-top: 12px;
@@ -1574,10 +1501,6 @@ footer {
 
   .origem-inner { grid-template-columns: 1fr; gap: 32px; }
   .dl-inner { grid-template-columns: 1fr; }
-  .opensource-inner { grid-template-columns: 1fr; gap: 32px; }
-  .opensource-right { width: 100%; max-width: 680px; margin: 0 auto; }
-  .os-gh-card { min-height: 0; }
-  #opensource { padding: 64px 24px 72px; }
 
   footer { padding: 28px 20px; }
 }
@@ -1644,8 +1567,7 @@ footer {
 }
 
 @media (max-width: 380px) {
-  #hero, #what, #how, #alunos, #boards, #educadores, #origem, #download, #faq,
-  #opensource { padding-left: 18px; padding-right: 18px; }
+  #hero, #what, #how, #alunos, #boards, #educadores, #origem, #download, #faq { padding-left: 18px; padding-right: 18px; }
   .nav-wordmark { display: none; }
   .nav-mobile { padding: 18px 14px; }
   .sec-title { font-size: 34px; }
@@ -1685,7 +1607,7 @@ footer {
     <a class="nav-youtube" href="https://www.youtube.com/@BloquinIDE" target="_blank" rel="noopener" aria-label="Canal do Bloquin no YouTube">
       <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
     </a>
-    <a class="nav-github" href="https://github.com/FelipeSilva10/Bloquin" target="_blank" rel="noopener" aria-label="Ver Bloquin no GitHub">
+    <a class="nav-github" href="https://github.com/FelipeSilva10/bloquin-releases" target="_blank" rel="noopener" aria-label="Ver Bloquin no GitHub">
       <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>
       Ver no GitHub
     </a>
@@ -1702,7 +1624,7 @@ footer {
   <a class="nav-mobile-pill p-orange" href="#alunos">Para quem</a>
   <a class="nav-mobile-pill p-green"  href="#educadores">Na educação</a>
   <a class="nav-mobile-pill p-yellow" href="#faq">Dúvidas</a>
-  <a class="nav-mobile-pill" style="background:#f0f0f8;display:flex;align-items:center;gap:10px;" href="https://github.com/FelipeSilva10/Bloquin" target="_blank" rel="noopener">
+  <a class="nav-mobile-pill" style="background:#f0f0f8;display:flex;align-items:center;gap:10px;" href="https://github.com/FelipeSilva10/bloquin-releases" target="_blank" rel="noopener">
     <svg viewBox="0 0 24 24" style="width:18px;height:18px;fill:#1C1B3A;flex-shrink:0;" xmlns="http://www.w3.org/2000/svg"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>
     Ver no GitHub ↗
   </a>
@@ -1743,7 +1665,7 @@ footer {
         <div class="hero-stat"><span class="hs-val">3</span><span class="hs-key">Modelos de placa</span></div>
         <div class="hero-stat"><span class="hs-val">C++</span><span class="hs-key">Código visível</span></div>
         <div class="hero-stat"><span class="hs-val">USB</span><span class="hs-key">Envio direto</span></div>
-        <div class="hero-stat"><span class="hs-val">MIT</span><span class="hs-key">Código aberto</span></div>
+        <div class="hero-stat"><span class="hs-val">100%</span><span class="hs-key">Gratuito</span></div>
       </div>
     </div>
 
@@ -2130,87 +2052,6 @@ footer {
 </section>
 
 <div class="wave-wrap" style="background:var(--origin-bg)" aria-hidden="true">
-  <svg viewBox="0 0 1440 70" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg"><path d="M0,40 C200,0 500,70 800,30 C1050,0 1280,60 1440,25 L1440,70 L0,70 Z" fill="#18C95D"/></svg>
-</div>
-
-
-<!-- OPEN SOURCE -->
-<section id="opensource" style="background:#EAFFF3;padding:72px 48px;position:relative;overflow:hidden;">
-  <div style="position:absolute;inset:0;background-image:radial-gradient(circle,rgba(28,27,58,0.06) 1.5px,transparent 1.5px);background-size:28px 28px;pointer-events:none;"></div>
-  <div class="opensource-inner">
-    <div class="opensource-left reveal">
-      <div class="sec-eye sticker" style="background:var(--dark);color:#fff;border-color:var(--dark);">
-        <svg viewBox="0 0 24 24" style="width:14px;height:14px;fill:#fff;flex-shrink:0;" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>
-        Código aberto · MIT
-      </div>
-      <h2 class="sec-title reveal reveal-d1" style="margin-top:16px;">Código aberto<br><em style="color:var(--green);font-style:normal">sob licença MIT.</em></h2>
-      <p class="sec-sub reveal reveal-d2" style="color:rgba(28,27,58,0.72);margin-bottom:28px;">O código-fonte pode ser consultado, estudado, modificado e redistribuído conforme os termos da licença. O repositório também concentra versões, documentação e contribuições.</p>
-      <div class="os-links reveal reveal-d3">
-        <a class="os-link-card" href="https://github.com/FelipeSilva10/Bloquin" target="_blank" rel="noopener">
-          <svg viewBox="0 0 24 24" style="width:20px;height:20px;fill:currentColor;flex-shrink:0;" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>
-          <div>
-            <strong>Repositório GitHub</strong>
-            <span>Código-fonte completo</span>
-          </div>
-          <span class="os-arrow">↗</span>
-        </a>
-        <a class="os-link-card" href="https://github.com/FelipeSilva10/Bloquin/blob/main/README.md" target="_blank" rel="noopener">
-          <span style="font-size:20px;flex-shrink:0;">📄</span>
-          <div>
-            <strong>Documentação</strong>
-            <span>Visão geral, instalação e arquitetura</span>
-          </div>
-          <span class="os-arrow">↗</span>
-        </a>
-        <a class="os-link-card" href="https://github.com/FelipeSilva10/Bloquin/releases" target="_blank" rel="noopener">
-          <span style="font-size:20px;flex-shrink:0;">🏷️</span>
-          <div>
-            <strong>Releases</strong>
-            <span>Histórico de versões e changelogs</span>
-          </div>
-          <span class="os-arrow">↗</span>
-        </a>
-        <a class="os-link-card" href="https://github.com/FelipeSilva10/Bloquin/issues" target="_blank" rel="noopener">
-          <span style="font-size:20px;flex-shrink:0;">🐛</span>
-          <div>
-            <strong>Suporte e sugestões</strong>
-            <span>Reporte um problema ou proponha uma melhoria</span>
-          </div>
-          <span class="os-arrow">↗</span>
-        </a>
-      </div>
-    </div>
-    <div class="opensource-right reveal reveal-d2">
-      <div class="os-gh-card">
-        <div class="os-gh-header">
-          <svg viewBox="0 0 24 24" style="width:28px;height:28px;fill:#fff;" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>
-          <div class="os-gh-title">
-            <span class="os-gh-org">FelipeSilva10</span>
-            <span class="os-gh-repo">/ Bloquin</span>
-          </div>
-          <div class="os-gh-badge">Open Source</div>
-        </div>
-        <p class="os-gh-desc">IDE visual em português para programar Arduino e ESP32 com blocos, acompanhar o C++ gerado e apoiar atividades educacionais.</p>
-        <div class="os-gh-lang">
-          <span class="os-lang-dot" style="background:#b07219;"></span><span>Rust</span>
-          <span class="os-lang-dot" style="background:#3178c6;margin-left:12px;"></span><span>TypeScript</span>
-          <span class="os-lang-dot" style="background:#f34b7d;margin-left:12px;"></span><span>C++</span>
-        </div>
-        <div class="os-gh-stats">
-          <div class="os-stat">⭐ Stars</div>
-          <div class="os-stat">🍴 Forks</div>
-          <div class="os-stat">📄 MIT</div>
-        </div>
-        <a class="os-gh-cta" href="https://github.com/FelipeSilva10/Bloquin" target="_blank" rel="noopener">
-          <svg viewBox="0 0 24 24" style="width:16px;height:16px;fill:currentColor;" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>
-          Ver no GitHub
-        </a>
-      </div>
-    </div>
-  </div>
-</section>
-
-<div class="wave-wrap" style="background:#EAFFF3" aria-hidden="true">
   <svg viewBox="0 0 1440 70" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg"><path d="M0,40 C200,0 500,70 800,30 C1050,0 1280,60 1440,25 L1440,70 L0,70 Z" fill="#FF5E1F"/></svg>
 </div>
 
@@ -2227,7 +2068,6 @@ footer {
       <div class="dl-meta reveal reveal-d3">
         <span class="dl-tag dl-tag-version" id="dl-version-tag">v2.7.1</span>
         <span class="dl-tag">64-bit</span>
-        <span class="dl-tag">MIT · Código aberto</span>
       </div>
 
       <div class="dl-platforms reveal reveal-d3">
@@ -2241,7 +2081,7 @@ footer {
               <p class="dl-plat-meta" id="dl-meta-windows">Windows 10/11 (64-bit) · instalador .exe · 22,2 MB</p>
             </div>
           </div>
-          <a class="dl-plat-btn dl-plat-btn-primary" id="dl-btn-windows" href="https://github.com/FelipeSilva10/Bloquin/releases/latest" target="_blank" rel="noopener" aria-label="Baixar Bloquin para Windows — instalador .exe, 22,2 MB"><img src="assets/icon-download.svg" alt="" aria-hidden="true" style="width:14px;height:14px;"> Baixar</a>
+          <a class="dl-plat-btn dl-plat-btn-primary" id="dl-btn-windows" href="https://github.com/FelipeSilva10/bloquin-releases/releases/latest" target="_blank" rel="noopener" aria-label="Baixar Bloquin para Windows — instalador .exe, 22,2 MB"><img src="assets/icon-download.svg" alt="" aria-hidden="true" style="width:14px;height:14px;"> Baixar</a>
         </div>
 
         <div class="dl-plat dl-plat-available">
@@ -2254,7 +2094,7 @@ footer {
               <p class="dl-plat-meta" id="dl-meta-linux">x86_64 · AppImage portátil · 103,3 MB</p>
             </div>
           </div>
-          <a class="dl-plat-btn" id="dl-btn-linux" href="https://github.com/FelipeSilva10/Bloquin/releases/latest/download/Bloquin-Linux-x86_64.AppImage" target="_blank" rel="noopener" aria-label="Baixar Bloquin para Linux — AppImage, 103,3 MB"><img src="assets/icon-download.svg" alt="" aria-hidden="true" style="width:14px;height:14px;"> Baixar</a>
+          <a class="dl-plat-btn" id="dl-btn-linux" href="https://github.com/FelipeSilva10/bloquin-releases/releases/latest/download/Bloquin-Linux-x86_64.AppImage" target="_blank" rel="noopener" aria-label="Baixar Bloquin para Linux — AppImage, 103,3 MB"><img src="assets/icon-download.svg" alt="" aria-hidden="true" style="width:14px;height:14px;"> Baixar</a>
         </div>
 
         <div class="dl-plat dl-plat-available">
@@ -2273,7 +2113,7 @@ footer {
 
       <p class="dl-req-note reveal reveal-d4">Requer ~6 GB de espaço livre. Nenhuma instalação adicional — o arduino-cli já vem incluso. No Linux, marque o AppImage como executável antes de abrir.</p>
 
-      <a class="dl-github-link reveal reveal-d4" href="https://github.com/FelipeSilva10/Bloquin/releases/latest" target="_blank" rel="noopener">
+      <a class="dl-github-link reveal reveal-d4" href="https://github.com/FelipeSilva10/bloquin-releases/releases/latest" target="_blank" rel="noopener">
         <svg viewBox="0 0 24 24" style="width:16px;height:16px;fill:currentColor;flex-shrink:0;" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>
         Ver notas da versão e verificação SHA-256 ↗
       </a>
@@ -2304,7 +2144,7 @@ footer {
     <div class="faq-list">
       <div class="faq-item reveal reveal-d1">
         <button class="faq-q" type="button" id="faq-q-1" aria-expanded="false" aria-controls="faq-a-1">O Bloquin é gratuito?<span class="faq-badge" aria-hidden="true">+</span></button>
-        <div class="faq-a" id="faq-a-1" role="region" aria-labelledby="faq-q-1" hidden>Sim. O aplicativo é distribuído gratuitamente e seu código-fonte está disponível sob a licença MIT.</div>
+        <div class="faq-a" id="faq-a-1" role="region" aria-labelledby="faq-q-1" hidden>Sim. O aplicativo é distribuído gratuitamente para Windows, Linux e Microsoft Store.</div>
       </div>
       <div class="faq-item reveal reveal-d2">
         <button class="faq-q" type="button" id="faq-q-2" aria-expanded="false" aria-controls="faq-a-2">Preciso saber programar para usar?<span class="faq-badge" aria-hidden="true">+</span></button>
@@ -2332,7 +2172,7 @@ footer {
     <noscript>
       <dl class="faq-noscript">
         <dt>O Bloquin é gratuito?</dt>
-        <dd>Sim. O aplicativo é gratuito e o código-fonte usa a licença MIT.</dd>
+        <dd>Sim. O aplicativo é distribuído gratuitamente para Windows, Linux e Microsoft Store.</dd>
         <dt>Preciso saber programar para usar?</dt>
         <dd>Não. É possível começar pela lógica em blocos e consultar o C++ gerado.</dd>
         <dt>O Bloquin precisa de internet?</dt>
@@ -2363,10 +2203,9 @@ footer {
     <a class="foot-link" href="#alunos">Para quem</a>
     <a class="foot-link" href="#boards">Placas</a>
     <a class="foot-link" href="#educadores">Educadores</a>
-    <a class="foot-link" href="#opensource">Código aberto</a>
     <a class="foot-link" href="#faq">Dúvidas</a>
     <span class="foot-divider" aria-hidden="true"></span>
-    <a class="foot-link foot-link-gh" href="https://github.com/FelipeSilva10/Bloquin" target="_blank" rel="noopener">
+    <a class="foot-link foot-link-gh" href="https://github.com/FelipeSilva10/bloquin-releases" target="_blank" rel="noopener">
       <svg viewBox="0 0 24 24" style="width:12px;height:12px;fill:currentColor;display:inline;vertical-align:-1px;" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>
       GitHub ↗
     </a>
@@ -2374,9 +2213,8 @@ footer {
       <svg viewBox="0 0 24 24" style="width:12px;height:12px;fill:currentColor;display:inline;vertical-align:-1px;" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
       YouTube ↗
     </a>
-    <a class="foot-link" href="https://github.com/FelipeSilva10/Bloquin/blob/main/README.md" target="_blank" rel="noopener">Documentação ↗</a>
-    <a class="foot-link" href="https://github.com/FelipeSilva10/Bloquin/releases" target="_blank" rel="noopener">Versões ↗</a>
-    <a class="foot-link" href="https://github.com/FelipeSilva10/Bloquin/issues" target="_blank" rel="noopener">Suporte ↗</a>
+    <a class="foot-link" href="https://github.com/FelipeSilva10/bloquin-releases/releases" target="_blank" rel="noopener">Versões ↗</a>
+    <a class="foot-link" href="https://github.com/FelipeSilva10/bloquin-releases/issues" target="_blank" rel="noopener">Suporte ↗</a>
     <a class="foot-link" href="https://sagsite.vercel.app/" target="_blank" rel="noopener">SAG ↗</a>
   </div>
   <span class="foot-copy">© 2026 Bloquin — Feito com ❤️ por Felipe da Conceição</span>
@@ -2512,7 +2350,7 @@ document.addEventListener('mouseup', () => {
   const controller = new AbortController();
   const timer = setTimeout(() => controller.abort(), 8000);
 
-  fetch('https://api.github.com/repos/FelipeSilva10/Bloquin/releases/latest', {
+  fetch('https://api.github.com/repos/FelipeSilva10/bloquin-releases/releases/latest', {
     signal: controller.signal,
     headers: { Accept: 'application/vnd.github+json' }
   })
