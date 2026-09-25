@@ -86,7 +86,6 @@ BloquinSite/
 │   ├── logo_SAG.png         # Logotipo da SAG
 │   ├── alunos1.jpg          # Foto de alunos em aula
 │   └── alunos2.jpg          # Foto de alunos em aula
-├── conteudos/                # Biblioteca de projetos e componentes
 ├── public/
 │   └── favicon.png           # Marca otimizada para uso na interface
 ├── index.html               # Página principal do site
