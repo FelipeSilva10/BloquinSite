@@ -155,6 +155,7 @@
   --hero-bg:      #FFED4A;
   --what-bg:      #FFFFFF;
   --how-bg:       #2F6EDB;
+  --showcase-bg:  #FFFBF0;
   --students-bg:  #FFE8D6;
   --boards-bg:    #EAFFF3;
   --edu-bg:       #F0EBFF;
@@ -909,6 +910,63 @@ nav {
 }
 
 /* ═══════════════════════════════
+   BLOQUIN IN ACTION
+═══════════════════════════════ */
+#em-acao {
+  background: var(--showcase-bg);
+  padding: 88px 48px 96px;
+  position: relative; overflow: hidden;
+}
+.showcase-inner { max-width: 1100px; margin: 0 auto; position: relative; z-index: var(--z-content); }
+.showcase-header { margin-bottom: 48px; }
+.showcase-header .sec-eye { background: var(--teal); color: var(--dark); }
+.showcase-header .sec-title em { color: var(--blue); font-style: normal; }
+.showcase-header .sec-sub { max-width: 620px; color: rgba(28,27,58,0.72); }
+.showcase-product {
+  display: grid; grid-template-columns: minmax(0, 2.2fr) minmax(0, 1fr);
+  gap: 32px; align-items: center;
+}
+.showcase-heading { font-family: 'Fredoka One', cursive; font-size: clamp(24px, 2.6vw, 30px); line-height: 1.2; margin-bottom: 14px; }
+.showcase-kicker { display: block; font-size: 12px; font-weight: 900; text-transform: uppercase; letter-spacing: 0.1em; color: var(--blue); margin-bottom: 10px; }
+.showcase-copy p, .showcase-classroom-header p { font-size: 16px; font-weight: 700; line-height: 1.7; color: rgba(28,27,58,0.72); }
+.showcase-tags { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 20px; }
+.showcase-tags span {
+  border: var(--border-w); border-radius: 100px; padding: 5px 12px;
+  background: #EEF4FF; font-size: 12px; font-weight: 900;
+}
+.showcase-screen, .showcase-photo {
+  min-width: 0; background: var(--white); border: var(--border);
+  border-radius: var(--r-md); box-shadow: var(--shadow-md);
+  overflow: hidden; position: relative; z-index: var(--z-card);
+}
+.showcase-screen-bar {
+  display: flex; align-items: center; justify-content: space-between; gap: 12px;
+  padding: 12px 16px; border-bottom: var(--border-w); background: #EEF4FF;
+  font-family: 'Fredoka One', cursive; font-size: 14px;
+}
+.showcase-screen-bar a { font-family: 'Nunito', sans-serif; font-size: 12px; font-weight: 900; text-decoration: underline; text-underline-offset: 3px; flex-shrink: 0; }
+.showcase-screen-bar a:hover { color: var(--blue); }
+.showcase-screen img { width: 100%; height: auto; }
+.showcase-screen figcaption, .showcase-photo figcaption { border-top: var(--border-w); padding: 18px 20px; }
+.showcase-screen figcaption p, .showcase-photo figcaption p { font-size: 14px; font-weight: 700; line-height: 1.65; color: rgba(28,27,58,0.72); }
+.showcase-caption-title { font-family: 'Fredoka One', cursive; font-size: 18px; margin-bottom: 6px; }
+.showcase-featured figcaption { padding: 12px 16px; }
+.showcase-resources { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 20px; margin-top: 28px; }
+.showcase-library .showcase-screen-bar { background: #F0EBFF; }
+.showcase-components .showcase-screen-bar { background: #EAFFF3; }
+.showcase-docs .showcase-screen-bar { background: #FFFAD0; }
+.showcase-classroom { margin-top: 56px; }
+.showcase-classroom-header {
+  display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  gap: 32px; align-items: center; margin-bottom: 28px;
+}
+.showcase-classroom-header .showcase-kicker { color: var(--orange); }
+.showcase-classroom-header .showcase-heading { margin-bottom: 0; }
+.showcase-photos { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 24px; }
+.showcase-photo img { width: 100%; height: auto; aspect-ratio: 4/3; object-fit: cover; }
+.showcase-photo figcaption { background: #FFF0E8; }
+
+/* ═══════════════════════════════
    STUDENTS
 ═══════════════════════════════ */
 #alunos {
@@ -1441,7 +1499,7 @@ footer {
   .nav-links { display: none; }
   .nav-hamburger { display: flex; }
 
-  #hero, #what, #how, #alunos, #boards, #educadores, #origem, #download, #faq {
+  #hero, #what, #how, #em-acao, #alunos, #boards, #educadores, #origem, #download, #faq {
     padding: 64px 24px 72px;
   }
 
@@ -1482,6 +1540,11 @@ footer {
   .what-cards { grid-template-columns: 1fr; }
   .steps-row { grid-template-columns: 1fr 1fr; }
   .steps-row::before { display: none; }
+  .showcase-product { grid-template-columns: 1fr; gap: 24px; }
+  .showcase-copy { grid-row: 1; }
+  .showcase-resources { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .showcase-docs { grid-column: 1 / -1; max-width: 600px; width: 100%; justify-self: center; }
+  .showcase-classroom-header { grid-template-columns: 1fr; gap: 16px; }
   .alunos-layout { grid-template-columns: 1fr; gap: 40px; }
   .alunos-gallery {
     width: 100%;
@@ -1501,7 +1564,7 @@ footer {
   footer { padding: 28px 20px; }
 }
 
-@media (max-width: 1200px) and (min-width: 961px) {
+@media (max-width: 1280px) and (min-width: 961px) {
   .nav-links { display: none; }
   .nav-hamburger { display: flex; }
 }
@@ -1525,6 +1588,10 @@ footer {
   .hero-stat:nth-child(even) { border-right: none; }
   .hero-stat:nth-child(n + 3) { border-bottom: none; }
   .steps-row { grid-template-columns: 1fr; }
+  .showcase-header { margin-bottom: 32px; }
+  .showcase-resources, .showcase-photos { grid-template-columns: 1fr; gap: 24px; }
+  .showcase-docs { grid-column: auto; max-width: none; }
+  .showcase-classroom { margin-top: 40px; }
   .edu-grid-right { grid-template-columns: 1fr; }
   .what-header { flex-direction: column; }
   .what-header .sec-title { font-size: 36px; }
@@ -1563,7 +1630,7 @@ footer {
 }
 
 @media (max-width: 380px) {
-  #hero, #what, #how, #alunos, #boards, #educadores, #origem, #download, #faq { padding-left: 18px; padding-right: 18px; }
+  #hero, #what, #how, #em-acao, #alunos, #boards, #educadores, #origem, #download, #faq { padding-left: 18px; padding-right: 18px; }
   .nav-wordmark { display: none; }
   .nav-mobile { padding: 18px 14px; }
   .sec-title { font-size: 34px; }
@@ -1595,6 +1662,7 @@ footer {
   <div class="nav-links">
     <a class="nav-pill p-purple" href="#what">O Bloquin</a>
     <a class="nav-pill p-blue"   href="#how">Como funciona</a>
+    <a class="nav-pill p-teal"   href="#em-acao">Em ação</a>
     <a class="nav-pill p-orange" href="#alunos">Para quem</a>
     <a class="nav-pill p-green"  href="#educadores">Educação</a>
     <a class="nav-pill p-yellow" href="#faq">Dúvidas</a>
@@ -1617,6 +1685,7 @@ footer {
 <div id="nav-mobile-menu" class="nav-mobile" role="navigation" aria-label="Menu de navegação" aria-hidden="true">
   <a class="nav-mobile-pill p-purple" href="#what">O Bloquin</a>
   <a class="nav-mobile-pill p-blue"   href="#how">Como funciona</a>
+  <a class="nav-mobile-pill p-teal"   href="#em-acao">Em ação</a>
   <a class="nav-mobile-pill p-orange" href="#alunos">Para quem</a>
   <a class="nav-mobile-pill p-green"  href="#educadores">Na educação</a>
   <a class="nav-mobile-pill p-yellow" href="#faq">Dúvidas</a>
@@ -1861,6 +1930,105 @@ footer {
 </section>
 
 <div class="wave-wrap" style="background:var(--how-bg)" aria-hidden="true">
+  <svg viewBox="0 0 1440 70" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg"><path d="M0,20 C300,70 600,0 900,50 C1100,80 1300,10 1440,40 L1440,70 L0,70 Z" fill="#FFFBF0"/></svg>
+</div>
+
+
+<!-- BLOQUIN IN ACTION -->
+<section id="em-acao" aria-labelledby="showcase-title">
+  <div class="showcase-inner">
+    <div class="showcase-header">
+      <div class="sec-eye sticker reveal">Bloquin em ação</div>
+      <h2 class="sec-title reveal reveal-d1" id="showcase-title">Na tela, uma ideia.<br><em>Na aula, uma descoberta.</em></h2>
+      <p class="sec-sub reveal reveal-d2">Conheça a interface do Bloquin e veja como os blocos fazem parte de experiências reais de programação, eletrônica e robótica.</p>
+    </div>
+
+    <div class="showcase-product">
+      <figure class="showcase-screen showcase-featured reveal reveal-d1">
+        <div class="showcase-screen-bar">
+          <span>Editor de blocos</span>
+          <a href="assets/IdeScreenBloquin.png" target="_blank" rel="noopener" aria-label="Ampliar captura do editor de blocos (abre em nova aba)">Ampliar ↗</a>
+        </div>
+        <img src="assets/showcase/editor-1918.webp" srcset="assets/showcase/editor-960.webp 960w, assets/showcase/editor-1918.webp 1918w" sizes="(max-width: 380px) calc(100vw - 36px), (max-width: 960px) calc(100vw - 48px), (max-width: 1196px) calc((100vw - 128px) * 0.6875), 734px" alt="Editor do Bloquin com um projeto com leds e sensor de distância, blocos de condições e leitura de sensor de distância para ESP32" width="1918" height="963" loading="lazy" decoding="async">
+        <figcaption><p>Projeto com LEDs e sensor de distância, programado no Bloquin para acender os LEDs conforme a distância.</p></figcaption>
+      </figure>
+      <div class="showcase-copy reveal reveal-d2">
+        <span class="showcase-kicker">01 · Dentro do Bloquin</span>
+        <h3 class="showcase-heading">Um espaço para construir a lógica.</h3>
+        <p>As categorias de blocos ficam ao lado do projeto. Na mesma interface, você escolhe a placa, salva o trabalho e envia o programa para testar no circuito.</p>
+        <div class="showcase-tags" aria-label="Recursos do editor">
+          <span>Blocos em português</span>
+          <span>Arduino e ESP32</span>
+          <span>Envio por USB</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="showcase-resources">
+      <figure class="showcase-screen showcase-library reveal reveal-d1">
+        <div class="showcase-screen-bar">
+          <span>Biblioteca</span>
+          <a href="assets/BibliotecaBloquin.png" target="_blank" rel="noopener" aria-label="Ampliar captura da biblioteca de projetos (abre em nova aba)">Ampliar ↗</a>
+        </div>
+        <img src="assets/showcase/biblioteca-960.webp" srcset="assets/showcase/biblioteca-480.webp 480w, assets/showcase/biblioteca-960.webp 960w" sizes="(max-width: 380px) calc(100vw - 36px), (max-width: 560px) calc(100vw - 48px), (max-width: 960px) calc((100vw - 68px) / 2), (max-width: 1196px) calc((100vw - 136px) / 3), 353px" alt="Biblioteca do Bloquin com exemplos de LEDs, sensores, motores e circuitos acompanhados de imagens" width="1918" height="962" loading="lazy" decoding="async">
+        <figcaption>
+          <h4 class="showcase-caption-title">Uma ideia para começar</h4>
+          <p>Exemplos de projetos aproximam os blocos da montagem e ajudam a explorar novas possibilidades.</p>
+        </figcaption>
+      </figure>
+      <figure class="showcase-screen showcase-components reveal reveal-d2">
+        <div class="showcase-screen-bar">
+          <span>Componentes</span>
+          <a href="assets/ComponentesBloquin.png" target="_blank" rel="noopener" aria-label="Ampliar captura do catálogo de componentes (abre em nova aba)">Ampliar ↗</a>
+        </div>
+        <img src="assets/showcase/componentes-960.webp" srcset="assets/showcase/componentes-480.webp 480w, assets/showcase/componentes-960.webp 960w" sizes="(max-width: 380px) calc(100vw - 36px), (max-width: 560px) calc(100vw - 48px), (max-width: 960px) calc((100vw - 68px) / 2), (max-width: 1196px) calc((100vw - 136px) / 3), 353px" alt="Catálogo de componentes do Bloquin com busca, filtros e imagens de placas, LEDs, resistores e sensores" width="1918" height="962" loading="lazy" decoding="async">
+        <figcaption>
+          <h4 class="showcase-caption-title">Conheça cada peça</h4>
+          <p>Um catálogo visual ajuda a identificar os componentes que fazem parte do circuito.</p>
+        </figcaption>
+      </figure>
+      <figure class="showcase-screen showcase-docs reveal reveal-d3">
+        <div class="showcase-screen-bar">
+          <span>Manual dos blocos</span>
+          <a href="assets/DocumentacaoBlocosBloquin.png" target="_blank" rel="noopener" aria-label="Ampliar captura do manual dos blocos (abre em nova aba)">Ampliar ↗</a>
+        </div>
+        <img src="assets/showcase/documentacao-960.webp" srcset="assets/showcase/documentacao-480.webp 480w, assets/showcase/documentacao-960.webp 960w" sizes="(max-width: 380px) calc(100vw - 36px), (max-width: 560px) calc(100vw - 48px), (max-width: 960px) min(600px, calc(100vw - 48px)), (max-width: 1196px) calc((100vw - 136px) / 3), 353px" alt="Manual do Bloquin com busca por blocos e explicações sobre preparação, repetição e configuração de pinos" width="1918" height="966" loading="lazy" decoding="async">
+        <figcaption>
+          <h4 class="showcase-caption-title">Apoio para entender</h4>
+          <p>Consulte o que cada bloco faz e relacione suas opções ao comportamento do projeto.</p>
+        </figcaption>
+      </figure>
+    </div>
+
+    <div class="showcase-classroom">
+      <div class="showcase-classroom-header reveal">
+        <div>
+          <span class="showcase-kicker">02 · Na prática, com a turma</span>
+          <h3 class="showcase-heading">O aprendizado ganha<br>forma fora da tela.</h3>
+        </div>
+        <p>Nas atividades em sala, os estudantes combinam o editor com placas, circuitos e robôs. Programar, observar e ajustar fazem parte da mesma experiência.</p>
+      </div>
+      <div class="showcase-photos">
+        <figure class="showcase-photo reveal reveal-d1">
+          <img src="assets/showcase/aula-programacao-1200.webp" srcset="assets/showcase/aula-programacao-640.webp 640w, assets/showcase/aula-programacao-1200.webp 1200w" sizes="(max-width: 380px) calc(100vw - 36px), (max-width: 560px) calc(100vw - 48px), (max-width: 960px) calc((100vw - 72px) / 2), (max-width: 1196px) calc((100vw - 120px) / 2), 538px" alt="Estudante diante do editor de blocos do Bloquin, com um robô de rodas e uma placa na bancada" width="4096" height="3072" loading="lazy" decoding="async">
+          <figcaption>
+            <h4 class="showcase-caption-title">Da lógica à montagem</h4>
+            <p>Blocos na tela e componentes na bancada aproximam programação e robótica.</p>
+          </figcaption>
+        </figure>
+        <figure class="showcase-photo reveal reveal-d2">
+          <img src="assets/showcase/aula-robotica-1200.webp" srcset="assets/showcase/aula-robotica-640.webp 640w, assets/showcase/aula-robotica-1200.webp 1200w" sizes="(max-width: 380px) calc(100vw - 36px), (max-width: 560px) calc(100vw - 48px), (max-width: 960px) calc((100vw - 72px) / 2), (max-width: 1196px) calc((100vw - 120px) / 2), 538px" alt="Estudante manuseando um robô de rodas junto a circuitos eletrônicos, com o Bloquin aberto no computador" width="4096" height="3072" loading="lazy" decoding="async">
+          <figcaption>
+            <h4 class="showcase-caption-title">Aprender experimentando</h4>
+            <p>O contato com o hardware dá contexto às atividades e às descobertas da turma.</p>
+          </figcaption>
+        </figure>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="wave-wrap" style="background:var(--showcase-bg)" aria-hidden="true">
   <svg viewBox="0 0 1440 70" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg"><path d="M0,20 C300,70 600,0 900,50 C1100,80 1300,10 1440,40 L1440,70 L0,70 Z" fill="#FFE8D6"/></svg>
 </div>
 
@@ -2200,6 +2368,7 @@ footer {
   <div class="foot-links" role="navigation" aria-label="Links do rodapé">
     <a class="foot-link" href="#what">O Bloquin</a>
     <a class="foot-link" href="#how">Como funciona</a>
+    <a class="foot-link" href="#em-acao">Em ação</a>
     <a class="foot-link" href="#alunos">Para quem</a>
     <a class="foot-link" href="#boards">Placas</a>
     <a class="foot-link" href="#educadores">Educadores</a>
@@ -2295,14 +2464,16 @@ const activeObs = new IntersectionObserver(entries => {
   entries.forEach(entry => {
     if (entry.isIntersecting) {
       pills.forEach(pill => pill.removeAttribute('aria-current'));
-      const link = document.querySelector(`.nav-pill[href="#${entry.target.id}"]`);
+      const sectionId = entry.target.closest('section[id]').id;
+      const link = document.querySelector(`.nav-pill[href="#${sectionId}"]`);
       if (link) {
         link.setAttribute('aria-current', 'true');
       }
     }
   });
 }, { threshold: 0.4 });
-sections.forEach(s => activeObs.observe(s));
+// A seção de imagens é longa; seu cabeçalho marca a entrada na navegação.
+sections.forEach(s => activeObs.observe(s.querySelector('.showcase-header') || s));
 
 /* ── BLOCK DRAG FEEL ── */
 // Drag feedback — listeners centralizados (sem memory leak)
